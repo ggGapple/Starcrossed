@@ -1,7 +1,7 @@
 lenX = room_width*3/8;
-lenY = room_height*3/4;
+lenY = room_height*5/8;
 x = room_width/4*3 - lenX/2;
-y = room_height/2 - lenY/2
+y = room_height/2 - lenY/2 + 35
 
 nineSliceOffset = 3;
 

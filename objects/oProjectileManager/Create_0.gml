@@ -1,3 +1,3 @@
-timerVertical = 180;
-timerHorizontal = 180;
+timerVertical = 100;
+timerHorizontal = 100;
 active = false;

@@ -14,6 +14,7 @@ if (attackWindow >= 0) {
 	if (keyboard_check_pressed(vk_up)) {
 		audio_play_sound(SndAttack,1,0);
 		attackWindow = -1;
+		dealDamage(oPlayerManager.attackDamage);
 	}
 	if (attackWindow == -1) {
 		attackTimer = irandom_range(30,180)*(1/oPlayerManager.attackFrequency);
