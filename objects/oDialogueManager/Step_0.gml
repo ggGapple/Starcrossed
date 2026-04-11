@@ -9,12 +9,21 @@ if (display) {
 		} else {
 			curChar = 0;
 			if (curIndex = array_length(texts) -1) {
-				oProjectileManager.active = true;
 				display = false;
+				oEverythingManager.doneTutorial = true;
+				room_goto(UpgradesRoom);
 			} else {
 				curIndex++;
-				fullText = texts[curIndex];	
+				fullText = texts[curIndex];
+				if (curIndex==1) {
+					oProjectileManager.active = true;	
+				}
 			}
 		}
 	}
+}
+
+if (oEverythingManager.doneTutorial) {
+	oProjectileManager.active = true;
+	instance_destroy();
 }
