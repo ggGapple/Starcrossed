@@ -5,3 +5,4 @@ if (keyboard_check(vk_left)) {
 	PlayerRight.active = true;
 	PlayerLeft.active = false;
 }
+

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"RedRectangle",
-    "path":"folders/RedRectangle.yy",
+    "name":"Projectiles",
+    "path":"folders/Projectiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

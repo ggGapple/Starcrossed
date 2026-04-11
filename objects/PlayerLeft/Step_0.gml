@@ -31,6 +31,7 @@ if (active) {
 	// check bullets
 	var _bullet = instance_place(x, y, oBulletParent);
 	if (_bullet != noone) {
+		PlayerManager.hp-=_bullet.dmg;
 	    instance_destroy(_bullet);
 	}
 }

@@ -6,8 +6,8 @@
   "name":"oBulletParent",
   "overriddenProperties":[],
   "parent":{
-    "name":"RedRectangle",
-    "path":"folders/RedRectangle.yy",
+    "name":"Projectiles",
+    "path":"folders/Projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
