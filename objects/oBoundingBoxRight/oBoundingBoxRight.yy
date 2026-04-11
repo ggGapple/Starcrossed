@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oButton",
-  "eventList":[],
+  "%Name":"oBoundingBoxRight",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oButton",
+  "name":"oBoundingBoxRight",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/UI.yy",
+    "name":"bbox",
+    "path":"folders/bbox.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sButton",
-    "path":"sprites/sButton/sButton.yy",
+    "name":"sBoundingBox",
+    "path":"sprites/sBoundingBox/sBoundingBox.yy",
   },
   "spriteMaskId":null,
   "visible":true,

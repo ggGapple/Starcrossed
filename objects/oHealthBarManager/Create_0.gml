@@ -1,2 +1,2 @@
-lenX = room_width/4;
+lenX = room_width/3;
 lenY = 15;

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"SndAttackNotif",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.18129252,
+  "exportDir":"",
+  "name":"SndAttackNotif",
+  "parent":{
+    "name":"Attack",
+    "path":"folders/Attack.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SndAttackNotif.wav",
+  "volume":1.0,
+}

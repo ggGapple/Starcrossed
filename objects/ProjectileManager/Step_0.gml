@@ -3,12 +3,12 @@ timerHorizontal--;
 
 if (timerVertical < 0) {
 	timerVertical = irandom(100);
-	if (PlayerLeft.active) {
-		var instanceX = irandom_range(BoundingBoxLeft.minX, BoundingBoxLeft.maxX);
-		instance_create_depth(instanceX,-1,depth,RedProjectileVertical);
-	} else if (PlayerRight.active) {
-		var instanceX = irandom_range(BoundingBoxRight.minX, BoundingBoxRight.maxX);
-		instance_create_depth(instanceX,-1,depth,RedProjectileVertical);
+	if (oPlayerLeft.active) {
+		var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
+		instance_create_depth(instanceX,-1,depth,oRedProjectileVertical);
+	} else if (oPlayerRight.active) {
+		var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
+		instance_create_depth(instanceX,-1,depth,oRedProjectileVertical);
 	}	
 }
 
@@ -16,11 +16,11 @@ if (timerHorizontal < 0) {
 	timerHorizontal = irandom(120);
 	var willItBeRightward = choose(true, false);
 	if (willItBeRightward) {
-		instance_create_depth(-1, irandom_range(BoundingBoxLeft.minY,
-		BoundingBoxLeft.maxY), depth, RedProjectileHorizontal);
+		instance_create_depth(-1, irandom_range(oBoundingBoxLeft.minY,
+		oBoundingBoxLeft.maxY), depth, oRedProjectileHorizontal);
 	} else {
-		var inst = instance_create_depth(room_width+1, irandom_range(BoundingBoxLeft.minY,
-		BoundingBoxLeft.maxY), depth, RedProjectileHorizontal);
+		var inst = instance_create_depth(room_width+1, irandom_range(oBoundingBoxLeft.minY,
+		oBoundingBoxLeft.maxY), depth, oRedProjectileHorizontal);
 		inst.rightward = false;
 	}
 }
