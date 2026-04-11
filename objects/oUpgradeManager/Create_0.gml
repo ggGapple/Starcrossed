@@ -19,7 +19,13 @@ descs = {
 "Forgiving" : "-damage from missing attack",
 "Stealthy" : "-hitbox size",
 "Healthy" : "+max hp",
-"Reactionary" : "+invincibility frames"
+"Reactionary" : "+invincibility frames",
+
+//special abilities
+"Elusive": "+teleport ability",
+"Violent": "+explode ability",
+"Peaceful": "+heal ability",
+
 }
 
 rareUpgrades= [
@@ -28,11 +34,6 @@ rareUpgrades= [
 
 ]
 
-abilityUpgrades = [
-"Teleport", //tp in the direction you're moving
-"Explode", // destroy all projectiles in a certain radius
-"Heal" //heal
-]
 
 curUpgrades = ["","",""];
 upgradeBoxes = [];
@@ -41,7 +42,5 @@ upgradesLeft = basicUpgrades;
 depth = -2;
 
 selected = -1;
-
-chosenUpgrades = [];
 
 selectingUpgrade = true;

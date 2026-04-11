@@ -1,9 +1,18 @@
 if (room == UpgradesRoom) {
 	draw_set_font(FntLarge);
 	draw_set_color(#0CE6F2);
-	draw_text(room_width/2-string_width("Pick an upgrade")/2,20,"Pick an upgrade");	
-	draw_set_font(FntMedium);
-	draw_text(room_width/2-string_width("Double tap to confirm")/2,155,"Double tap to confirm");	
+	
+	// for level 3, u pick a unique upgrade
+	if (!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3) {
+		draw_text(room_width/2-string_width("Congrats on beating level 3!")/2,20,"Congrats on beating level 3!");	
+		draw_set_font(FntMedium);
+		draw_text(room_width/2-string_width("As a reward, pick a special ability that triggers with down arrow")/2,155,
+		"As a reward, pick a special ability that triggers with down arrow");	
+	} else {
+		draw_text(room_width/2-string_width("Pick an upgrade")/2,20,"Pick an upgrade");	
+		draw_set_font(FntMedium);
+		draw_text(room_width/2-string_width("Double tap to confirm")/2,155,"Double tap to confirm");
+	}
 	draw_set_font(FntMediumLarge);
 	draw_set_color(#201533);
 	if (selectingUpgrade) {
@@ -33,13 +42,15 @@ if (room == UpgradesRoom) {
 		,upgradeBoxes[2].y,curUpgrades[2]);
 	}
 	
+	// if done, the tip to go to next level
 	if (!selectingUpgrade) {
-		draw_set_font(FntMediumLarge);
+		draw_set_font(FntMedium);
 		draw_set_color(#0CE6F2);
 		draw_text(room_width/2 - string_width("Press any key to start the next level")/2,
-		600, "Press any key to start the next level");	
+		700, "Press any key to start the next level");	
 	}
 	
+	// draw description
 	if (selected != -1) {
 		draw_set_font(FntMedium);
 		draw_text(upgradeBoxes[selected].x+ 11*sprite_get_width(sButton)-

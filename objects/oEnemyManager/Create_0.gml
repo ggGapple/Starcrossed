@@ -2,10 +2,10 @@ rightDefense = 1;
 leftDefense = 1; //0 to 1; closer to zero is higher defense (i know it's stupid and inconsistent mb)
 
 
-rightHpMax = 50;
+rightHpMax = 30;
 leftHpMax = 20;
 
-rightHp = 50;
+rightHp = rightHpMax;
 leftHp = 10;
 
 leftHpRegenTimer = 260;

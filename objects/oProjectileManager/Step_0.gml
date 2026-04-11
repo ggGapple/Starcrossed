@@ -3,7 +3,7 @@ if (active) {
 	timerHorizontal--;
 
 	if (timerVertical < 0) {
-		timerVertical = irandom(300)/(oEnemyManager.leftHp^2);
+		timerVertical = irandom(maxTimer)/(oEnemyManager.leftHp^2);
 		if (oPlayerLeft.active) {
 			var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
 			instance_create_depth(instanceX,-1,depth,oRedProjectileVertical);
@@ -14,7 +14,7 @@ if (active) {
 	}
 
 	if (timerHorizontal < 0) {
-		timerHorizontal = irandom(300)/(oEnemyManager.leftHp^2);
+		timerHorizontal = irandom(maxTimer)/(oEnemyManager.leftHp^2);
 		var willItBeRightward = choose(true, false);
 		if (willItBeRightward) {
 			instance_create_depth(-1, irandom_range(oBoundingBoxLeft.minY,

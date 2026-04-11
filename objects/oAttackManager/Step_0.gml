@@ -1,8 +1,9 @@
 attackTimer--;
 
-if (attackTimer== 0) {
+if (attackTimer<= 0 and !doneAttackNotif) {
 	audio_play_sound(SndAttackNotif,1,0);
 	attackWindow = irandom_range(30,80)*oPlayerManager.attackWindowLength;
+	doneAttackNotif = true;
 }
 
 if (keyboard_check_pressed(vk_up) and attackWindow < 0) {
@@ -18,5 +19,6 @@ if (attackWindow >= 0) {
 	}
 	if (attackWindow == -1) {
 		attackTimer = irandom_range(30,180)*(1/oPlayerManager.attackFrequency);
+		doneAttackNotif = false;
 	}
 }

@@ -1,0 +1,1 @@
+// initializes combat then dies

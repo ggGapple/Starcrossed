@@ -27,6 +27,15 @@ function chooseUpgrade(upgrade){
 		case "Reactionary":
 			oPlayerManager.maxIFrames+=2;
 			break;
+		case "Elusive":
+			oPlayerManager.elusive = true;
+			break;
+		case "Violent":
+			oPlayerManager.violent = true;
+			break;
+		case "Peaceful": 
+			oPlayerManager.peaceful = true;
+			break;
 	}
 }
 
