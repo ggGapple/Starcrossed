@@ -12,6 +12,7 @@
   "Folders":[
     {"$GMFolder":"","%Name":"Attack","folderPath":"folders/Attack.yy","name":"Attack","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"bbox","folderPath":"folders/bbox.yy","name":"bbox","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Enemy","folderPath":"folders/Enemy.yy","name":"Enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Projectiles","folderPath":"folders/Projectiles.yy","name":"Projectiles","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"UI","folderPath":"folders/UI.yy","name":"UI","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -38,6 +39,7 @@
     {"id":{"name":"oBulletParent","path":"objects/oBulletParent/oBulletParent.yy",},},
     {"id":{"name":"oButtonManager","path":"objects/oButtonManager/oButtonManager.yy",},},
     {"id":{"name":"oDialogueManager","path":"objects/oDialogueManager/oDialogueManager.yy",},},
+    {"id":{"name":"oEnemyManager","path":"objects/oEnemyManager/oEnemyManager.yy",},},
     {"id":{"name":"oEverythingManager","path":"objects/oEverythingManager/oEverythingManager.yy",},},
     {"id":{"name":"oHealthBarManager","path":"objects/oHealthBarManager/oHealthBarManager.yy",},},
     {"id":{"name":"oPlayerLeft","path":"objects/oPlayerLeft/oPlayerLeft.yy",},},
@@ -52,6 +54,7 @@
     {"id":{"name":"CombatRoom","path":"rooms/CombatRoom/CombatRoom.yy",},},
     {"id":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"id":{"name":"UpgradesRoom","path":"rooms/UpgradesRoom/UpgradesRoom.yy",},},
+    {"id":{"name":"chooseUpgradeScript","path":"scripts/chooseUpgradeScript/chooseUpgradeScript.yy",},},
     {"id":{"name":"takeDamageScript","path":"scripts/takeDamageScript/takeDamageScript.yy",},},
     {"id":{"name":"SndAttack","path":"sounds/SndAttack/SndAttack.yy",},},
     {"id":{"name":"SndAttackNotif","path":"sounds/SndAttackNotif/SndAttackNotif.yy",},},

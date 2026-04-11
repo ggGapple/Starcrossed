@@ -1,17 +1,17 @@
 // movement
 if (active) {
 	if (keyboard_check(ord("S"))) {
-		y+=3;	
+		y+=3*oPlayerManager.movementSpeed;	
 	} if (keyboard_check(ord("W"))) {
-		y-=3;	
+		y-=3*oPlayerManager.movementSpeed;	
 	}
 
 	if (keyboard_check(ord("D"))) {
-		x+=3;	
+		x+=3*oPlayerManager.movementSpeed;	
 	}
 
 	if (keyboard_check(ord("A"))) {
-		x-=3;	
+		x-=3*oPlayerManager.movementSpeed;	
 	}
 	
 	// check bbox

@@ -1,3 +1,3 @@
 active = false;
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = oPlayerManager.hitboxSize;
+image_yscale = oPlayerManager.hitboxSize;

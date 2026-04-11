@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"chooseUpgradeScript",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"chooseUpgradeScript",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,1 +1,1 @@
-doneTutorial = false;
+level = 0

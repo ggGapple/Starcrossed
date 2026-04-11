@@ -5,7 +5,9 @@ basicUpgrades = [
 "Vicious", // +attack damage
 "Fast", // + speed
 "Forgiving", // less punishing if you miss the attack window
-"Stealthy" //smaller hitbox
+"Stealthy", //smaller hitbox
+"Healthy", //more max hp
+"Reactionary" // more iframes
 ]
 
 descs = {
@@ -14,8 +16,10 @@ descs = {
 "Resilient": "+defense",
 "Vicious": "+damage",
 "Fast": "+speed",
-"Forgiving" : "-damage from missing attack window",
-"Stealthy" : "-hitbox size"
+"Forgiving" : "-damage from missing attack",
+"Stealthy" : "-hitbox size",
+"Healthy" : "+max hp",
+"Reactionary" : "+invincibility frames"
 }
 
 rareUpgrades= [

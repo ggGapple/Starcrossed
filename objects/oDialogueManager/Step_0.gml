@@ -23,7 +23,7 @@ if (display) {
 	}
 }
 
-if (oEverythingManager.doneTutorial) {
+if (oEverythingManager.level != 0) {
 	oProjectileManager.active = true;
 	instance_destroy();
 }

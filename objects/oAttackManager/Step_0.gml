@@ -1,12 +1,12 @@
 attackTimer--;
 
-if (attackTimer == 0) {
+if (attackTimer== 0) {
 	audio_play_sound(SndAttackNotif,1,0);
-	attackWindow = irandom_range(30,80);
+	attackWindow = irandom_range(30,80)*oPlayerManager.attackWindowLength;
 }
 
 if (keyboard_check_pressed(vk_up) and attackWindow < 0) {
-	takeDamage(1);
+	takeDamage(1*oPlayerManager.attackPunishMultiplier);
 }
 
 if (attackWindow >= 0) {
@@ -16,6 +16,6 @@ if (attackWindow >= 0) {
 		attackWindow = -1;
 	}
 	if (attackWindow == -1) {
-		attackTimer = irandom_range(30,180);
+		attackTimer = irandom_range(30,180)*(1/oPlayerManager.attackFrequency);
 	}
 }
