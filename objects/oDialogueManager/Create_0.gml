@@ -11,6 +11,8 @@ texts = [
 "meaning all projectiles on the other side will freeze",
 "At random intervals, you'll get an attack notification",
 "Press up arrow in time to attack",
+"If you press up arrow before or after the attack window,",
+"you'll take damage. So try to react well",
 "You will attack the hp bar of whichever side you are on",
 "Left hp bar controls spawn rates and regenerates"
 ,"Right hp bar is enemy hp. Get that to 0 to beat the enemy",

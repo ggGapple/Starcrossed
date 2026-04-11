@@ -1,5 +1,8 @@
 if (room==UpgradesRoom ) {
-	if (!instance_exists(oUpgradeBox)) {
+	if (!instance_exists(oUpgradeBox)|| createNewOptions) {
+		for (i = 0; i < array_length(upgradeBoxes);i++) {
+			instance_destroy(upgradeBoxes[i]);	
+		}
 		upgradeBoxes[0] = instance_create_depth(room_width/6 - 11*sprite_get_width(sButton)
 		,350,-1,oUpgradeBox);
 		upgradeBoxes[1] = instance_create_depth(room_width/6*3 - 11*sprite_get_width(sButton)
@@ -22,6 +25,12 @@ if (room==UpgradesRoom ) {
 			curUpgrades[2] = upgradesLeft[idx];
 			array_delete(upgradesLeft,idx,1);
 		}
+		createNewOptions = false;
+		selected = -1;
+		selectingUpgrade = true;
+		upgradeBoxes[0].sprite_index = sButton;
+		upgradeBoxes[1].sprite_index = sButton;
+		upgradeBoxes[2].sprite_index = sButton;
 	}
 	
 	if (selectingUpgrade) {
@@ -71,8 +80,13 @@ if (room==UpgradesRoom ) {
 	
 	} else {
 		if (keyboard_check_pressed(vk_anykey)) {
-			oEverythingManager.level++;
-			room_goto(CombatRoom);
+			if (!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3) {
+				oEverythingManager.obtainedUniqueUpgrade = true;
+				createNewOptions = true;
+			} else {
+				oEverythingManager.level++;
+				room_goto(CombatRoom);
+			}
 		}
 	}
 }

@@ -43,11 +43,16 @@ if (room == UpgradesRoom) {
 	}
 	
 	// if done, the tip to go to next level
-	if (!selectingUpgrade) {
+	if (!selectingUpgrade and (oEverythingManager.level !=3 or oEverythingManager.obtainedUniqueUpgrade)) {
 		draw_set_font(FntMedium);
 		draw_set_color(#0CE6F2);
 		draw_text(room_width/2 - string_width("Press any key to start the next level")/2,
 		700, "Press any key to start the next level");	
+	} else if (!selectingUpgrade) {
+		draw_set_font(FntMedium);
+		draw_set_color(#0CE6F2);
+		draw_text(room_width/2 - string_width("Press any key to select next upgrade")/2,
+		700, "Press any key to select next upgrade");		
 	}
 	
 	// draw description
