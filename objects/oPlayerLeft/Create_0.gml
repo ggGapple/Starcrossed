@@ -6,3 +6,6 @@ explosionTimer = 50;
 
 // reset max hp on enter room (which coincides with this guy's creation)
 oPlayerManager.hp = oPlayerManager.maxHp;
+
+attackSpriteTimer = 0;
+maxAttackSpriteTimer = 15;

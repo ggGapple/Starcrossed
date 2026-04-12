@@ -1,8 +1,8 @@
 draw_set_color(#660827);
 outerx1 = room_width*3/4-lenX/2;
 outerx2 = room_width*3/4+lenX/2;
-outery1 = oBoundingBoxRight.minY/2 -lenY+45;
-outery2 = oBoundingBoxRight.minY/2 +lenY+45;
+outery1 = oBoundingBoxRight.minY/2 -lenY+45 + yOffset;
+outery2 = oBoundingBoxRight.minY/2 +lenY+45 + yOffset;
 
 
 // bg rectangle

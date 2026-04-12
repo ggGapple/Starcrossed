@@ -75,6 +75,28 @@ if (active) {
 			oPlayerManager.hp = min(oPlayerManager.hp+ 1,oPlayerManager.maxHp);	
 		}
 	}
+	
+	// flash during attack
+	if (attackSpriteTimer >= 0) {
+		attackSpriteTimer--;
+		sprite_index = sPlayerAttack;
+		if (attackSpriteTimer==-1) {
+			sprite_index = sRight;	
+		}
+	}
+	
+	// flash during i frames
+	
+	if (oPlayerManager.iFrames > 0) {
+		if (oPlayerManager.iFrames ==1) {
+			sprite_index = sRight;
+		} else {
+			sprite_index = sPlayerInvincible;	
+		}
+	}
 
 
+}
+ else if (sprite_index != sRight) {
+	sprite_index = sRight;	
 }
