@@ -1,5 +1,3 @@
-rightward = true;
 dmg = 1;
-spriteLeft = sDiagonalProjectile;
-spriteRight = sDiagonalProjectile;
 image_angle = 45;
+rightward = choose(-1,1);
