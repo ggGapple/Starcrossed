@@ -59,6 +59,7 @@
     {"id":{"name":"oStartUIManager","path":"objects/oStartUIManager/oStartUIManager.yy",},},
     {"id":{"name":"oUpgradeBox","path":"objects/oUpgradeBox/oUpgradeBox.yy",},},
     {"id":{"name":"oUpgradeManager","path":"objects/oUpgradeManager/oUpgradeManager.yy",},},
+    {"id":{"name":"oWinManager","path":"objects/oWinManager/oWinManager.yy",},},
     {"id":{"name":"CombatRoom","path":"rooms/CombatRoom/CombatRoom.yy",},},
     {"id":{"name":"DeathRoom","path":"rooms/DeathRoom/DeathRoom.yy",},},
     {"id":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},

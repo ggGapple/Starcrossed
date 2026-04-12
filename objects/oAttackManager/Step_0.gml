@@ -18,7 +18,7 @@ if (attackWindow >= 0) {
 		attackWindow = -1;
 		dealDamage(oPlayerManager.attackDamage);
 	}
-	if (attackWindow == -1) {
+	if (attackWindow < 0) {
 		attackTimer = irandom_range(30,180)*(1/oPlayerManager.attackFrequency);
 		doneAttackNotif = false;
 	}

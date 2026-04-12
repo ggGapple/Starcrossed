@@ -6,5 +6,9 @@ if (leftHpRegenTimer < 0) {
 
 
 if (rightHp<=0) {
-	room_goto(UpgradesRoom);	
+	if (oEverythingManager.level == 10) {
+		room_goto(WinRoom);
+	} else {
+		room_goto(UpgradesRoom);
+	}
 }

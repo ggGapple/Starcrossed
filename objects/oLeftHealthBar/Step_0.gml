@@ -8,5 +8,5 @@ if (wiggle > 0){
 
 if (damageToTake > 0) {
 	damageToTake-=0.2;
-	oEnemyManager.leftHp-=0.2;
+	oEnemyManager.leftHp=max(0,oEnemyManager.leftHp - 0.2);
 }
