@@ -67,7 +67,7 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 		var _displayText4 = string_copy(fullText4, 1, floor(curChar4));
 		draw_set_color(oColorCodes.darkBlue);
 		draw_text(room_width/2 - string_width("Press any key to start the next level")/2,
-		room_height/2 - string_height(fullText4)/2,_displayText4);
+		155,_displayText4);
 	} 
 	
 	// draw description

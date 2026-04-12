@@ -56,8 +56,8 @@ function chooseProjectileVertical() {
 		sum+=3;		
 	} if (oEverythingManager.level >= 5) {
 		array_push(options,oSnakeProjectileVertical);
-		array_push(weights,3);
-		sum+=3;		
+		array_push(weights,2);
+		sum+=2;		
 	}
 	var choice = irandom(sum)
 	var curSum = 0;
@@ -88,8 +88,8 @@ function chooseProjectileHorizontal() {
 		sum+=3;		
 	} if (oEverythingManager.level >= 5) {
 		array_push(options,oSnakeProjectileHorizontal);
-		array_push(weights,3);
-		sum+=3;		
+		array_push(weights,2);
+		sum+=2;		
 	}
 	var choice = irandom(sum)
 	var curSum = 0;
