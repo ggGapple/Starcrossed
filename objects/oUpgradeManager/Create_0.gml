@@ -7,7 +7,8 @@ basicUpgrades = [
 "Forgiving", // less punishing if you miss the attack window
 "Stealthy", //smaller hitbox
 "Healthy", //more max hp
-"Reactionary" // more iframes
+"Reactionary", // more iframes
+"Versatile", //reduced ability cooldown
 ]
 
 descs = {
@@ -20,6 +21,7 @@ descs = {
 "Stealthy" : "-hitbox size",
 "Healthy" : "+max hp",
 "Reactionary" : "+invincibility frames",
+"Versatile" : "-ability cooldown",
 
 //special abilities
 "Elusive": "+teleport ability",
@@ -45,3 +47,10 @@ selected = -1;
 
 selectingUpgrade = true;
 createNewOptions = false;
+upgradesString = "Current upgrades: ";
+for (i = 0; i < array_length(oPlayerManager.chosen);i++) {
+	upgradesString+=oPlayerManager.chosen[i]
+	if (i != array_length(oPlayerManager.chosen)-1) {
+		upgradesString += ", "
+	}
+}

@@ -11,6 +11,7 @@ if (room == UpgradesRoom) {
 	} else {
 		draw_text(room_width/2-string_width("Pick an upgrade")/2,20,"Pick an upgrade");	
 		draw_set_font(FntMedium);
+		draw_set_color(#1e579c);
 		draw_text(room_width/2-string_width("Double tap to confirm")/2,155,"Double tap to confirm");
 	}
 	draw_set_font(FntMediumLarge);
@@ -45,21 +46,27 @@ if (room == UpgradesRoom) {
 	// if done, the tip to go to next level
 	if (!selectingUpgrade and (oEverythingManager.level !=3 or oEverythingManager.obtainedUniqueUpgrade)) {
 		draw_set_font(FntMedium);
-		draw_set_color(#0CE6F2);
+		draw_set_color(#1e579c);
 		draw_text(room_width/2 - string_width("Press any key to start the next level")/2,
-		700, "Press any key to start the next level");	
+		650, "Press any key to start the next level");	
 	} else if (!selectingUpgrade) {
 		draw_set_font(FntMedium);
-		draw_set_color(#0CE6F2);
+		draw_set_color(#1e579c);
 		draw_text(room_width/2 - string_width("Press any key to select next upgrade")/2,
-		700, "Press any key to select next upgrade");		
+		650, "Press any key to select next upgrade");		
 	}
 	
 	// draw description
 	if (selected != -1) {
 		draw_set_font(FntMedium);
+		draw_set_color(#EE145B);
 		draw_text(upgradeBoxes[selected].x+ 11*sprite_get_width(sButton)-
 		string_width(descs[$ curUpgrades[selected]])/2,
 		upgradeBoxes[selected].y+100,descs[$ curUpgrades[selected]]);
 	}
+	
+	// draw current upgrades
+	draw_set_font(FntMedium);
+	draw_set_color(oColorCodes.darkRed);
+	draw_text(10,room_height-string_height(upgradesString)-5,upgradesString);
 }

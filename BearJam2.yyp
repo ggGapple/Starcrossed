@@ -39,6 +39,7 @@
     {"id":{"name":"oBoundingBoxRight","path":"objects/oBoundingBoxRight/oBoundingBoxRight.yy",},},
     {"id":{"name":"oBulletParent","path":"objects/oBulletParent/oBulletParent.yy",},},
     {"id":{"name":"oButtonManager","path":"objects/oButtonManager/oButtonManager.yy",},},
+    {"id":{"name":"oColorCodes","path":"objects/oColorCodes/oColorCodes.yy",},},
     {"id":{"name":"oCombatInit","path":"objects/oCombatInit/oCombatInit.yy",},},
     {"id":{"name":"oCombatUI","path":"objects/oCombatUI/oCombatUI.yy",},},
     {"id":{"name":"oDeathManager","path":"objects/oDeathManager/oDeathManager.yy",},},

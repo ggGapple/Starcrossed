@@ -27,6 +27,9 @@ function chooseUpgrade(upgrade){
 		case "Reactionary":
 			oPlayerManager.maxIFrames+=2;
 			break;
+		case "Versatile":
+			oPlayerManager.abilityCooldownMax-=40;
+			break;
 		case "Elusive":
 			oPlayerManager.elusive = true;
 			break;
