@@ -98,6 +98,7 @@
     {"id":{"name":"sPlayerInvincible","path":"sprites/sPlayerInvincible/sPlayerInvincible.yy",},},
     {"id":{"name":"sPlayerTransition","path":"sprites/sPlayerTransition/sPlayerTransition.yy",},},
     {"id":{"name":"sRedProjectileHorizontal","path":"sprites/sRedProjectileHorizontal/sRedProjectileHorizontal.yy",},},
+    {"id":{"name":"sRedProjectileVertical_1","path":"sprites/sRedProjectileVertical_1/sRedProjectileVertical_1.yy",},},
     {"id":{"name":"sRedProjectileVertical","path":"sprites/sRedProjectileVertical/sRedProjectileVertical.yy",},},
     {"id":{"name":"sRight","path":"sprites/sRight/sRight.yy",},},
     {"id":{"name":"sSpinningProjectile","path":"sprites/sSpinningProjectile/sSpinningProjectile.yy",},},
