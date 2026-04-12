@@ -13,7 +13,7 @@ if (keyboard_check(ord("B")) and keyboard_check(ord("V"))) {
 
 if (keyboard_check(ord("O"))) {
 	oProjectileManager.active = true;
-
+}
 
 if (room == CombatRoom and level == 5) {
 	bossProjTimer--;
