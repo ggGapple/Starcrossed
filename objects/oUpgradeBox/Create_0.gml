@@ -5,3 +5,7 @@ timer = 50;
 tempY = 350;
 animSpeed =8;
 goinDown = true;
+chosen = false;
+effectTimer = 20;
+fadingTimer = -1;
+goUp = false;

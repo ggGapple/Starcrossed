@@ -71,7 +71,7 @@ if (room==UpgradesRoom ) {
 			if (selected ==1) {
 				array_push(oPlayerManager.chosen,curUpgrades[selected] + " (L)");
 				selectingUpgrade = false;
-				upgradeBoxes[1].sprite_index = sButtonChosen;
+				upgradeBoxes[1].sprite_index = sButtonChosen
 				if (array_length(oPlayerManager.chosen)!=1) {
 					upgradesString+=", " 	
 				}

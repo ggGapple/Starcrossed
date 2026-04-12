@@ -1,6 +1,6 @@
 leftHpRegenTimer--;
 if (leftHpRegenTimer < 0) {
-	leftHpRegenTimer = 330;
+	leftHpRegenTimer = 300;
 	leftHp=min(leftHp+1,leftHpMax);
 }
 

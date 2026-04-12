@@ -8,7 +8,7 @@ leftHpMax = 20;
 rightHp = rightHpMax;
 leftHp = 10;
 
-leftHpRegenTimer = 330;
+leftHpRegenTimer = 300;
 
 rightHealthBar = instance_create_depth(0,0,-1,oRightHealthBar);
 leftHealthBar = instance_create_depth(0,0,-1,oLeftHealthBar);
