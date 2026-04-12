@@ -105,6 +105,7 @@ if (room==UpgradesRoom ) {
 			if (!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3) {
 				oEverythingManager.obtainedUniqueUpgrade = true;
 				createNewOptions = true;
+				array_push(basicUpgrades,"Versatile")
 			} else {
 				oEverythingManager.level++;
 				room_goto(CombatRoom);

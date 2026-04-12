@@ -7,8 +7,7 @@ basicUpgrades = [
 "Forgiving", // less punishing if you miss the attack window
 "Stealthy", //smaller hitbox
 "Healthy", //more max hp
-"Reactionary", // more iframes
-"Versatile", //reduced ability cooldown
+"Reactionary" // more iframes
 ]
 
 descs = {
