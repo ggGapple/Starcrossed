@@ -78,6 +78,7 @@
     {"id":{"name":"SndAttack","path":"sounds/SndAttack/SndAttack.yy",},},
     {"id":{"name":"SndAttackNotif","path":"sounds/SndAttackNotif/SndAttackNotif.yy",},},
     {"id":{"name":"SndHurt","path":"sounds/SndHurt/SndHurt.yy",},},
+    {"id":{"name":"SndOst1","path":"sounds/SndOst1/SndOst1.yy",},},
     {"id":{"name":"SndSwitch","path":"sounds/SndSwitch/SndSwitch.yy",},},
     {"id":{"name":"sBg","path":"sprites/sBg/sBg.yy",},},
     {"id":{"name":"sBoundingBox","path":"sprites/sBoundingBox/sBoundingBox.yy",},},

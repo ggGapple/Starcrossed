@@ -54,3 +54,13 @@ for (i = 0; i < array_length(oPlayerManager.chosen);i++) {
 		upgradesString += ", "
 	}
 }
+
+curIndex = 0;
+curChar = 0;
+textSpeed = 0.5;
+fullText = "";
+
+curIndex2 = 0;
+curChar2 = 0;
+fullText2 = "";
+delay = 60;

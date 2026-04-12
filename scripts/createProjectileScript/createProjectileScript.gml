@@ -42,7 +42,6 @@ function chooseProjectileVertical() {
 	for (i = 0; i < array_length(options); i ++ ) {
 		curSum += weights[i];	
 		if choice <= curSum {
-			show_debug_message(options[i]);
 			return options[i];
 		}
 	}

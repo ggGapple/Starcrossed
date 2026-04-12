@@ -4,15 +4,23 @@ if (room == UpgradesRoom) {
 	
 	// for level 3, u pick a unique upgrade
 	if (!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3) {
-		draw_text(room_width/2-string_width("Congrats on beating level 3!")/2,20,"Congrats on beating level 3!");	
+		fullText = "Congrats on beating level 3!"
+		var _displayText = string_copy(fullText, 1, floor(curChar));
+		fullText2 = "As a reward, pick a special ability that triggers with down arrow"
+		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
+		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
 		draw_set_font(FntMedium);
-		draw_text(room_width/2-string_width("As a reward, pick a special ability that triggers with down arrow")/2,155,
-		"As a reward, pick a special ability that triggers with down arrow");	
+		draw_text(room_width/2-string_width(fullText2)/2,155,
+		_displayText2);	
 	} else {
-		draw_text(room_width/2-string_width("Pick an upgrade")/2,20,"Pick an upgrade");	
+		fullText = "Pick an upgrade"
+		var _displayText = string_copy(fullText, 1, floor(curChar));
+		fullText2 = "Double tap to confirm"
+		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
+		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
 		draw_set_font(FntMedium);
 		draw_set_color(#1e579c);
-		draw_text(room_width/2-string_width("Double tap to confirm")/2,155,"Double tap to confirm");
+		draw_text(room_width/2-string_width(fullText2)/2, 155, _displayText2);
 	}
 	draw_set_font(FntMediumLarge);
 	draw_set_color(#201533);

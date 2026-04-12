@@ -28,6 +28,14 @@ if (room==UpgradesRoom ) {
 			array_delete(upgradesLeft,idx,1);
 		}
 		createNewOptions = false;
+		curIndex = 0;
+		curChar = 0;
+		textSpeed = 0.5;
+		fullText = "";
+		curIndex2 = 0;
+		curChar2 = 0;
+		fullText2 = "";
+		delay = 60;
 		selected = -1;
 		selectingUpgrade = true;
 		upgradeBoxes[0].sprite_index = sButton;
@@ -103,4 +111,18 @@ if (room==UpgradesRoom ) {
 			}
 		}
 	}
+	
+	//animation
+	
+	if (curChar < string_length(fullText)) {
+	    curChar += textSpeed;
+	} if (delay == 0 and curChar2 < string_length(fullText2)) {
+	    curChar2 += textSpeed;
+	}
+	if (delay > 0) {
+		delay--;	
+	}
+
+
 }
+

@@ -3,6 +3,8 @@ curChar = 0;
 
 textSpeed = 0.5;
 
+display = true;
+
 texts = [
 "Welcome to <placeholder> (tbh even this line is placeholder) (space)",
 "Use WASD to move and dodge projectiles (space)",
@@ -20,4 +22,3 @@ texts = [
 ]
 
 fullText = texts[curIndex];
-display = true;
