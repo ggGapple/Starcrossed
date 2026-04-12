@@ -5,6 +5,9 @@ if (instance_exists(oPlayerLeft)) {
 			audio_play_sound(SndSwitch,1,0);
 		}
 		oPlayerLeft.active = true;
+		if (oPlayerRight.active == false and !instance_exists(oPlayerTransition)) {
+			instance_create_depth(room_width/2,room_height/2,-2,oPlayerTransition);
+		}
 		oPlayerLeft.sprite_index = sLeft;
 		oPlayerRight.sprite_index = sRight;
 		oPlayerRight.active = false;
