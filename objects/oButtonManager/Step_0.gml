@@ -1,4 +1,5 @@
-if (keyboard_check_pressed(vk_anykey)) {
+if (keyboard_check_pressed(vk_anykey) and !started) {
+	started = true;
 	instance_create_depth(0,0,-50,oTransition);
 	freeze = true;
 }

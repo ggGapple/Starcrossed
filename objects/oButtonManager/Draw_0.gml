@@ -1,4 +1,7 @@
 draw_set_color(oColorCodes.darkBlue);
+if (freeze) {
+	draw_set_color(oColorCodes.lightBlue);	
+}
 draw_set_font(FntStart);
 draw_text(room_width/2-string_width("Start")/2,room_height-145,"Start");
 draw_set_font(FntSuggestion);

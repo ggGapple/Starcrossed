@@ -7,3 +7,4 @@ timer = 0;
 subimg = oButtonManager.spriteTimer;
 leftX = room_width/2-sprite_get_width(sLeftAnimated)*5
 rightX = room_width/2
+audio_play_sound(SndChooseUpgrade,1,0);
