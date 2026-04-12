@@ -1,6 +1,6 @@
 active = false;
 image_xscale = oPlayerManager.leftHitbox;
-image_yscale = oPlayerManager.rightHitbox;
+image_yscale = oPlayerManager.leftHitbox;
 drawExplosion = false;
 explosionTimer = 50;
 
