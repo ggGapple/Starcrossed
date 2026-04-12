@@ -1,8 +1,5 @@
 if (room==UpgradesRoom ) {
-	if (!instance_exists(oUpgradeBox)|| createNewOptions) {
-		for (i = 0; i < array_length(upgradeBoxes);i++) {
-			instance_destroy(upgradeBoxes[i]);	
-		}
+	if (!instance_exists(oUpgradeBox) || createNewOptions) {
 		upgradeBoxes[0] = instance_create_depth(room_width/6 - 11*sprite_get_width(sButton)
 		,-100,-1,oUpgradeBox);
 		upgradeBoxes[1] = instance_create_depth(room_width/6*3 - 11*sprite_get_width(sButton)
@@ -48,14 +45,17 @@ if (room==UpgradesRoom ) {
 			if (selected ==0) {
 				selectingUpgrade = false;
 				upgradeBoxes[0].sprite_index = sButtonChosen;
-				array_push(oPlayerManager.chosen,curUpgrades[selected]);
+				array_push(oPlayerManager.chosen,curUpgrades[selected] + "(R)");
 				if (array_length(oPlayerManager.chosen)!=1) {
 					upgradesString+=", " 	
 				}
 				upgradesString += curUpgrades[selected];
+				if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
+					upgradesString += " (R)"
+				}
 				instance_destroy(upgradeBoxes[1]);
 				instance_destroy(upgradeBoxes[2]);
-				chooseUpgrade(curUpgrades[selected]);
+				chooseUpgrade(curUpgrades[selected], "right");
 			} else {
 				selected = 0;
 				upgradeBoxes[0].sprite_index = sButtonSelected;
@@ -64,16 +64,19 @@ if (room==UpgradesRoom ) {
 			}
 		} else if (keyboard_check_pressed(ord("S"))) {
 			if (selected ==1) {
-				array_push(oPlayerManager.chosen,curUpgrades[selected]);
+				array_push(oPlayerManager.chosen,curUpgrades[selected] + "(R)");
 				selectingUpgrade = false;
 				upgradeBoxes[1].sprite_index = sButtonChosen;
 				if (array_length(oPlayerManager.chosen)!=1) {
 					upgradesString+=", " 	
 				}
 				upgradesString += curUpgrades[selected];
+				if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
+					upgradesString += " (R)"
+				}
 				instance_destroy(upgradeBoxes[0]);
 				instance_destroy(upgradeBoxes[2]);
-				chooseUpgrade(curUpgrades[selected]);
+				chooseUpgrade(curUpgrades[selected], "right");
 			} else {
 				selected = 1;
 				upgradeBoxes[1].sprite_index = sButtonSelected;
@@ -82,16 +85,19 @@ if (room==UpgradesRoom ) {
 			}
 		} else if (keyboard_check_pressed(ord("D"))) {
 			if (selected ==2) {
-				array_push(oPlayerManager.chosen,curUpgrades[selected]);
+				array_push(oPlayerManager.chosen,curUpgrades[selected] + "(R)");
 				if (array_length(oPlayerManager.chosen)!=1) {
 					upgradesString+=", " 	
 				}
 				selectingUpgrade = false;
 				upgradesString += curUpgrades[selected];
 				upgradeBoxes[2].sprite_index = sButtonChosen;
+				if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
+					upgradesString += " (R)"
+				}
 				instance_destroy(upgradeBoxes[1]);
 				instance_destroy(upgradeBoxes[0]);
-				chooseUpgrade(curUpgrades[selected]);
+				chooseUpgrade(curUpgrades[selected], "right");
 			} else {
 				selected = 2;	
 				upgradeBoxes[2].sprite_index = sButtonSelected;

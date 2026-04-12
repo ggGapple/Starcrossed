@@ -2,7 +2,12 @@ function takeDamage(damage = 1){
 	if (oPlayerManager.iFrames > 0) {
 		return;
 	}
-	oHealthBarManager.damageToTake+= damage*(1-oPlayerManager.defense);
+	if (oPlayerLeft.active) {
+		oHealthBarManager.damageToTake+= damage*(1-oPlayerManager.leftDefense);
+	} else {
+		oHealthBarManager.damageToTake+= damage*(1-oPlayerManager.leftDefense);
+	}
+	
 	oHealthBarManager.wiggle += 50;
 	oPlayerManager.iFrames = oPlayerManager.maxIFrames;
 	audio_play_sound(SndHurt,1,0);

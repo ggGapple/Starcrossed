@@ -1,45 +1,89 @@
-function chooseUpgrade(upgrade){
-	switch upgrade {
-		case "Wise":
-			oPlayerManager.attackWindowLength +=0.2
-			break;
-		case "Ferocious":
-			oPlayerManager.attackFrequency +=0.15;
-			break;
-		case "Resilient":
-			oPlayerManager.defense +=0.1;
-			break;
-		case "Vicious":
-			oPlayerManager.attackDamage +=0.5;
-			break;
-		case "Fast":
-			oPlayerManager.movementSpeed += 0.15;
-			break;
-		case "Forgiving":
-			oPlayerManager.attackPunishMultiplier-=0.3;
-			break;
-		case "Stealthy":
-			oPlayerManager.hitboxSize-=0.15;
-			break;
-		case "Healthy":
-			oPlayerManager.maxHp +=1;
-			break;
-		case "Reactionary":
-			oPlayerManager.maxIFrames+=2;
-			break;
-		case "Versatile":
-			oPlayerManager.abilityCooldownMax-=40;
-			break;
-		case "Elusive":
-			oPlayerManager.elusive = true;
-			break;
-		case "Violent":
-			oPlayerManager.violent = true;
-			break;
-		case "Peaceful": 
-			oPlayerManager.peaceful = true;
-			break;
-	}
+function chooseUpgrade(upgrade, side){
+	if (side == "left") {
+		switch upgrade {
+			case "Wise":
+				oPlayerManager.leftAttackWindowLength +=0.5
+				break;
+			case "Ferocious":
+				oPlayerManager.leftAttackFrequency +=0.3;
+				break;
+			case "Resilient":
+				oPlayerManager.leftDefense +=0.5;
+				break;
+			case "Vicious":
+				oPlayerManager.leftAttackDamage +=1;
+				break;
+			case "Fast":
+				oPlayerManager.leftMovementSpeed += 0.3;
+				break;
+			case "Forgiving":
+				oPlayerManager.leftAttackPunishMultiplier*=0.5;
+				break;
+			case "Stealthy":
+				oPlayerManager.leftHitbox*=0.6;
+				break;
+			case "Healthy":
+				oPlayerManager.maxHp +=1;
+				break;
+			case "Reactionary":
+				oPlayerManager.maxIFrames+=2;
+				break;
+			case "Versatile":
+				oPlayerManager.abilityCooldownMax-=40;
+				break;
+			case "Elusive":
+				oPlayerManager.elusive = true;
+				break;
+			case "Violent":
+				oPlayerManager.violent = true;
+				break;
+			case "Peaceful": 
+				oPlayerManager.peaceful = true;
+				break;
+		}
+	} else if (side =="right") {
+		switch upgrade {
+			case "Wise":
+				oPlayerManager.rightAttackWindowLength +=0.5
+				break;
+			case "Ferocious":
+				oPlayerManager.rightAttackFrequency +=0.3;
+				break;
+			case "Resilient":
+				oPlayerManager.rightDefense +=0.5;
+				break;
+			case "Vicious":
+				oPlayerManager.rightAttackDamage +=1;
+				break;
+			case "Fast":
+				oPlayerManager.rightMovementSpeed += 0.3;
+				break;
+			case "Forgiving":
+				oPlayerManager.rightAttackPunishMultiplier*=0.5;
+				break;
+			case "Stealthy":
+				oPlayerManager.rightHitbox*=0.6;
+				break;
+			case "Healthy":
+				oPlayerManager.maxHp +=1;
+				break;
+			case "Reactionary":
+				oPlayerManager.maxIFrames+=2;
+				break;
+			case "Versatile":
+				oPlayerManager.abilityCooldownMax-=40;
+				break;
+			case "Elusive":
+				oPlayerManager.elusive = true;
+				break;
+			case "Violent":
+				oPlayerManager.violent = true;
+				break;
+			case "Peaceful": 
+				oPlayerManager.peaceful = true;
+				break;
+		}
+		}
 }
 
 /*"Wise", // + attack window

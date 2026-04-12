@@ -27,11 +27,11 @@ function chooseProjectileVertical() {
 	var options = [oRedProjectileVertical]
 	var weights = [10]
 	var sum = 10;
-	if (oEverythingManager.level >=1) {
+	if (oEverythingManager.level >=2) {
 		array_push(options,oYellowProjectileVertical);
 		array_push(weights,3)
 		sum +=3;
-	} if (oEverythingManager.level >=4) {
+	} if (oEverythingManager.level >=3) {
 		array_push(options,oSpinningProjectileVertical);
 		array_push(weights,2);
 		weights[0]+=2;
@@ -51,11 +51,11 @@ function chooseProjectileHorizontal() {
 	var options = [oRedProjectileHorizontal]
 	var weights = [10]
 	var sum = 10;
-	if (oEverythingManager.level ==2) {
+	if (oEverythingManager.level >=2) {
 		array_push(options,oYellowProjectileHorizontal);
 		array_push(weights,3)
 		sum +=3;
-	} if (oEverythingManager.level >=5) {
+	} if (oEverythingManager.level >=3) {
 		array_push(options,oSpinningProjectileHorizontal);
 		array_push(weights,2);
 		weights[0]+=2;

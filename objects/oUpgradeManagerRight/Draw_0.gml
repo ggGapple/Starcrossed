@@ -1,4 +1,4 @@
-if (room == UpgradesRoom) {
+if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 	draw_set_font(FntLarge);
 	draw_set_color(#0CE6F2);
 	
@@ -13,7 +13,7 @@ if (room == UpgradesRoom) {
 		draw_text(room_width/2-string_width(fullText2)/2,155,
 		_displayText2);	
 	} else {
-		fullText = "Pick an upgrade"
+		fullText = "Pick an upgrade (right side)"
 		var _displayText = string_copy(fullText, 1, floor(curChar));
 		fullText2 = "Double tap to confirm"
 		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
@@ -74,7 +74,7 @@ if (room == UpgradesRoom) {
 	}
 	
 	// draw current upgrades
-	draw_set_font(FntMedium);
+	draw_set_font(FntSuggestion);
 	draw_set_color(oColorCodes.darkRed);
 	draw_text(10,room_height-string_height(upgradesString)-5,upgradesString);
 }
