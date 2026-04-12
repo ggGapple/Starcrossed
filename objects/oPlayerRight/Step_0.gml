@@ -46,18 +46,20 @@ if (active) {
 	oPlayerManager.abilityCooldown--;
 	
 	// ability
-	if (keyboard_check_pressed(vk_down) and oPlayerManager.abilityCooldown <=0) {
+	if ((keyboard_check_pressed(vk_down) and oPlayerManager.abilityCooldown <=0) and
+	(oPlayerManager.elusive | oPlayerManager.violent | oPlayerManager.peaceful)) {
 		oPlayerManager.abilityCooldown = oPlayerManager.abilityCooldownMax;
+		audio_play_sound(SndAbilityActivate,1,0);
 		if (oPlayerManager.elusive) {
 			
 			if (keyboard_check(ord("W"))) {
-				y -= 50;
+				y -= 65;
 			} else if (keyboard_check(ord("A"))) {
-				x-=50
+				x-=65
 			} else if (keyboard_check(ord("D"))) {
-				x+=50
+				x+=65
 			} else {
-				y+=50
+				y+=65
 			}
 		} else if (oPlayerManager.violent) {
 			var collisions = ds_list_create();
@@ -81,7 +83,7 @@ if (active) {
 		attackSpriteTimer--;
 		sprite_index = sPlayerAttack;
 		if (attackSpriteTimer==-1) {
-			sprite_index = sRight;	
+			sprite_index = sLeft;	
 		}
 	}
 	
@@ -89,14 +91,11 @@ if (active) {
 	
 	if (oPlayerManager.iFrames > 0) {
 		if (oPlayerManager.iFrames ==1) {
-			sprite_index = sRight;
+			sprite_index = sLeft;
 		} else {
 			sprite_index = sPlayerInvincible;	
 		}
 	}
 
 
-}
- else if (sprite_index != sRight) {
-	sprite_index = sRight;	
 }

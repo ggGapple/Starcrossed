@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"SndHurt",
   "parent":{
-    "name":"Player",
-    "path":"folders/Player.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

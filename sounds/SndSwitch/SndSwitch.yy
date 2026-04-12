@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"SndAttack",
+  "%Name":"SndSwitch",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.25804988,
+  "duration":0.23687075,
   "exportDir":"",
-  "name":"SndAttack",
+  "name":"SndSwitch",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"SndAttack.wav",
-  "volume":0.6,
+  "soundFile":"SndSwitch.wav",
+  "volume":1.0,
 }

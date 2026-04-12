@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"SndAttackNotif",
   "parent":{
-    "name":"Attack",
-    "path":"folders/Attack.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

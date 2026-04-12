@@ -4,11 +4,13 @@ if (room==UpgradesRoom ) {
 			instance_destroy(upgradeBoxes[i]);	
 		}
 		upgradeBoxes[0] = instance_create_depth(room_width/6 - 11*sprite_get_width(sButton)
-		,350,-1,oUpgradeBox);
+		,-100,-1,oUpgradeBox);
 		upgradeBoxes[1] = instance_create_depth(room_width/6*3 - 11*sprite_get_width(sButton)
-		,350,-1,oUpgradeBox);
+		,-100,-1,oUpgradeBox);
 		upgradeBoxes[2] = instance_create_depth(room_width/6*5 - 11*sprite_get_width(sButton)
-		,350,-1,oUpgradeBox);
+		,-100,-1,oUpgradeBox);
+		upgradeBoxes[1].timer += 30
+		upgradeBoxes[2].timer += 60
 		if (oEverythingManager.obtainedUniqueUpgrade == false and oEverythingManager.level == 3) {
 			curUpgrades[0] = "Elusive";
 			curUpgrades[1] = "Violent";
