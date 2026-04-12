@@ -60,7 +60,7 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 		draw_text(upgradeBoxes[0].x - string_width(curUpgrades[0])/2 + 
 		sprite_get_width(sButton)*(upgradeBoxes[0].image_xscale)/2
 		,upgradeBoxes[0].y,
-		curUpgrades[1]);	
+		curUpgrades[0]);	
 	} else if (selected ==1) {
 		draw_text(upgradeBoxes[1].x - string_width(curUpgrades[1])/2 + 
 		sprite_get_width(sButton)*(upgradeBoxes[1].image_xscale)/2
