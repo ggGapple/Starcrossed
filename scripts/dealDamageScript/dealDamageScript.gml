@@ -1,7 +1,9 @@
 function dealDamage(dmg){
 	if (oPlayerLeft.active) {
-		oEnemyManager.leftHp= max(0,oEnemyManager.leftHp-dmg*oEnemyManager.leftDefense);
+		oLeftHealthBar.damageToTake = dmg*oEnemyManager.leftDefense;
+		oLeftHealthBar.wiggle +=90;
 	} else if (oPlayerRight.active) {
-		oEnemyManager.rightHp= max(0,oEnemyManager.rightHp-dmg*oEnemyManager.rightDefense);
+		oRightHealthBar.damageToTake= dmg*oEnemyManager.rightDefense;
+		oRightHealthBar.wiggle +=90;
 	}
 }
