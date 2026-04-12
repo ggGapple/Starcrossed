@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"moveVignetteScript",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"moveVignetteScript",
+  "parent":{
+    "name":"UI",
+    "path":"folders/UI.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

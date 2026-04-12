@@ -12,6 +12,7 @@ if (instance_exists(oPlayerLeft)) {
 		oPlayerRight.sprite_index = sRight;
 		oPlayerRight.active = false;
 		oCameraManager.shakeAmount = 5;
+		moveVignette();
 
 	} else if (keyboard_check_pressed(vk_right) && oPlayerRight.active = false) {
 		audio_play_sound(SndSwitch,1,0);
@@ -20,6 +21,7 @@ if (instance_exists(oPlayerLeft)) {
 		oPlayerLeft.sprite_index = sRight;
 		oPlayerRight.sprite_index = sLeft;
 		oCameraManager.shakeAmount = 5;
+		moveVignette();
 	}
 
 	if (iFrames > 0) {

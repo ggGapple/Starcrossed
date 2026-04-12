@@ -64,8 +64,8 @@ if (active) {
 		} else if (oPlayerManager.violent) {
 			var collisions = ds_list_create();
 			var num = collision_circle_list(x + sprite_get_width(sprite_index)/2*image_xscale,
-			y + sprite_get_height(sprite_index)/2*image_yscale,100,[oRedProjectileHorizontal,
-			oRedProjectileVertical], false, true, collisions,false);
+			y + sprite_get_height(sprite_index)/2*image_yscale,100,oProjectileManager.projectiles, 
+			false, true, collisions,false);
 			drawExplosion = true;
 			explosionTimer = 60;
 			for (i = 0; i < num; i++) {
