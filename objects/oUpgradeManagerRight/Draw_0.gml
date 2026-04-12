@@ -10,8 +10,10 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
 		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
 		draw_set_font(FntMedium);
-		draw_text(room_width/2-string_width(fullText2)/2,155,
-		_displayText2);	
+		if (selectingUpgrade) {
+			draw_text(room_width/2-string_width(fullText2)/2,155,
+			_displayText2);	
+		}
 	} else {
 		fullText = "Pick an upgrade (right side)"
 		var _displayText = string_copy(fullText, 1, floor(curChar));
@@ -20,7 +22,9 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
 		draw_set_font(FntMedium);
 		draw_set_color(#1e579c);
-		draw_text(room_width/2-string_width(fullText2)/2, 155, _displayText2);
+		if (selectingUpgrade) {
+			draw_text(room_width/2-string_width(fullText2)/2, 155, _displayText2);
+		}
 	}
 	draw_set_font(FntMediumLarge);
 	draw_set_color(#201533);
