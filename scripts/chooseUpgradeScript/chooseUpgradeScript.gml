@@ -1,4 +1,5 @@
 function chooseUpgrade(upgrade, side){
+	audio_play_sound(SndUpgrade, 1, 0)
 	if (side == "left") {
 		switch upgrade {
 			case "Wise":
