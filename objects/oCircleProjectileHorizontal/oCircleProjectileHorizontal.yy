@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oSpinningProjectileVertical",
+  "%Name":"oCircleProjectileHorizontal",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oSpinningProjectileVertical",
+  "name":"oCircleProjectileHorizontal",
   "overriddenProperties":[],
   "parent":{
     "name":"Projectiles",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sSpinningProjectile",
-    "path":"sprites/sSpinningProjectile/sSpinningProjectile.yy",
+    "name":"sBallProjectile",
+    "path":"sprites/sBallProjectile/sBallProjectile.yy",
   },
   "spriteMaskId":null,
   "visible":true,

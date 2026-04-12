@@ -55,7 +55,12 @@ function chooseProjectileVertical() {
 		array_push(weights,3);
 		sum+=3;		
 	} if (oEverythingManager.level >= 5) {
-		array_push(options,oSnakeProjectileVertical);
+		if (oEverythingManager.seed1 == 1){
+			array_push(options,oCircleProjectileVertical);
+		} else {
+			array_push(options,oSnakeProjectileVertical);
+		}
+		
 		array_push(weights,2);
 		sum+=2;		
 	}
@@ -83,10 +88,15 @@ function chooseProjectileHorizontal() {
 		weights[0]+=2;
 		sum+=4;
 	} if (oEverythingManager.level >= 4) {
-		array_push(options,oDiagonalProjectileHorizontal);
+		array_push(options,oCircleProjectileHorizontal);
 		array_push(weights,3);
 		sum+=3;		
 	} if (oEverythingManager.level >= 5) {
+		if (oEverythingManager.seed1 == 1){
+			array_push(options,oCircleProjectileHorizontal);
+		} else {
+			array_push(options,oSnakeProjectileHorizontal);
+		}
 		array_push(options,oSnakeProjectileHorizontal);
 		array_push(weights,2);
 		sum+=2;		
