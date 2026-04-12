@@ -1,6 +1,13 @@
 // movement
 
 if (active) {
+	//die
+	if (oPlayerManager.hp< 0) {
+		oEverythingManager.playerLives--;
+		room_goto(DeathRoom);
+	}
+
+
 	if (keyboard_check(ord("S"))) {
 		y+=3;	
 	} if (keyboard_check(ord("W"))) {

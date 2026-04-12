@@ -10,6 +10,7 @@ if (keyboard_check_pressed(vk_up) and attackWindow < 0) {
 	takeDamage(1*oPlayerManager.attackPunishMultiplier);
 }
 
+
 if (attackWindow >= 0) {
 	attackWindow--;
 	if (keyboard_check_pressed(vk_up)) {
