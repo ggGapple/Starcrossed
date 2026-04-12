@@ -12,13 +12,7 @@ if (active) {
 			hpMultiplier += 0.4;
 		}
 		timerVertical = irandom(maxTimer)/(oEnemyManager.leftHp^2)*1/hpMultiplier;
-		if (oPlayerLeft.active) {
-			var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
-			instance_create_depth(instanceX,-1,depth,oRedProjectileVertical);
-		} else if (oPlayerRight.active) {
-			var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
-			instance_create_depth(instanceX,-1,depth,oRedProjectileVertical);
-		}	
+		createProjectile(3,3,"vertical")
 	}
 
 	if (timerHorizontal < 0) {
@@ -31,15 +25,7 @@ if (active) {
 			hpMultiplier += 0.4;
 		}
 		timerHorizontal = irandom(maxTimer)/(oEnemyManager.leftHp^2)*1/hpMultiplier;
-		var willItBeRightward = choose(true, false);
-		if (willItBeRightward) {
-			instance_create_depth(-1, irandom_range(oBoundingBoxLeft.minY,
-			oBoundingBoxLeft.maxY), depth, oRedProjectileHorizontal);
-		} else {
-			var inst = instance_create_depth(room_width+1, irandom_range(oBoundingBoxLeft.minY,
-			oBoundingBoxLeft.maxY), depth, oRedProjectileHorizontal);
-			inst.rightward = false;
-		}
+		createProjectile(12,1,"horizontal")
 	}
 
 
