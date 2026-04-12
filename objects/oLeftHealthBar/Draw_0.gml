@@ -10,4 +10,4 @@ draw_set_color(#660827);
 draw_rectangle(outerx1+4, outery1 +4, outerx2 -4, outery2 -4, false);
 
 draw_set_color(#EE145B)
-draw_rectangle(outerx1+4, outery1 +4, -4+outerx1+lenX* oEnemyManager.leftHp/oEnemyManager.leftHpMax, outery2 -4, false);
+draw_rectangle(outerx1+4, outery1 +4, outerx1+lenX* oEnemyManager.leftHp/oEnemyManager.leftHpMax, outery2 -4, false);

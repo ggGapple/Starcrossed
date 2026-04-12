@@ -3,12 +3,12 @@ leftDefense = 1; //0 to 1; closer to zero is higher defense (i know it's stupid 
 
 
 rightHpMax = 20;
-leftHpMax = 20;
+leftHpMax = 10;
 
 rightHp = rightHpMax;
-leftHp = 10;
+leftHp = 5;
 
-leftHpRegenTimer = 300;
+leftHpRegenTimer = 200;
 
 rightHealthBar = instance_create_depth(0,0,-1,oRightHealthBar);
 leftHealthBar = instance_create_depth(0,0,-1,oLeftHealthBar);
