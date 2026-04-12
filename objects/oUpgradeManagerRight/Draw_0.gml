@@ -36,25 +36,11 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 		,upgradeBoxes[2].y,curUpgrades[2]);
 		
 		draw_set_font(FntMedium);
-		if (selected == 0) {
-			draw_set_color(oColorCodes.darkBlue);
-		} else {
-			draw_set_color(#EE145B);	
-		}
+		draw_set_color(oColorCodes.lightRed);
 		draw_text(upgradeBoxes[0].x - string_width("A")/2 + 11*sprite_get_width(sButton)
 		,upgradeBoxes[0].y-string_height("A")-5,"A");
-		if (selected == 1) {
-			draw_set_color(oColorCodes.darkBlue);
-		} else {
-			draw_set_color(#EE145B);
-		}
 		draw_text(upgradeBoxes[1].x - string_width("S")/2+ 11*sprite_get_width(sButton)
 		,upgradeBoxes[1].y-string_height("S")-5,"S");
-		if (selected == 2) {
-			draw_set_color(oColorCodes.darkBlue);
-		} else {
-			draw_set_color(#EE145B);
-		}
 		draw_text(upgradeBoxes[2].x - string_width("D")/2+ 11*sprite_get_width(sButton)
 		,upgradeBoxes[2].y-string_height("D")-5,"D");
 	} else if (selected == 0) {
@@ -83,7 +69,7 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 	// draw description
 	if (selected != -1) {
 		draw_set_font(FntMedium);
-		draw_set_color(oColorCodes.darkBlue);
+		draw_set_color(oColorCodes.lightRed);
 		draw_text(upgradeBoxes[selected].x+ 11*sprite_get_width(sButton)-
 		string_width(descs[$ curUpgrades[selected]])/2,
 		upgradeBoxes[selected].y+100,descs[$ curUpgrades[selected]]);
