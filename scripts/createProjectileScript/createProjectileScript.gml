@@ -1,21 +1,35 @@
 function createProjectile(projX,projY, dir){
 	if (dir == "vertical") {
+		var proj = chooseProjectileVertical();
+		var instanceY = -5;
+		if (proj == oSnakeProjectileVertical) {
+			instanceY-=90
+		}
 		if (oPlayerLeft.active) {
 				var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
-				instance_create_depth(instanceX,-1,depth,chooseProjectileVertical());
+				instance_create_depth(instanceX,instanceY,depth,proj);
 			} else if (oPlayerRight.active) {
 				var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
-				instance_create_depth(instanceX,-1,depth,chooseProjectileVertical());
+				instance_create_depth(instanceX,instanceY,depth,proj);
 			}	
 	} else if (dir == "horizontal") {
 		var willItBeRightward = choose(true, false);
+		var proj = chooseProjectileHorizontal();
 		if (willItBeRightward) {
-			var inst = instance_create_depth(-1, irandom_range(oBoundingBoxLeft.minY,
-			oBoundingBoxLeft.maxY), depth, chooseProjectileHorizontal());
+			var instanceX = -10;
+			if (proj == oSnakeProjectileHorizontal) {
+				instanceX -= 90
+			}
+			var inst = instance_create_depth(instanceX, irandom_range(oBoundingBoxLeft.minY,
+			oBoundingBoxLeft.maxY), depth, proj);
 			inst.sprite_index = inst.spriteRight;
 		} else {
-			var inst = instance_create_depth(room_width+1, irandom_range(oBoundingBoxLeft.minY,
-			oBoundingBoxLeft.maxY), depth, chooseProjectileHorizontal());
+			var instanceX = room_width+10;
+			if (proj == oSnakeProjectileHorizontal) {
+				instanceX += 90
+			}
+			var inst = instance_create_depth(instanceX, irandom_range(oBoundingBoxLeft.minY,
+			oBoundingBoxLeft.maxY), depth, proj);
 			inst.rightward = false;
 			inst.sprite_index = inst.spriteLeft;
 			
@@ -38,6 +52,10 @@ function chooseProjectileVertical() {
 		sum+=4;
 	} if (oEverythingManager.level >= 4) {
 		array_push(options,oDiagonalProjectileVertical);
+		array_push(weights,3);
+		sum+=3;		
+	} if (oEverythingManager.level >= 5) {
+		array_push(options,oSnakeProjectileVertical);
 		array_push(weights,3);
 		sum+=3;		
 	}
@@ -66,6 +84,10 @@ function chooseProjectileHorizontal() {
 		sum+=4;
 	} if (oEverythingManager.level >= 4) {
 		array_push(options,oDiagonalProjectileHorizontal);
+		array_push(weights,3);
+		sum+=3;		
+	} if (oEverythingManager.level >= 5) {
+		array_push(options,oSnakeProjectileHorizontal);
 		array_push(weights,3);
 		sum+=3;		
 	}
