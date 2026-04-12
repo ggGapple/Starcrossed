@@ -4,3 +4,7 @@ button_height = room_height/6;
 //startButton.image_xscale = button_width/sprite_get_width(sButton);
 //startButton.image_yscale = button_height/sprite_get_height(sButton);
 depth = -2
+
+animTimer = 0;
+spriteTimer = 0;
+freeze = false;
