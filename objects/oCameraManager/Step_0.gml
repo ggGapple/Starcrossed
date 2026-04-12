@@ -1,6 +1,4 @@
-if (shake_amount > 0) {
-    shake_amount *= shake_decay;
-    
-    // If it gets small enough, just kill it
-    if (shake_amount < 0.1) shake_amount = 0;
+if (shakeAmount > 0) {
+    shakeAmount *= shakeDecay;
+    if (shakeAmount < 0.1) shakeAmount = 0;
 }

@@ -11,7 +11,7 @@ if (instance_exists(oPlayerLeft)) {
 		oPlayerLeft.sprite_index = sLeft;
 		oPlayerRight.sprite_index = sRight;
 		oPlayerRight.active = false;
-		oCameraManager.shake_amount = 5;
+		oCameraManager.shakeAmount = 5;
 
 	} else if (keyboard_check_pressed(vk_right) && oPlayerRight.active = false) {
 		audio_play_sound(SndSwitch,1,0);
@@ -19,7 +19,7 @@ if (instance_exists(oPlayerLeft)) {
 		oPlayerLeft.active = false;
 		oPlayerLeft.sprite_index = sRight;
 		oPlayerRight.sprite_index = sLeft;
-		oCameraManager.shake_amount = 5;
+		oCameraManager.shakeAmount = 5;
 	}
 
 	if (iFrames > 0) {
