@@ -8,6 +8,7 @@ else if (timer > -10 and timer < 30) {
 else if (timer == -10) {
     timer--;
     y = tempY;
+	animDone = true
 }
 
 if (fadingTimer == -1 and sprite_index = sButtonChosen) {

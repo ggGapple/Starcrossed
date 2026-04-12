@@ -89,6 +89,8 @@
     {"id":{"name":"SndOst1","path":"sounds/SndOst1/SndOst1.yy",},},
     {"id":{"name":"SndSwitch","path":"sounds/SndSwitch/SndSwitch.yy",},},
     {"id":{"name":"SndUpgrade","path":"sounds/SndUpgrade/SndUpgrade.yy",},},
+    {"id":{"name":"SndWin","path":"sounds/SndWin/SndWin.yy",},},
+    {"id":{"name":"SndWinRound","path":"sounds/SndWinRound/SndWinRound.yy",},},
     {"id":{"name":"sBg","path":"sprites/sBg/sBg.yy",},},
     {"id":{"name":"sBlack","path":"sprites/sBlack/sBlack.yy",},},
     {"id":{"name":"sBoundingBox","path":"sprites/sBoundingBox/sBoundingBox.yy",},},
