@@ -1,8 +1,8 @@
 draw_set_color(#660827);
 outerx1 = room_width/2-lenX/2;
 outerx2 = room_width/2+lenX/2;
-outery1 = oBoundingBoxLeft.maxY + (room_height-oBoundingBoxLeft.maxY)/2-lenY;
-outery2 = oBoundingBoxLeft.maxY + (room_height-oBoundingBoxLeft.maxY)/2+lenY;
+outery1 = oBoundingBoxLeft.maxY + (room_height-oBoundingBoxLeft.maxY)/2-lenY + yOffset;
+outery2 = oBoundingBoxLeft.maxY + (room_height-oBoundingBoxLeft.maxY)/2+lenY + yOffset;
 
 // outline commented out cuz i think it looks better without
 //var outer = draw_rectangle(outerx1, outery1,
