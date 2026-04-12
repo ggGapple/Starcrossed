@@ -10,3 +10,5 @@ for (i = 0; i < array_length(oPlayerManager.chosen);i++) {
 
 fullText4 = upgradesString;
 textSpeed=0.5;
+
+audio_play_sound(SndWinRound, 1, 0)

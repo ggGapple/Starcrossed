@@ -6,6 +6,7 @@ if (leftHpRegenTimer < 0) {
 
 
 if (rightHp<=0) {
+	audio_play_sound(SndWinRound, 1, 0)
 	if (oEverythingManager.level == 5) {
 		room_goto(WinRoom);
 	} else {

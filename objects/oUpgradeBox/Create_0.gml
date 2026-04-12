@@ -9,3 +9,4 @@ chosen = false;
 effectTimer = 20;
 fadingTimer = -1;
 goUp = false;
+animDone = false;
