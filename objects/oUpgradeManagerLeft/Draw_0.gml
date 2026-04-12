@@ -52,16 +52,15 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 	}
 	
 	// if done, the tip to go to next level
-	if (!selectingUpgrade and (oEverythingManager.level !=3 or oEverythingManager.obtainedUniqueUpgrade)) {
+	 if (!selectingUpgrade) {
+		yeahWereDone = true;
 		draw_set_font(FntMedium);
 		draw_set_color(#1e579c);
-		draw_text(room_width/2 - string_width("Press any key to select next upgrade")/2,
-		650, "Press any key to select next upgrade");	
-	} else if (!selectingUpgrade) {
-		draw_set_font(FntMedium);
-		draw_set_color(#1e579c);
-		draw_text(room_width/2 - string_width("Press any key to select next upgrade")/2,
-		650, "Press any key to select next upgrade");		
+		fullText4 = "Press any key to select the next upgrade";
+		var _displayText4 = string_copy(fullText4, 1, floor(curChar4));
+		draw_set_color(oColorCodes.darkBlue);
+		draw_text(room_width/2 - string_width("Press any key to select the next upgrade")/2,
+		640,_displayText4);	
 	}
 	
 	// draw description
@@ -74,7 +73,9 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 	}
 	
 	// draw current upgrades
+	fullText3 = upgradesString;
+	var _displayText3 = string_copy(fullText3, 1, floor(curChar3));
 	draw_set_font(FntSuggestion);
-	draw_set_color(oColorCodes.darkRed);
-	draw_text(10,room_height-string_height(upgradesString)-5,upgradesString);
+	draw_set_color(oColorCodes.darkBlue);
+	draw_text(10,room_height-string_height(_displayText3)-5,_displayText3);
 }

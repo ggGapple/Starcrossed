@@ -59,6 +59,15 @@ curChar = 0;
 textSpeed = 0.5;
 fullText = "";
 
+curIndex3 = 0;
+curChar3 = 0;
+fullText3 = "";
+
+curIndex4 = 0;
+curChar4 = 0;
+fullText4 = "";
+yeahWereDone = false;
+
 curIndex2 = 0;
 curChar2 = 0;
 fullText2 = "";

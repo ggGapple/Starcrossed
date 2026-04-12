@@ -123,7 +123,13 @@ if (room==UpgradesRoom ) {
 	
 	if (curChar < string_length(fullText)) {
 	    curChar += textSpeed;
-	} if (delay == 0 and curChar2 < string_length(fullText2)) {
+	} 
+	if (curChar3 < string_length(fullText3)) {
+		curChar3 += textSpeed;	
+	} if (curChar4 < string_length(fullText4) && yeahWereDone) {
+		curChar4 += textSpeed;	
+	}
+	if (delay == 0 and curChar2 < string_length(fullText2)) {
 	    curChar2 += textSpeed;
 	}
 	if (delay > 0) {
