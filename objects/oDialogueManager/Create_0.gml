@@ -16,7 +16,7 @@ texts = [
 "If you press up arrow before or after the attack window,",
 "you'll take damage. So try to react well",
 "You will attack the hp bar of whichever side you are on",
-"Left hp bar controls spawn rates and regenerates"
+"Left hp bar controls spawn rates and bullet speed, but regenerates"
 ,"Right hp bar is enemy hp. Get that to 0 to beat the enemy",
 "Try not to get hit. Good luck!"
 ]
