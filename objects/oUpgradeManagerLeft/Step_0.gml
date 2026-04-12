@@ -67,7 +67,7 @@ if (room==UpgradesRoom ) {
 			}
 		} else if (keyboard_check_pressed(ord("S"))) {
 			if (selected ==1) {
-				array_push(oPlayerManager.chosen,curUpgrades[selected] + "(L)");
+				array_push(oPlayerManager.chosen,curUpgrades[selected] + " (L)");
 				selectingUpgrade = false;
 				upgradeBoxes[1].sprite_index = sButtonChosen;
 				if (array_length(oPlayerManager.chosen)!=1) {
@@ -88,7 +88,7 @@ if (room==UpgradesRoom ) {
 			}
 		} else if (keyboard_check_pressed(ord("D"))) {
 			if (selected ==2) {
-				array_push(oPlayerManager.chosen,curUpgrades[selected] + "(L)");
+				array_push(oPlayerManager.chosen,curUpgrades[selected] + " (L)");
 				if (array_length(oPlayerManager.chosen)!=1) {
 					upgradesString+=", " 	
 				}
