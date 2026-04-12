@@ -69,7 +69,11 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 	// draw description
 	if (selected != -1) {
 		draw_set_font(FntMedium);
-		draw_set_color(oColorCodes.lightRed);
+		if (yeahWereDone) {
+			draw_set_color(oColorCodes.lightBlue);	
+		} else {
+			draw_set_color(oColorCodes.lightRed);
+		}
 		draw_text(upgradeBoxes[selected].x+ 11*sprite_get_width(sButton)-
 		string_width(descs[$ curUpgrades[selected]])/2,
 		upgradeBoxes[selected].y+100,descs[$ curUpgrades[selected]]);

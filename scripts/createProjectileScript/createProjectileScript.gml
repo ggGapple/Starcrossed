@@ -60,6 +60,10 @@ function chooseProjectileHorizontal() {
 		array_push(weights,2);
 		weights[0]+=2;
 		sum+=4;
+	} if (oEverythingManager.level >= 4) {
+		array_push(options,oDiagonalProjectileHorizontal);
+		array_push(weights,3);
+		sum+=3;		
 	}
 	var choice = irandom(sum)
 	var curSum = 0;
