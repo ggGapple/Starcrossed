@@ -27,18 +27,23 @@ function chooseProjectileVertical() {
 	var options = [oRedProjectileVertical]
 	var weights = [10]
 	var sum = 10;
-	if (oEverythingManager.level ==1) {
+	if (oEverythingManager.level >=1) {
 		array_push(options,oYellowProjectileVertical);
 		array_push(weights,3)
 		sum +=3;
+	} if (oEverythingManager.level >=4) {
+		array_push(options,oSpinningProjectileVertical);
+		array_push(weights,2);
+		weights[0]+=2;
+		sum+=4;
 	}
 	var choice = irandom(sum)
-	var curSum = 10;
+	var curSum = 0;
 	for (i = 0; i < array_length(options); i ++ ) {
+		curSum += weights[i];	
 		if choice <= curSum {
+			show_debug_message(options[i]);
 			return options[i];
-		} else {
-			curSum += weights[i];	
 		}
 	}
 }
@@ -47,18 +52,22 @@ function chooseProjectileHorizontal() {
 	var options = [oRedProjectileHorizontal]
 	var weights = [10]
 	var sum = 10;
-	if (oEverythingManager.level ==1) {
+	if (oEverythingManager.level ==2) {
 		array_push(options,oYellowProjectileHorizontal);
 		array_push(weights,3)
 		sum +=3;
+	} if (oEverythingManager.level >=5) {
+		array_push(options,oSpinningProjectileHorizontal);
+		array_push(weights,2);
+		weights[0]+=2;
+		sum+=4;
 	}
 	var choice = irandom(sum)
-	var curSum = 10;
+	var curSum = 0;
 	for (i = 0; i < array_length(options); i ++ ) {
+		curSum += weights[i];	
 		if choice <= curSum {
 			return options[i];
-		} else {
-			curSum += weights[i];	
 		}
 	}
 }
