@@ -1,7 +1,6 @@
 if (active) {
 	timerVertical--;
 	timerHorizontal--;
-	show_debug_message(active)
 	if (timerVertical < 0) {
 		var hpMultiplier = 1;
 		if (oEnemyManager.leftHp/oEnemyManager.leftHpMax>0.5) {
@@ -11,7 +10,6 @@ if (active) {
 		} if (oEnemyManager.leftHp/oEnemyManager.leftHpMax>0.8) {
 			hpMultiplier += 1.00;
 		}
-		timerVertical = irandom(maxTimer-oEverythingManager.level*40)/((oEnemyManager.leftHp*2)^2 + 1)/hpMultiplier;
 		timerVertical = irandom(maxTimer-oEverythingManager.level*40)/
 		(oEnemyManager.leftHp^2+0.1)*1/hpMultiplier;
 		createProjectile(3,3,"vertical")
@@ -26,12 +24,8 @@ if (active) {
 		} if (oEnemyManager.leftHp/oEnemyManager.leftHpMax>0.8) {
 			hpMultiplier += 1.00;
 		}
-		timerHorizontal = irandom(maxTimer-oEverythingManager.level*40)/((oEnemyManager.leftHp*2)^2 + 1)/hpMultiplier;
 		timerHorizontal = irandom(maxTimer-oEverythingManager.level*40)/
 		(oEnemyManager.leftHp^2+0.1)*1/hpMultiplier;
 		createProjectile(12,1,"horizontal")
 	}
-
-
 }
-show_debug_message(timerVertical);

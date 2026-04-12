@@ -1,21 +1,26 @@
-image_alpha = lerp(image_alpha,0.7,0.05);
+if (boomTimer == -1000) {
+	image_alpha = lerp(image_alpha,0.7,0.05);
+}
+
 if (image_alpha >= 0.65) {
 	if (boomTimer == -1000) {
 		boomTimer = 60;
 	}
-	boomTimer --;
 }
-
-if (boomTimer < -160 and boomTimer > -999) {
-	image_alpha = lerp(image_alpha,0,0.05);
-	if (image_alpha < 0.1) {
+if (boomTimer > -999) {
+	boomTimer --;	
+}
+if (boomTimer <= -135 and boomTimer > -999) {
+	image_alpha = lerp(image_alpha,0,0.1);
+	if (image_alpha < 0.2) {
 		instance_destroy();	
 	}
-} if (boomTimer == -159) {
+} if (boomTimer == -135) {
 	image_alpha = 1;
 	var list = ds_list_create();
 	var count = instance_place_list(x, y, all, list, false);
-
+	oCameraManager.shakeAmount+=20;
+	audio_play_sound(SndStart,1,0);
 	if (count > 0) {
 	    for (i = 0; i < count; i++;) {
 	        var inst = list[| i];
