@@ -36,6 +36,7 @@
     {"id":{"name":"FntTitle","path":"fonts/FntTitle/FntTitle.yy",},},
     {"id":{"name":"oAttackManager","path":"objects/oAttackManager/oAttackManager.yy",},},
     {"id":{"name":"oBackgroundManager","path":"objects/oBackgroundManager/oBackgroundManager.yy",},},
+    {"id":{"name":"oBossAttack","path":"objects/oBossAttack/oBossAttack.yy",},},
     {"id":{"name":"oBoundingBoxLeft","path":"objects/oBoundingBoxLeft/oBoundingBoxLeft.yy",},},
     {"id":{"name":"oBoundingBoxRight","path":"objects/oBoundingBoxRight/oBoundingBoxRight.yy",},},
     {"id":{"name":"oBulletParent","path":"objects/oBulletParent/oBulletParent.yy",},},
