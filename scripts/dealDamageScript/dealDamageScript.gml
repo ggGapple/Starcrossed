@@ -1,5 +1,5 @@
 function dealDamage(dmg){
-	if (oEverythingManager.level != 0) {
+	if (instance_exists(oBlackHole)) {
 		oBlackHole.iShouldTakeDamageTimer = 30;
 	}
 	if (oPlayerLeft.active) {

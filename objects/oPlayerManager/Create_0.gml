@@ -32,3 +32,5 @@ abilityCooldownMax = 300;
 
 abilityLenX = 75;
 abilityLenY = 20;
+
+invincibleGood = false;

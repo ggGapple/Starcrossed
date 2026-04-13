@@ -23,7 +23,7 @@ descs = {
 "Versatile" : "-ability cooldown",
 
 //special abilities
-"Elusive": "+teleport ability",
+"Elusive": "+teleport ability (with i frames)",
 "Violent": "+explode ability",
 "Peaceful": "+heal ability",
 

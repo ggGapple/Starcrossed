@@ -124,6 +124,7 @@
     {"id":{"name":"sLeftAnimated","path":"sprites/sLeftAnimated/sLeftAnimated.yy",},},
     {"id":{"name":"sPlayerAttack","path":"sprites/sPlayerAttack/sPlayerAttack.yy",},},
     {"id":{"name":"sPlayerInvincible","path":"sprites/sPlayerInvincible/sPlayerInvincible.yy",},},
+    {"id":{"name":"sPlayerInvincibleGood","path":"sprites/sPlayerInvincibleGood/sPlayerInvincibleGood.yy",},},
     {"id":{"name":"sPlayerTransition","path":"sprites/sPlayerTransition/sPlayerTransition.yy",},},
     {"id":{"name":"sRedProjectileHorizontal","path":"sprites/sRedProjectileHorizontal/sRedProjectileHorizontal.yy",},},
     {"id":{"name":"sRedProjectileVertical","path":"sprites/sRedProjectileVertical/sRedProjectileVertical.yy",},},

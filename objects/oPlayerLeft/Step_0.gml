@@ -54,12 +54,20 @@ if (active) {
 			
 			if (keyboard_check(ord("W"))) {
 				y -= 65;
+				oPlayerManager.iFrames+=60;
+				oPlayerManager.invincibleGood = true;
 			} else if (keyboard_check(ord("A"))) {
 				x-=65
+				oPlayerManager.iFrames+=60;
+				oPlayerManager.invincibleGood = true;
 			} else if (keyboard_check(ord("D"))) {
 				x+=65
+				oPlayerManager.iFrames+=60;
+				oPlayerManager.invincibleGood = true;
 			} else {
 				y+=65
+				oPlayerManager.iFrames+=60;
+				oPlayerManager.invincibleGood = true;
 			}
 		} else if (oPlayerManager.violent) {
 			var collisions = ds_list_create();
@@ -90,10 +98,19 @@ if (active) {
 	
 	// flash during i frames
 	if (oPlayerManager.iFrames > 0) {
-		if (oPlayerManager.iFrames ==1) {
-			sprite_index = sLeft;
+		if (oPlayerManager.invincibleGood) {
+			if (oPlayerManager.iFrames ==1) {
+				sprite_index = sLeft;
+				oPlayerManager.invincibleGood = false;
+			} else {
+				sprite_index = sPlayerInvincibleGood;	
+			}	
 		} else {
-			sprite_index = sPlayerInvincible;	
+			if (oPlayerManager.iFrames ==1) {
+				sprite_index = sLeft;
+			} else {
+				sprite_index = sPlayerInvincible;	
+			}
 		}
 	}
 }
