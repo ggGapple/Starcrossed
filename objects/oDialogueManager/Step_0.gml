@@ -4,7 +4,6 @@ if (display) {
 	}
 
 	if (keyboard_check_pressed(vk_space)) {
-		audio_play_sound(SndChooseUpgrade, 0.5, 0)
 		if (curChar < string_length(fullText)) {
 			curChar = string_length(fullText)-1;
 		} else {
@@ -16,6 +15,7 @@ if (display) {
 			} else {
 				curIndex++;
 				fullText = texts[curIndex];
+				audio_play_sound(SndDialogueNext, 0.5, 0)
 				if (curIndex==1) {
 					oProjectileManager.active = true;	
 				}
