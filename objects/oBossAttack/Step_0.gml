@@ -1,21 +1,21 @@
 if (boomTimer == -1000) {
-	image_alpha = lerp(image_alpha,0.7,0.05);
+	image_alpha = lerp(image_alpha,0.45,0.05);
 }
 
-if (image_alpha >= 0.65) {
+if (image_alpha >= 0.40) {
 	if (boomTimer == -1000) {
-		boomTimer = 60;
+		boomTimer = 25;
 	}
 }
 if (boomTimer > -999) {
 	boomTimer --;	
 }
-if (boomTimer <= -135 and boomTimer > -999) {
+if (boomTimer <= -80 and boomTimer > -999) {
 	image_alpha = lerp(image_alpha,0,0.1);
 	if (image_alpha < 0.2) {
 		instance_destroy();	
 	}
-} if (boomTimer == -135) {
+} if (boomTimer == -80) {
 	image_alpha = 1;
 	var list = ds_list_create();
 	var count = instance_place_list(x, y, all, list, false);
