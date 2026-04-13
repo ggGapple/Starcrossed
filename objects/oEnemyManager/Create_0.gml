@@ -12,3 +12,5 @@ leftHpRegenTimer = 200;
 
 rightHealthBar = instance_create_depth(0,0,-1,oRightHealthBar);
 leftHealthBar = instance_create_depth(0,0,-1,oLeftHealthBar);
+image_xscale = 2;
+image_yscale = 2;
