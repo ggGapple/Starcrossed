@@ -4,7 +4,7 @@ if (muteTimer > 0) {
 	draw_set_font(FntMedium);
 	draw_set_color(oColorCodes.darkBlue);
 	draw_text(room_width-string_width("'M' to mute music")-5,
-	room_height-string_height("'M' to mute music"), "M to mute music");
+	5, "M to mute music");
 	draw_set_alpha(1);
 }
 if (mutedTimer > 0) {
@@ -12,8 +12,8 @@ if (mutedTimer > 0) {
 	draw_set_alpha(min(1,mutedTimer/60));
 	draw_set_font(FntMedium);
 	draw_set_color(oColorCodes.darkBlue);
-	draw_text(room_width-string_width("Music muted")-5
-	,room_height-string_height("Music muted"), "Music muted");
+	draw_text(room_width-string_width("Music muted")-10
+	,5, "Music muted");
 	draw_set_alpha(1);
 }
 
