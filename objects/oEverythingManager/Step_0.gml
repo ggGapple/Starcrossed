@@ -6,5 +6,12 @@ if (room == CombatRoom and level == 5) {
 	if (bossProjTimer < 0 and !instance_exists(oBossAttack)) {
 		bossProjTimer = 200;
 	}
+}
 
+if (keyboard_check_pressed(ord("P")) and room != StartRoom) {
+	difficulty +=0.5;
+	if (difficulty > 1.5) {
+		difficulty = 0.5;
+	}
+	dTimer = 180;
 }
