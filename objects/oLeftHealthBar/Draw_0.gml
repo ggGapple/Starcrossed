@@ -14,4 +14,6 @@ draw_rectangle(outerx1+4, outery1 +4, outerx1+lenX* oEnemyManager.leftHp/oEnemyM
 
 draw_set_color(oColorCodes.lightRed);
 draw_set_font(FntMedium)
-draw_text(room_width/4 - string_width("Black Hole Strength")/2,outery1-37,"Black Hole Strength");
+if (oEverythingManager.level != 0) {
+	draw_text(room_width/4 - string_width("Black Hole Strength")/2,outery1-37,"Black Hole Strength");
+}
