@@ -11,3 +11,6 @@ if (switchTimer == switchWhen) {
 if (iShouldTakeDamageTimer > 0) {
 	xOffset = iShouldTakeDamageTimer*cos(iShouldTakeDamageTimer)/5;	
 }
+
+image_xscale = lerp(5, 2, 1 - oEnemyManager.leftHp/oEnemyManager.leftHpMax);
+image_yscale = lerp(5, 2, 1 - oEnemyManager.leftHp/oEnemyManager.leftHpMax);

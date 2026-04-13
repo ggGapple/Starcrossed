@@ -120,6 +120,7 @@
     {"id":{"name":"sButtonChosen","path":"sprites/sButtonChosen/sButtonChosen.yy",},},
     {"id":{"name":"sButtonSelected","path":"sprites/sButtonSelected/sButtonSelected.yy",},},
     {"id":{"name":"sDiagonalProjectile","path":"sprites/sDiagonalProjectile/sDiagonalProjectile.yy",},},
+    {"id":{"name":"sDown","path":"sprites/sDown/sDown.yy",},},
     {"id":{"name":"sLeft","path":"sprites/sLeft/sLeft.yy",},},
     {"id":{"name":"sLeftAnimated","path":"sprites/sLeftAnimated/sLeftAnimated.yy",},},
     {"id":{"name":"sPlayerAttack","path":"sprites/sPlayerAttack/sPlayerAttack.yy",},},
