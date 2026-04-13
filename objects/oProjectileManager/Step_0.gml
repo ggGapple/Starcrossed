@@ -3,7 +3,7 @@ if (active) {
 	timerHorizontal--;
 	
 	var leftHpPercent = oEnemyManager.leftHp/oEnemyManager.leftHpMax
-	var baseTimer = lerp(12, 35, 1 - leftHpPercent);
+	var baseTimer = lerp(10, 30, 1 - leftHpPercent);
 
 	if (timerVertical < 0) {
 		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/oEverythingManager.difficulty;

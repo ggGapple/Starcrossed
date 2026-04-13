@@ -22,16 +22,16 @@ switch oEverythingManager.level {
 		sprite_index = sBlackHole5;
 		redSprite = sBlackHole5Red;
 		break;
-	
 }
 
 image_xscale = 3;
 image_yscale = 3;
 image_angle = 0;
 rotating = false
+switched = false
 xBase = room_width/2
 xOffset = 0;
-baseY = 84;
+baseY = 100;
 timer = 0;
 yOffset = 10;
 switchTimer = 0;

@@ -6,7 +6,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.leftAttackWindowLength +=0.5
 				break;
 			case "Ferocious":
-				oPlayerManager.leftAttackFrequency +=0.3;
+				oPlayerManager.leftAttackFrequency +=0.25;
 				break;
 			case "Resilient":
 				oPlayerManager.leftDefense +=0.5;
@@ -21,13 +21,13 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.leftAttackPunishMultiplier*=0.5;
 				break;
 			case "Stealthy":
-				oPlayerManager.leftHitbox*=0.6;
+				oPlayerManager.leftHitbox*=0.7;
 				break;
 			case "Healthy":
 				oPlayerManager.maxHp +=1;
 				break;
 			case "Reactionary":
-				oPlayerManager.maxIFrames+=2;
+				oPlayerManager.maxIFrames+=10;
 				break;
 			case "Versatile":
 				oPlayerManager.abilityCooldownMax-=40;
@@ -48,7 +48,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.rightAttackWindowLength +=0.5
 				break;
 			case "Ferocious":
-				oPlayerManager.rightAttackFrequency +=0.3;
+				oPlayerManager.rightAttackFrequency +=0.25;
 				break;
 			case "Resilient":
 				oPlayerManager.rightDefense +=0.5;
@@ -63,13 +63,13 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.rightAttackPunishMultiplier*=0.5;
 				break;
 			case "Stealthy":
-				oPlayerManager.rightHitbox*=0.6;
+				oPlayerManager.rightHitbox*=0.7;
 				break;
 			case "Healthy":
 				oPlayerManager.maxHp +=1;
 				break;
 			case "Reactionary":
-				oPlayerManager.maxIFrames+=2;
+				oPlayerManager.maxIFrames+=10;
 				break;
 			case "Versatile":
 				oPlayerManager.abilityCooldownMax-=40;

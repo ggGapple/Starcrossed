@@ -10,3 +10,5 @@ difficulty = 1;
 drawDifficulty = false;
 dTimer = 0;
 pinged = false;
+
+difficulties = ["Easy", "Normal", "Hard"]
