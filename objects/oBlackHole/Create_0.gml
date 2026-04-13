@@ -27,6 +27,8 @@ switch oEverythingManager.level {
 
 image_xscale = 3;
 image_yscale = 3;
+image_angle = 0;
+rotating = false
 xBase = room_width/2
 xOffset = 0;
 baseY = 84;
@@ -34,5 +36,4 @@ timer = 0;
 yOffset = 10;
 switchTimer = 0;
 switchWhen = irandom(300);
-
 iShouldTakeDamageTimer = 0;
