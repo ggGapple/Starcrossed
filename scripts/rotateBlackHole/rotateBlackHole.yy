@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"rotateBlackHole",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"rotateBlackHole",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

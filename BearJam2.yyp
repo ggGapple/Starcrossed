@@ -89,6 +89,7 @@
     {"id":{"name":"createProjectileScript","path":"scripts/createProjectileScript/createProjectileScript.yy",},},
     {"id":{"name":"dealDamageScript","path":"scripts/dealDamageScript/dealDamageScript.yy",},},
     {"id":{"name":"moveVignetteScript","path":"scripts/moveVignetteScript/moveVignetteScript.yy",},},
+    {"id":{"name":"rotateBlackHole","path":"scripts/rotateBlackHole/rotateBlackHole.yy",},},
     {"id":{"name":"takeDamageScript","path":"scripts/takeDamageScript/takeDamageScript.yy",},},
     {"id":{"name":"SndAbilityActivate","path":"sounds/SndAbilityActivate/SndAbilityActivate.yy",},},
     {"id":{"name":"SndAttack","path":"sounds/SndAttack/SndAttack.yy",},},

@@ -8,12 +8,18 @@ if (leftHp/leftHpMax < 0.25){
 	leftHpRegenTimer -= 2 * (1 - leftHp/leftHpMax)	
 }
 
+if (rightHp/rightHpMax <= 0.5 && !rotatedAlready){
+	rotatedAlready = true
+	oBlackHole.rotating = true
+}
+
 
 if (rightHp<=0) {
 	audio_play_sound(SndWinRound, 1, 0)
 	if (oEverythingManager.level == 5) {
 		room_goto(WinRoom);
 	} else {
+		rotatedAlready = false
 		room_goto(UpgradesRoom);
 	}
 }
