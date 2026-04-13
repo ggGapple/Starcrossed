@@ -20,7 +20,11 @@ switch oEverythingManager.level {
 	
 }
 
-image_xscale = 2;
-image_yscale = 2;
-x = room_width/2 -sprite_width/2
-y = 15;
+image_xscale = 3;
+image_yscale = 3;
+x = room_width/2
+baseY = 75;
+timer = 0;
+yOffset = 10;
+switchTimer = 0;
+switchWhen = irandom(300);
