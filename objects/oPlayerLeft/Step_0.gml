@@ -23,7 +23,7 @@ if (active) {
 	}
 	
 	// check bbox
-	while (x + sprite_get_width(sprite_index)*image_xscale > oBoundingBoxLeft.maxX) {
+	while (x-14 + sprite_get_width(sprite_index)*image_xscale > oBoundingBoxLeft.maxX) {
 		x--;
 	}
 	while (y + sprite_get_height(sprite_index)*image_yscale > oBoundingBoxLeft.maxY) {

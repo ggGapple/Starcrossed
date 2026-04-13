@@ -29,7 +29,7 @@ if (active) {
 	while (y + sprite_get_height(sprite_index)*image_yscale > oBoundingBoxRight.maxY) {
 		y--;
 	}
-	while (x < oBoundingBoxRight.minX) {
+	while (x+16 < oBoundingBoxRight.minX) {
 		x++;
 	}
 	while (y < oBoundingBoxRight.minY) {
