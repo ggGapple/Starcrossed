@@ -9,3 +9,4 @@ bossProjTimer = 200;
 difficulty = 1;
 drawDifficulty = false;
 dTimer = 0;
+pinged = false;

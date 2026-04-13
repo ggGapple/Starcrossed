@@ -22,3 +22,8 @@ if (room == DeathRoom) {
 	}
 	
 }
+
+if (room == CombatRoom and !pinged) {
+	dTimer = 180;
+	pinged = true;
+}
