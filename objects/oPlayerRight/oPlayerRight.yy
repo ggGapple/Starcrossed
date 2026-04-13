@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sRight",
-    "path":"sprites/sRight/sRight.yy",
+    "name":"sRightHitbox",
+    "path":"sprites/sRightHitbox/sRightHitbox.yy",
   },
   "spriteMaskId":null,
   "visible":true,

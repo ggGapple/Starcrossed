@@ -4,6 +4,6 @@ if (attackWindow > 0) {
 	if (oPlayerLeft.active) {
 		draw_text(oPlayerLeft.x + sprite_get_width(sLeft) +9,oPlayerLeft.y-25,"!");
 	} else {
-		draw_text(oPlayerRight.x + sprite_get_width(sRight) + 9,oPlayerRight.y-25,"!");
+		draw_text(oPlayerRight.x + sprite_get_width(sRightL) + 9,oPlayerRight.y-25,"!");
 	}
 }

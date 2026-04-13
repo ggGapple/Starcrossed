@@ -92,7 +92,7 @@ if (active) {
 		attackSpriteTimer--;
 		sprite_index = sPlayerAttack;
 		if (attackSpriteTimer==-1) {
-			sprite_index = sLeft;	
+			sprite_index = sLeftHitbox;	
 		}
 	}
 	
@@ -100,14 +100,14 @@ if (active) {
 	if (oPlayerManager.iFrames > 0) {
 		if (oPlayerManager.invincibleGood) {
 			if (oPlayerManager.iFrames ==1) {
-				sprite_index = sLeft;
+				sprite_index = sLeftHitbox;
 				oPlayerManager.invincibleGood = false;
 			} else {
 				sprite_index = sPlayerInvincibleGood;	
 			}	
 		} else {
 			if (oPlayerManager.iFrames ==1) {
-				sprite_index = sLeft;
+				sprite_index = sLeftHitbox;
 			} else {
 				sprite_index = sPlayerInvincible;	
 			}

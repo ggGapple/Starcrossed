@@ -1,9 +1,13 @@
 rightDefense = 1;
 leftDefense = 1; //0 to 1; closer to zero is higher defense (i know it's stupid and inconsistent mb)
 
-
 rightHpMax = 20;
 leftHpMax = 10;
+
+if (oEverythingManager.level == 5) {
+	rightHpMax = 30;	
+}
+
 
 rightHp = rightHpMax;
 leftHp = 5;

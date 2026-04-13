@@ -1,4 +1,4 @@
-image_xscale = 22;
+image_xscale = 24;
 image_yscale = 6;
 depth = -1;
 timer = 50;

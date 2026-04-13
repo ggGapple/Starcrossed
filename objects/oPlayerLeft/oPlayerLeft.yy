@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sLeft",
-    "path":"sprites/sLeft/sLeft.yy",
+    "name":"sLeftHitbox",
+    "path":"sprites/sLeftHitbox/sLeftHitbox.yy",
   },
   "spriteMaskId":null,
   "visible":true,
