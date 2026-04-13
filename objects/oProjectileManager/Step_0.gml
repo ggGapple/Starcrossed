@@ -3,10 +3,10 @@ if (active) {
 	timerHorizontal--;
 	
 	var leftHpPercent = oEnemyManager.leftHp/oEnemyManager.leftHpMax
-	var baseTimer = lerp(9, 25, 1 - leftHpPercent);
+	var baseTimer = lerp(12, 35, 1 - leftHpPercent);
 
 	if (timerVertical < 0) {
-		timerVertical = (baseTimer + irandom(4) - oEverythingManager.level);
+		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level);
 		if (oEverythingManager.level == 0){
 			timerVertical += 10;	
 		}
@@ -14,7 +14,7 @@ if (active) {
 	}
 
 	if (timerHorizontal < 0) {
-		timerHorizontal = (baseTimer + irandom(4) - oEverythingManager.level);
+		timerHorizontal = (baseTimer + irandom(4) - 1.25*oEverythingManager.level);
 		if (oEverythingManager.level == 0){
 			timerHorizontal += 10;	
 		}

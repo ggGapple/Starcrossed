@@ -4,10 +4,10 @@ switch oEverythingManager.level {
 		instance_destroy();
 		break;
 	case 1:
-		sprite_index = sBlackHole2;
+		sprite_index = sBlackHole1;
 		break;
 	case 2:
-		sprite_index = sBlackHole1;
+		sprite_index = sBlackHole2;
 		redSprite = sBlackHole1Red;
 		break;
 	case 3:
