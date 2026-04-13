@@ -14,4 +14,7 @@ if (in) {
 
 if (image_alpha == 0 and oPlayerLeft.active) {
 	in = true;
+}if (image_alpha !=0 and oPlayerRight.active) {
+	in = false;
+	out = true;
 }
