@@ -14,7 +14,7 @@ if ((x >= room_width/2 and oPlayerRight.active) or (x <= room_width/2 and oPlaye
 }
 
 if (spawnTimer < 0) {
-	spawnTimer = 30;
+	spawnTimer = 40;
 	instance_create_depth(x,
 	y,-1,oCircleProjectileResidue);
 }

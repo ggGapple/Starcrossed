@@ -5,4 +5,4 @@ spriteRight = sBallProjectile;
 image_xscale = 1.3;
 image_yscale = 1.3;
 
-spawnTimer = 30;
+spawnTimer = 40;

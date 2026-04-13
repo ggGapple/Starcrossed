@@ -6,19 +6,14 @@ textSpeed = 0.5;
 display = true;
 
 texts = [
-"Welcome to Starcrossed (space)",
-"Use WASD to move and dodge projectiles (space)",
-"Use arrow keys to swap between the two half stars",
-"Only half of the screen will remain active at a time,",
-"meaning all projectiles on the other side will freeze",
-"At random intervals, you'll get an attack notification",
-"Press up arrow in time to attack",
-"If you press up arrow before or after the attack window,",
-"you'll take damage. So try to react well",
-"You will attack the hp bar of whichever side you are on",
-"Left hp bar controls spawn rates and bullet speed, but regenerates"
-,"Right hp bar is enemy hp. Get that to 0 to beat the enemy",
-"Try not to get hit. Good luck!"
+"Welcome to Starcrossed! [press space]",
+"Move and dodge with WASD.",
+"Use arrow keys to swap between the two half stars.",
+"ONLY HALF of the screen will remain active at a time.",
+"When a ' ! ' appears, press UP arrow to attack the side you're on!",
+"Left HP bar controls spawn rates and projectile speed,",
+"Right HP bar is enemy HP. Get that to 0 to win!",
+"Good luck!"
 ]
 
 fullText = texts[curIndex];
