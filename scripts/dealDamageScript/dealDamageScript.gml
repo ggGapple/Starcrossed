@@ -1,4 +1,5 @@
 function dealDamage(dmg){
+	oBlackHole.iShouldTakeDamageTimer = 30;
 	if (oPlayerLeft.active) {
 		oLeftHealthBar.damageToTake = dmg*oEnemyManager.leftDefense;
 		oLeftHealthBar.wiggle +=90;
