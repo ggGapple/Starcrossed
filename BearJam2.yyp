@@ -149,8 +149,8 @@
     {"roomId":{"name":"StartRoom","path":"rooms/StartRoom/StartRoom.yy",},},
     {"roomId":{"name":"CombatRoom","path":"rooms/CombatRoom/CombatRoom.yy",},},
     {"roomId":{"name":"UpgradesRoom","path":"rooms/UpgradesRoom/UpgradesRoom.yy",},},
-    {"roomId":{"name":"WinRoom","path":"rooms/WinRoom/WinRoom.yy",},},
     {"roomId":{"name":"DeathRoom","path":"rooms/DeathRoom/DeathRoom.yy",},},
+    {"roomId":{"name":"WinRoom","path":"rooms/WinRoom/WinRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -41,20 +41,27 @@ if (room == UpgradesRoom && array_length(upgradeBoxes) > 0) {
 		
 		draw_set_font(FntMedium);
 		draw_set_color(oColorCodes.lightRed);
-		draw_text(upgradeBoxes[0].x - string_width("A")/2 + 11*sprite_get_width(sButton)
+		draw_text(upgradeBoxes[0].x - string_width("A")/2 + (upgradeBoxes[0].image_xscale)/2
+		*sprite_get_width(sButton)
 		,upgradeBoxes[0].y-string_height("A")-5,"A");
-		draw_text(upgradeBoxes[1].x - string_width("S")/2+ 11*sprite_get_width(sButton)
+		draw_text(upgradeBoxes[1].x - string_width("S")/2+ (upgradeBoxes[1].image_xscale)/2
+		*sprite_get_width(sButton)
 		,upgradeBoxes[1].y-string_height("S")-5,"S");
-		draw_text(upgradeBoxes[2].x - string_width("D")/2+ 11*sprite_get_width(sButton)
+		draw_text(upgradeBoxes[2].x - string_width("D")/2+ (upgradeBoxes[2].image_xscale)/2
+		*sprite_get_width(sButton)
 		,upgradeBoxes[2].y-string_height("D")-5,"D");
-	} else if (selected == 0) {
-		draw_text(upgradeBoxes[0].x - string_width(curUpgrades[0])/2 + 11*sprite_get_width(sButton)
+	} else if (selected == 0) {	
+		
+		draw_text(upgradeBoxes[0].x - string_width(curUpgrades[0])/2 + (upgradeBoxes[0].image_xscale)/2
+		*sprite_get_width(sButton)
 		,upgradeBoxes[0].y,curUpgrades[0]);	
 	} else if (selected ==1) {
-		draw_text(upgradeBoxes[1].x - string_width(curUpgrades[1])/2+ 11*sprite_get_width(sButton)
+		draw_text(upgradeBoxes[1].x - string_width(curUpgrades[1])/2+ (upgradeBoxes[1].image_xscale)/2
+		*sprite_get_width(sButton)
 		,upgradeBoxes[1].y,curUpgrades[1]);	
 	} else if (selected ==2) {
-		draw_text(upgradeBoxes[2].x - string_width(curUpgrades[2])/2+ 11*sprite_get_width(sButton)
+		draw_text(upgradeBoxes[2].x - string_width(curUpgrades[2])/2+ (upgradeBoxes[2].image_xscale)/2
+		*sprite_get_width(sButton)
 		,upgradeBoxes[2].y,curUpgrades[2]);
 	}
 	

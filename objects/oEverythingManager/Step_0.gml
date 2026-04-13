@@ -15,3 +15,10 @@ if (keyboard_check_pressed(ord("P")) and room != StartRoom) {
 	}
 	dTimer = 180;
 }
+
+if (room == DeathRoom) {
+	if (keyboard_check_pressed(ord("R"))) {
+		game_restart();
+	}
+	
+}
