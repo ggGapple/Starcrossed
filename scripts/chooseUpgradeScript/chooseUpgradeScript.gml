@@ -12,7 +12,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.leftDefense +=0.5;
 				break;
 			case "Vicious":
-				oPlayerManager.leftAttackDamage +=1;
+				oPlayerManager.leftAttackDamage +=0.5;
 				break;
 			case "Fast":
 				oPlayerManager.leftMovementSpeed += 0.3;
@@ -54,7 +54,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.rightDefense +=0.5;
 				break;
 			case "Vicious":
-				oPlayerManager.rightAttackDamage +=1;
+				oPlayerManager.rightAttackDamage +=0.5;
 				break;
 			case "Fast":
 				oPlayerManager.rightMovementSpeed += 0.3;
