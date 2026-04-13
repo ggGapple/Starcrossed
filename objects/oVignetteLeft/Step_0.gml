@@ -11,3 +11,7 @@ if (in) {
 		out = false;
 	}
 }
+
+if (image_alpha == 0 and oPlayerLeft.active) {
+	in = true;
+}

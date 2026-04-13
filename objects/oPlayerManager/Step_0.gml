@@ -14,6 +14,7 @@ if (instance_exists(oPlayerLeft)) {
 		oCameraManager.shakeAmount = 5;
 		moveVignette();
 
+
 	} else if (keyboard_check_pressed(vk_right) && oPlayerRight.active = false) {
 		audio_play_sound(SndSwitch,1,0);
 		oPlayerRight.active = true;
