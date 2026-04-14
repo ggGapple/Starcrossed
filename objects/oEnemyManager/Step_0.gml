@@ -8,7 +8,7 @@ if (leftHp/leftHpMax < 0.25){
 	leftHpRegenTimer -= 2 * (1 - leftHp/leftHpMax)	
 }
 
-if (rightHp/rightHpMax <= 0.5 && !rotatedAlready){
+if (rightHp/rightHpMax <= 0.5 && !rotatedAlready && instance_exists(oBlackHole)){
 	rotatedAlready = true
 	oBlackHole.rotating = true
 }
