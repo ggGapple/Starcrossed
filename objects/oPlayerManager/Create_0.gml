@@ -1,7 +1,7 @@
 hp = 10;
 maxHp = 10;
 iFrames = 0;
-leftDefense = 0;
+leftDefense = 1;
 leftMovementSpeed = 1;
 leftHitbox = 2;
 leftAttackWindowLength = 1;
@@ -11,7 +11,7 @@ leftAttackDamage = 1;
 maxIFrames = 10;
 
 
-rightDefense = 0;
+rightDefense = 1;
 rightMovementSpeed = 1;
 rightHitbox = 2;
 rightAttackWindowLength = 1;

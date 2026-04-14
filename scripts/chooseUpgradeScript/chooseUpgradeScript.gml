@@ -9,7 +9,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.leftAttackFrequency +=0.25;
 				break;
 			case "Resilient":
-				oPlayerManager.leftDefense +=0.5;
+				oPlayerManager.leftDefense +=0.4;
 				break;
 			case "Vicious":
 				oPlayerManager.leftAttackDamage +=0.5;
@@ -51,7 +51,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.rightAttackFrequency +=0.25;
 				break;
 			case "Resilient":
-				oPlayerManager.rightDefense +=0.5;
+				oPlayerManager.rightDefense +=0.4;
 				break;
 			case "Vicious":
 				oPlayerManager.rightAttackDamage +=0.5;
