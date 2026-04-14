@@ -60,9 +60,9 @@ function chooseProjectileVertical() {
 		} else {
 			array_push(options,oSnakeProjectileVertical);
 		}
-		
 		array_push(weights,1);
-		sum+=1;		
+		weights[0]+= 2;
+		sum+=3;		
 	}
 	var choice = irandom(sum)
 	var curSum = 0;
@@ -97,7 +97,6 @@ function chooseProjectileHorizontal() {
 		} else {
 			array_push(options,oSnakeProjectileHorizontal);
 		}
-		array_push(options,oSnakeProjectileHorizontal);
 		array_push(weights,1);
 		weights[0]+= 2;
 		sum+=3;		
