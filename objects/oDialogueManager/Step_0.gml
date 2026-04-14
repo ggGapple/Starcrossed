@@ -8,6 +8,8 @@ if (display) {
 			curChar = string_length(fullText)-1;
 		} else {
 			curChar = 0;
+			doneTimer = 0;
+			done = false;
 			if (curIndex = array_length(texts) -1) {
 				display = false;
 				oEverythingManager.doneTutorial = true;
@@ -18,6 +20,8 @@ if (display) {
 				audio_play_sound(SndDialogueNext, 0.5, 0)
 				if (curIndex==1) {
 					oProjectileManager.active = true;	
+				} else if (curIndex == 3) {
+					oProjectileManager.active = false;	
 				}
 			}
 		}
@@ -27,4 +31,15 @@ if (display) {
 if (oEverythingManager.level != 0) {
 	oProjectileManager.active = true;
 	instance_destroy();
+}
+
+if (!done && curChar == string_length(fullText)-1) {
+	done = true;
+}
+if (done) {
+	doneTimer++;	
+}
+
+if (doneTimer == 180) {
+	fullText = fullText + " [space]";
 }

@@ -6,7 +6,7 @@ textSpeed = 0.5;
 display = true;
 
 texts = [
-"Welcome to Starcrossed! [press space]",
+"Welcome to Starcrossed!",
 "Move and dodge with WASD.",
 "Use arrow keys to swap between the two half stars.",
 "ONLY HALF of the screen will remain active at a time.",
@@ -17,3 +17,6 @@ texts = [
 ]
 
 fullText = texts[curIndex];
+
+done = false;
+doneTimer = 0;
