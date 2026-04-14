@@ -10,5 +10,6 @@ difficulty = 1;
 drawDifficulty = false;
 dTimer = 0;
 pinged = false;
-
-difficulties = ["Easy", "Normal", "Hard"]
+dIndex = 2;
+difficulties=  [0.25, 0.5, 1, 1.5, 2.5, 5]
+difficultyNames = ["Very Easy", "Easy", "Normal", "Hard", "Expert", "Insane"]

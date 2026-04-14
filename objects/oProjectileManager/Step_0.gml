@@ -6,7 +6,8 @@ if (active) {
 	var baseTimer = lerp(10, 30, 1 - leftHpPercent);
 
 	if (timerVertical < 0) {
-		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/oEverythingManager.difficulty;
+		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/
+		oEverythingManager.difficulties[oEverythingManager.dIndex];
 		if (oEverythingManager.level == 0){
 			timerVertical += 10;	
 		}
@@ -14,7 +15,8 @@ if (active) {
 	}
 
 	if (timerHorizontal < 0) {
-		timerHorizontal = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/oEverythingManager.difficulty;
+		timerHorizontal = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/
+		oEverythingManager.difficulties[oEverythingManager.dIndex];
 		if (oEverythingManager.level == 0){
 			timerHorizontal += 10;	
 		}

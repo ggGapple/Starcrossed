@@ -9,7 +9,10 @@ if (room == CombatRoom and level == 5) {
 }
 
 if (keyboard_check_pressed(ord("P")) and room != StartRoom) {
-	difficulty +=0.5;
+	dIndex++;
+	if (dIndex > array_length(difficulties)-1) {
+		dIndex = 0;	
+	}
 	if (difficulty > 1.5) {
 		difficulty = 0.5;
 	}
