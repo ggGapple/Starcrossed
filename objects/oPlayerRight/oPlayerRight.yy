@@ -13,7 +13,10 @@
     "name":"Player",
     "path":"folders/Player.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oPlayerParent",
+    "path":"objects/oPlayerParent/oPlayerParent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sRightHitbox",
-    "path":"sprites/sRightHitbox/sRightHitbox.yy",
+    "name":"sRight",
+    "path":"sprites/sRight/sRight.yy",
   },
   "spriteMaskId":null,
   "visible":true,

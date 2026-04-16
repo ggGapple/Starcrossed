@@ -8,8 +8,8 @@ if (instance_exists(oPlayerLeft)) {
 		if (oPlayerRight.active == false and !instance_exists(oPlayerTransition)) {
 			instance_create_depth(room_width/2,room_height/2,-2,oPlayerTransition);
 		}
-		oPlayerLeft.sprite_index = sLeftHitbox;
-		oPlayerRight.sprite_index = sRightR;
+		oPlayerLeft.sprite_index = sLeft;
+		oPlayerRight.sprite_index = sInactiveRight;
 		oPlayerRight.active = false;
 		oCameraManager.shakeAmount = 5;
 		moveVignette();
@@ -19,13 +19,19 @@ if (instance_exists(oPlayerLeft)) {
 		audio_play_sound(SndSwitch,1,0);
 		oPlayerRight.active = true;
 		oPlayerLeft.active = false;
-		oPlayerLeft.sprite_index = sRightL;
-		oPlayerRight.sprite_index = sRightHitbox;
+		oPlayerLeft.sprite_index = sInactiveLeft;
+		oPlayerRight.sprite_index = sRight;
 		oCameraManager.shakeAmount = 5;
 		moveVignette();
 	}
 
 	if (iFrames > 0) {
 		iFrames--;
+	}
+	
+	// death logic
+	if (oPlayerManager.hp< 0) {
+		oEverythingManager.playerLives--;
+		room_goto(DeathRoom);
 	}
 }

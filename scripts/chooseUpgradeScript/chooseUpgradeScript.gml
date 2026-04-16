@@ -18,7 +18,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.leftMovementSpeed += 0.3;
 				break;
 			case "Forgiving":
-				oPlayerManager.leftAttackPunishMultiplier*=0.5;
+				oPlayerManager.leftAttackPunishMultiplier/=2;
 				break;
 			case "Stealthy":
 				oPlayerManager.leftHitbox*=0.7;
@@ -60,7 +60,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.rightMovementSpeed += 0.3;
 				break;
 			case "Forgiving":
-				oPlayerManager.rightAttackPunishMultiplier*=0.5;
+				oPlayerManager.rightAttackPunishMultiplier/=2;
 				break;
 			case "Stealthy":
 				oPlayerManager.rightHitbox*=0.7;

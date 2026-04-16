@@ -1,5 +1,7 @@
 attackTimer--;
 
+
+// start attack window, give notif
 if (attackTimer<= 0 and !doneAttackNotif) {
 	audio_play_sound(SndAttackNotif,1,0);
 	if (oPlayerLeft.active) {
@@ -7,20 +9,19 @@ if (attackTimer<= 0 and !doneAttackNotif) {
 	} else {
 		attackWindow = irandom_range(30,80)*oPlayerManager.rightAttackWindowLength;
 	}
-	
 	doneAttackNotif = true;
 }
 
+// if they attack but window is inactive
 if (keyboard_check_pressed(vk_up) and attackWindow < 0) {
 	if (oPlayerLeft.active) {
-		takeDamage( oPlayerManager.leftAttackPunishMultiplier);
+		takeDamage(oPlayerManager.leftAttackPunishMultiplier);
 	} else {
-		takeDamage( oPlayerManager.rightAttackPunishMultiplier);
+		takeDamage(oPlayerManager.rightAttackPunishMultiplier);
 	}
-	
 }
 
-
+// if window is open
 if (attackWindow >= 0) {
 	attackWindow--;
 	if (keyboard_check_pressed(vk_up)) {
@@ -31,15 +32,15 @@ if (attackWindow >= 0) {
 		} else {
 			dealDamage(oPlayerManager.rightAttackDamage);
 		}
-		
 	}
+	
+	// reset timer
 	if (attackWindow < 0) {
 		if (oPlayerLeft.active) {
 			attackTimer = irandom_range(30,180)*(1/oPlayerManager.leftAttackFrequency);
 		} else {
 			attackTimer = irandom_range(30,180)*(1/oPlayerManager.rightAttackFrequency);
 		}
-		
 		doneAttackNotif = false;
 	}
 }

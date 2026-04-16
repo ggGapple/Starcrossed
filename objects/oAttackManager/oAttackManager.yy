@@ -10,8 +10,8 @@
   "name":"oAttackManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Attack",
-    "path":"folders/Attack.yy",
+    "name":"Player",
+    "path":"folders/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

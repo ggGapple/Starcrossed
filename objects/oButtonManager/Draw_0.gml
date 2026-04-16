@@ -9,6 +9,6 @@ if (!freeze) {
 
 
 if (!freeze) {
-	draw_sprite_ext(sLeftAnimated,spriteTimer,room_width/2-sprite_get_width(sLeftAnimated)*5,
-	room_height/2-sprite_get_height(sLeft)*5,10,10,0,c_white,1);
+	draw_sprite_ext(sActiveGlisten,spriteTimer,room_width/2-sprite_get_width(sActiveGlisten)*5,
+	room_height/2-sprite_get_height(sActive)*5,10,10,0,c_white,1);
 }

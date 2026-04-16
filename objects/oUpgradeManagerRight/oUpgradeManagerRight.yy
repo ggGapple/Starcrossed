@@ -10,8 +10,8 @@
   "name":"oUpgradeManagerRight",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/UI.yy",
+    "name":"Upgrades",
+    "path":"folders/Upgrades.yy",
   },
   "parentObjectId":null,
   "persistent":false,

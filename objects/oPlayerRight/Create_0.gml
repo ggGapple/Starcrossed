@@ -1,8 +1,9 @@
+event_inherited();
 active = false;
 image_xscale = oPlayerManager.rightHitbox;
 image_yscale = oPlayerManager.rightHitbox;
-drawExplosion = false;
-explosionTimer = 50;
-
-attackSpriteTimer = 0;
-maxAttackSpriteTimer = 15;
+moveSpeed = oPlayerManager.rightMovementSpeed;
+activeSprite = sRight;
+attackSprite = sPlayerAttackRight;
+invincibleSprite = sPlayerInvincibleRight;
+invincibleTpSprite = sPlayerTpInvincibleRight;

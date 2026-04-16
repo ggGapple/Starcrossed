@@ -4,7 +4,7 @@
   "bboxMode":2,
   "bbox_bottom":14,
   "bbox_left":1,
-  "bbox_right":7,
+  "bbox_right":8,
   "bbox_top":1,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Player",
-    "path":"folders/Player.yy",
+    "name":"Sprites",
+    "path":"folders/Player/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":16,
+  "width":9,
 }
