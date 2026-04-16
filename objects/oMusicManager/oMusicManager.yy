@@ -10,8 +10,8 @@
   "name":"oMusicManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"BearJam2",
-    "path":"BearJam2.yyp",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -45,8 +45,8 @@
   ],
   "name":"CombatRoom",
   "parent":{
-    "name":"BearJam2",
-    "path":"BearJam2.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -23,7 +23,7 @@ descs = {
 "Versatile" : "-ability cooldown",
 
 //special abilities
-"Elusive": "+teleport ability",
+"Elusive": "+teleport ability (with i frames)",
 "Violent": "+explode ability",
 "Peaceful": "+heal ability",
 
@@ -59,7 +59,20 @@ curChar = 0;
 textSpeed = 0.5;
 fullText = "";
 
+curIndex3 = 0;
+curChar3 = 0;
+fullText3 = "";
+
+curIndex4 = 0;
+curChar4 = 0;
+fullText4 = "";
+yeahWereDone = false;
+
 curIndex2 = 0;
 curChar2 = 0;
 fullText2 = "";
 delay = 60;
+
+num = 0;
+side = "left";
+sideAbbreviation = "L";

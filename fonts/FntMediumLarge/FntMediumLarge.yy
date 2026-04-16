@@ -119,8 +119,8 @@
   "maintainGms1Font":false,
   "name":"FntMediumLarge",
   "parent":{
-    "name":"UI",
-    "path":"folders/UI.yy",
+    "name":"Fonts",
+    "path":"folders/UI/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

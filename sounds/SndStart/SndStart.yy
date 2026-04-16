@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"SndStart",
   "parent":{
-    "name":"UI",
-    "path":"folders/UI.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

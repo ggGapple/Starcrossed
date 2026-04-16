@@ -9,8 +9,8 @@
   "name":"oCombatInit",
   "overriddenProperties":[],
   "parent":{
-    "name":"BearJam2",
-    "path":"BearJam2.yyp",
+    "name":"Enemy",
+    "path":"folders/Enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -10,8 +10,8 @@
   "name":"oCameraManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"BearJam2",
-    "path":"BearJam2.yyp",
+    "name":"UI",
+    "path":"folders/UI.yy",
   },
   "parentObjectId":null,
   "persistent":true,

@@ -10,8 +10,8 @@
   "name":"oWinManager",
   "overriddenProperties":[],
   "parent":{
-    "name":"BearJam2",
-    "path":"BearJam2.yyp",
+    "name":"Misc",
+    "path":"folders/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

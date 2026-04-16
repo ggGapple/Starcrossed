@@ -14,6 +14,7 @@
     {"name":"inst_1F770937","path":"rooms/StartRoom/StartRoom.yy",},
     {"name":"inst_27A91443","path":"rooms/StartRoom/StartRoom.yy",},
     {"name":"inst_65936F6C","path":"rooms/StartRoom/StartRoom.yy",},
+    {"name":"inst_3DAA640D","path":"rooms/StartRoom/StartRoom.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -26,13 +27,14 @@
         {"$GMRInstance":"v4","%Name":"inst_1F770937","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1F770937","objectId":{"name":"oColorCodes","path":"objects/oColorCodes/oColorCodes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_27A91443","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_27A91443","objectId":{"name":"oMusicManager","path":"objects/oMusicManager/oMusicManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_65936F6C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65936F6C","objectId":{"name":"oCameraManager","path":"objects/oCameraManager/oCameraManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_3DAA640D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3DAA640D","objectId":{"name":"oCheatsManager","path":"objects/oCheatsManager/oCheatsManager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"StartRoom",
   "parent":{
-    "name":"BearJam2",
-    "path":"BearJam2.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

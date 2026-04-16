@@ -15,7 +15,6 @@ if (active) {
 		x-=3*moveSpeed;	
 	}
 	
-	
 
 	// check bullets
 	var _bullet = instance_place(x, y, oBulletParent);
@@ -49,7 +48,7 @@ if (active) {
 		else if (oPlayerManager.violent) {
 			var collisions = ds_list_create();
 			var num = collision_circle_list(x + sprite_width/2,
-			y + sprite_height/2,100,oProjectileManager.projectiles, 
+			y + sprite_height/2,105,oProjectileManager.projectiles, 
 			false, true, collisions,false);
 			drawExplosion = true;
 			explosionTimer = 60;
@@ -69,7 +68,7 @@ if (active) {
 		attackSpriteTimer--;
 		sprite_index = attackSprite;
 		if (attackSpriteTimer==-1) {
-			sprite_index = activeSprite;	//hitbox
+			sprite_index = activeSprite;
 		}
 	}
 	
