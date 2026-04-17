@@ -19,7 +19,7 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 		var _displayText = string_copy(fullText, 1, floor(curChar));
 		fullText2 = "Double tap to confirm"
 		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
-		drawTextShadow(room_width/2-string_width(fullText)/2, 20, _displayText,3);
+		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
 		draw_set_font(FntMedium);
 		draw_set_color(#1e579c);
 		if (selectingUpgrade) {

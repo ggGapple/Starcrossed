@@ -11,6 +11,6 @@ if (damageToTake > 0) {
 	oPlayerManager.hp-=0.1;
 }
 
-if (damageToTake == 0 && curHp != oPlayerManager.hp) {
+if (damageToTake <= 0 && curHp != oPlayerManager.hp) {
 	curHp = oPlayerManager.hp;	
 }
