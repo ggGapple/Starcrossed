@@ -1,14 +1,7 @@
-
-
-
 timer++; 
+image_xscale = display_get_gui_width()/sprite_get_width(sBlack);
+image_yscale = display_get_gui_height()/sprite_get_height(sBlack);
 
-if (timer == 60) {
-	leftX -=25;
-	rightX +=25;
-	oScreenShake.shakeAmount = 10;
-	audio_play_sound(SndStart,1,0);
-}
 
 if (timer > 120) {
 	image_alpha+=0.01;
