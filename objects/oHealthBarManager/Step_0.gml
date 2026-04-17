@@ -7,6 +7,10 @@ if (wiggle > 0){
 }
 
 if (damageToTake > 0) {
-	damageToTake-=0.2;
-	oPlayerManager.hp-=0.2;
+	damageToTake-=0.1;
+	oPlayerManager.hp-=0.1;
+}
+
+if (damageToTake == 0 && curHp != oPlayerManager.hp) {
+	curHp = oPlayerManager.hp;	
 }

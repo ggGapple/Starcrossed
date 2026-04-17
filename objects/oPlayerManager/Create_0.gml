@@ -34,3 +34,4 @@ abilityLenX = 75;
 abilityLenY = 20;
 
 invincibleGood = false;
+curHp = maxHp;

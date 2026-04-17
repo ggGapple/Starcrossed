@@ -30,7 +30,7 @@ if (instance_exists(oPlayerLeft)) {
 	}
 	
 	// death logic
-	if (oPlayerManager.hp< 0) {
+	if (oPlayerManager.hp<= 0) {
 		oEverythingManager.playerLives--;
 		room_goto(DeathRoom);
 	}

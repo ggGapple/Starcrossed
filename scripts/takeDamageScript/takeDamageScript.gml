@@ -10,5 +10,6 @@ function takeDamage(damage = 1){
 	
 	oHealthBarManager.wiggle += 50;
 	oPlayerManager.iFrames = oPlayerManager.maxIFrames;
+	oScreenShake.shakeAmount+=4;
 	audio_play_sound(SndHurt,1,0);
 }
