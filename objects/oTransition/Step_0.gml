@@ -6,7 +6,7 @@ timer++;
 if (timer == 60) {
 	leftX -=25;
 	rightX +=25;
-	oCameraManager.shakeAmount = 10;
+	oScreenShake.shakeAmount = 10;
 	audio_play_sound(SndStart,1,0);
 }
 

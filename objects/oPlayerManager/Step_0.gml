@@ -11,7 +11,7 @@ if (instance_exists(oPlayerLeft)) {
 		oPlayerLeft.sprite_index = sLeft;
 		oPlayerRight.sprite_index = sInactiveRight;
 		oPlayerRight.active = false;
-		oCameraManager.shakeAmount = 5;
+		oScreenShake.shakeAmount = 5;
 		moveVignette();
 
 
@@ -21,7 +21,7 @@ if (instance_exists(oPlayerLeft)) {
 		oPlayerLeft.active = false;
 		oPlayerLeft.sprite_index = sInactiveLeft;
 		oPlayerRight.sprite_index = sRight;
-		oCameraManager.shakeAmount = 5;
+		oScreenShake.shakeAmount = 5;
 		moveVignette();
 	}
 

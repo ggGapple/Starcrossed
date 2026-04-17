@@ -19,7 +19,7 @@ if (boomTimer <= -80 and boomTimer > -999) {
 	image_alpha = 1;
 	var list = ds_list_create();
 	var count = instance_place_list(x, y, all, list, false);
-	oCameraManager.shakeAmount+=20;
+	oScreenShake.shakeAmount+=20;
 	audio_play_sound(SndStart,1,0);
 	if (count > 0) {
 	    for (i = 0; i < count; i++;) {

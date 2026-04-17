@@ -1,8 +1,7 @@
 title = "Starcrossed"
-yOffset = 0;
-goinUp = 1;
+depth = -2
 
-waveTimer = 0;
-waveSpeed = 0.1;
-waveHeight = 20;
-waveFreq = 0.5;
+animTimer = 0;
+spriteTimer = 0;
+freeze = false;
+started = false;
