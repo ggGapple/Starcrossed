@@ -8,7 +8,7 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 		var _displayText = string_copy(fullText, 1, floor(curChar));
 		fullText2 = "As a reward, pick a special ability that triggers with down arrow"
 		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
-		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
+		drawTextShadow(room_width/2-string_width(fullText)/2, 20, _displayText,3);
 		draw_set_font(FntMedium);
 		if (selectingUpgrade) {
 			draw_text(room_width/2-string_width(fullText2)/2,155,
@@ -19,7 +19,7 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 		var _displayText = string_copy(fullText, 1, floor(curChar));
 		fullText2 = "Double tap to confirm"
 		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
-		draw_text(room_width/2-string_width(fullText)/2, 20, _displayText);
+		drawTextShadow(room_width/2-string_width(fullText)/2, 20, _displayText,3);
 		draw_set_font(FntMedium);
 		draw_set_color(#1e579c);
 		if (selectingUpgrade) {

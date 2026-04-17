@@ -24,7 +24,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.leftHitbox*=0.7;
 				break;
 			case "Healthy":
-				oPlayerManager.maxHp +=1;
+				oPlayerManager.maxHp +=2;
 				break;
 			case "Reactionary":
 				oPlayerManager.maxIFrames+=10;
@@ -66,7 +66,7 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.rightHitbox*=0.7;
 				break;
 			case "Healthy":
-				oPlayerManager.maxHp +=1;
+				oPlayerManager.maxHp +=2;
 				break;
 			case "Reactionary":
 				oPlayerManager.maxIFrames+=10;

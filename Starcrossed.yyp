@@ -100,6 +100,7 @@
     {"id":{"name":"moveVignetteScript","path":"scripts/moveVignetteScript/moveVignetteScript.yy",},},
     {"id":{"name":"rotateBlackHole","path":"scripts/rotateBlackHole/rotateBlackHole.yy",},},
     {"id":{"name":"takeDamageScript","path":"scripts/takeDamageScript/takeDamageScript.yy",},},
+    {"id":{"name":"textScripts","path":"scripts/textScripts/textScripts.yy",},},
     {"id":{"name":"SndAbilityActivate","path":"sounds/SndAbilityActivate/SndAbilityActivate.yy",},},
     {"id":{"name":"SndAttack","path":"sounds/SndAttack/SndAttack.yy",},},
     {"id":{"name":"SndAttackNotif","path":"sounds/SndAttackNotif/SndAttackNotif.yy",},},
