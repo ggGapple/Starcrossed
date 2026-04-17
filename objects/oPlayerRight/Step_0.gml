@@ -2,16 +2,16 @@ event_inherited();
 
 if (active) {
 	// check bbox
-	while (x + sprite_get_width(sprite_index)*image_xscale > oBoundingBoxRight.maxX) {
+	while (x+sprite_width > oBoundingBoxRight.maxX) {
 		x--;
 	}
-	while (y + sprite_get_height(sprite_index)*image_yscale > oBoundingBoxRight.maxY) {
+	while (y + sprite_height/2 > oBoundingBoxRight.maxY) {
 		y--;
 	}
-	while (x+16 < oBoundingBoxRight.minX) {
+	while (x < oBoundingBoxRight.minX) {
 		x++;
 	}
-	while (y < oBoundingBoxRight.minY) {
+	while (y - sprite_height/2 < oBoundingBoxRight.minY) {
 		y++;
 	}
 }
