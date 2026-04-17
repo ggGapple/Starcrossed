@@ -1,1 +1,1 @@
-draw_sprite_ext(sVignette, 0, x, y, image_xscale*1.5, image_yscale*1.1, 0, c_white, max(0,image_alpha-0.3));
+draw_sprite_ext(sVignette, 0, x, y, image_xscale, image_yscale, 0, c_white, max(0,image_alpha-0.4));
