@@ -1,17 +1,27 @@
-function createProjectile(projX,projY, dir){
+function createProjectile(projX,projY, dir, undodgeable = false){
+	// proj x and proj y are deprecated and never used but im too lazy to fix it everywhere else
 	if (dir == "vertical") {
-		var proj = chooseProjectileVertical();
+		if (undodgeable) {
+			var proj = oUndodgeabale;
+			if (oPlayerLeft.active) {
+				var instanceX =0;
+			} else {
+				var instanceX = room_width/2;
+			}
+		} else {
+			var proj = chooseProjectileVertical();
+			if (oPlayerLeft.active) {
+				var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
+			} else if (oPlayerRight.active) {
+				var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
+			}
+		}
 		var instanceY = -5;
 		if (proj == oSnakeProjectileVertical) {
 			instanceY-=90
 		}
-		if (oPlayerLeft.active) {
-				var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
-				instance_create_depth(instanceX,instanceY,depth,proj);
-			} else if (oPlayerRight.active) {
-				var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
-				instance_create_depth(instanceX,instanceY,depth,proj);
-			}	
+
+		instance_create_depth(instanceX,instanceY,depth,proj);
 	} else if (dir == "horizontal") {
 		var willItBeRightward = choose(true, false);
 		var proj = chooseProjectileHorizontal();

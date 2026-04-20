@@ -1,6 +1,7 @@
 draw_set_font(FntTitle);
-draw_set_color(oColorCodes.lightBlue);
+
 draw_set_halign(fa_center);
+draw_set_color(oColorCodes.lightBlue);
 draw_text_transformed(display_get_gui_width()/2,display_get_gui_height()*-1/35,
 title,oResolutionManager.uiScale,
 oResolutionManager.uiScale,0);

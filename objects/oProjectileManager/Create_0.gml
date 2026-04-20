@@ -7,3 +7,5 @@ oYellowProjectileVertical,oSpinningProjectileHorizontal,oSpinningProjectileVerti
 oCircleProjectileHorizontal,oCircleProjectileResidue,oCircleProjectileVertical,
 oDiagonalProjectileHorizontal,oDiagonalProjectileVertical,oSnakeProjectileHorizontal,
 oSnakeProjectileVertical]
+
+undodgeableTimer = 250;

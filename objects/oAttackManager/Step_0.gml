@@ -1,3 +1,4 @@
+
 attackTimer--;
 
 
@@ -44,3 +45,4 @@ if (attackWindow >= 0) {
 		doneAttackNotif = false;
 	}
 }
+

@@ -22,4 +22,12 @@ if (active) {
 		}
 		createProjectile(12,1,"horizontal")
 	}
+	if (oEnemyManager.leftHp >=oEnemyManager.leftHpMax && oEverythingManager.level > 0) {
+		undodgeableTimer--;	
+	}
+	
+	if (undodgeableTimer < 0) {
+		undodgeableTimer = 700;
+		createProjectile(12,1,"vertical",true);
+	}
 }
