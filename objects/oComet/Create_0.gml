@@ -1,0 +1,16 @@
+redSprite = sBlackHole2Red;
+image_index = oEverythingManager.level - 1;
+image_speed = 0;
+image_xscale = 3;
+image_yscale = 3;
+image_angle = 0;
+rotating = false
+switched = false
+xBase = room_width/2
+xOffset = 0;
+baseY = 120;
+timer = 0;
+yOffset = 10;
+switchTimer = 0;
+switchWhen = irandom(300);
+iShouldTakeDamageTimer = 0;

@@ -2,11 +2,21 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 	// proj x and proj y are deprecated and never used but im too lazy to fix it everywhere else
 	if (dir == "vertical") {
 		if (undodgeable) {
-			var proj = oUndodgeabale;
-			if (oPlayerLeft.active) {
+			if (oEverythingManager.lightyear == 1) {
+				var proj = oBlackHolePunish;
+			} else if (oEverythingManager.lightyear == 10) {
+				var proj = oCometPunish;	
+			}
+			if (oPlayerLeft.active && oEverythingManager.lightyear == 1) {
 				var instanceX =0;
-			} else {
+			} else if (oEverythingManager.lightyear == 1){
 				var instanceX = room_width/2;
+			} else {
+				if (oPlayerLeft.active) {
+					var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
+				} else if (oPlayerRight.active) {
+					var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
+				}
 			}
 		} else {
 			var proj = chooseProjectileVertical();

@@ -9,3 +9,8 @@ oDiagonalProjectileHorizontal,oDiagonalProjectileVertical,oSnakeProjectileHorizo
 oSnakeProjectileVertical]
 
 undodgeableTimer = 250;
+if (oEverythingManager.lightyear == 1) {
+	maxUndodgeableTimer = 700;	
+} else if (oEverythingManager.lightyear == 10) {
+	maxUndodgeableTimer = 6;	
+}

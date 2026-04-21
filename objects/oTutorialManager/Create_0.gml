@@ -12,7 +12,7 @@ texts = [
 "ONLY HALF of the screen will remain active at a time.",
 "When a ' ! ' appears, press UP arrow to attack the side you're on!",
 "Left HP bar is enemy strength,",
-"Which controls spawn rates, projectile speed, and enemy attacks",
+"which controls spawn rates, projectile speed, and enemy attacks",
 "Right HP bar is enemy HP. Get that to 0 to win!",
 "Good luck!"
 ]

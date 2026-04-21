@@ -13,3 +13,5 @@ pinged = false;
 dIndex = 2;
 difficulties=  [0.25, 0.5, 1, 1.5, 2.5, 5]
 difficultyNames = ["Very Easy", "Easy", "Normal", "Hard", "Expert", "Insane"]
+
+lightyear = 10;
