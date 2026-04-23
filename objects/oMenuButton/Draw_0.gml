@@ -22,19 +22,30 @@ draw_set_font(FntSuggestion);
 
 
 if (selected) {
-	draw_sprite_ext(sActiveCentered,0,x+sprite_width/2,y-10,3,3,0,c_white,1)	
+	draw_sprite_ext(sActiveCentered,0,x+sprite_width/2,y-20,3,3,0,c_white,1)	
 	// draw_sprite_ext(sActiveCentered,0,x-10,y+sprite_height/2,3,3,0,c_white,1)	
-	if (selectedTimer > 0) {
-			selectedTimer--;
-	} else if (selectedTimer == 0) {
-		draw_set_font(FntMediumLarge);
-		draw_set_halign(fa_center);
-		draw_set_color(c_gray);
-		draw_set_font(FntSuggestion);
-		draw_text_transformed(x+sprite_width/2,
-		y+sprite_height+4,"[space]",scale,scale,0);
-	} else {
-		selectedTimer = 600;	
+	if (oStartUIManager.menu == 0) {
+		if (selectedTimer > 0) {
+				selectedTimer--;
+		} else if (selectedTimer == 0) {
+			draw_set_font(FntMediumLarge);
+			draw_set_halign(fa_center);
+			draw_set_color(c_gray);
+			draw_set_font(FntSuggestion);
+			draw_text_transformed(x+sprite_width/2,
+			y+sprite_height+8,"[space]",scale,scale,0);
+		} else {
+			selectedTimer = 500;	
+		}
+	} else if (text != "Back" && oStartUIManager.menu == 1){
+			draw_set_font(FntMediumLarge);
+			draw_set_halign(fa_center);
+			draw_set_color(c_gray);
+			draw_set_font(FntSuggestion);
+			draw_text_transformed(x+sprite_width/2,
+			y+sprite_height+8,"Difficulty: < " + 
+			oEverythingManager.difficultyNames[oEverythingManager.dIndex] + " >"
+			,scale,scale,0);			
 	}
 } else if (selectedTimer >= 0) {
 	selectedTimer = -1;	

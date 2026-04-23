@@ -1,4 +1,4 @@
-if (menu == 0) {
+
 	draw_set_font(FntTitle);
 
 	draw_set_halign(fa_center);
@@ -52,7 +52,4 @@ if (menu == 0) {
 		oResolutionManager.uiScale,0,c_white,1);
 	}
 	
-
-	
-}
 

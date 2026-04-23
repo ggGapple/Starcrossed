@@ -1,14 +1,3 @@
-if (dTimer > 0) {
-	dTimer--;	
-	draw_set_alpha(min(1,dTimer/60));
-	draw_set_color(oColorCodes.lightRed);
-	draw_set_font(FntMedium);
-	draw_text(room_width-string_width("Difficulty: "+
-	difficultyNames[dIndex]+ " (P to cycle)")-12, 30,"Difficulty: "+
-	difficultyNames[dIndex]+ " (P to cycle)")
-	draw_set_alpha(1);
-}
-
 if (room == DeathRoom && playerLives == 0) {
 	draw_set_color(oColorCodes.lightRed);
 	draw_set_font(FntMedium);

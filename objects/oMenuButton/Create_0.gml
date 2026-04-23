@@ -16,3 +16,5 @@ selected = false;
 targetScale = 1;
 selectedTimer = -1;
 tooltip = ""
+
+goFadeTimer = 0;

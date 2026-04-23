@@ -12,23 +12,18 @@ else if (timer == -10) {
 	animDone = true
 }
 
-/*
-choose logic -- dw about it for now 
-if (fadingTimer == -1 and sprite_index = sButtonChosen) {
-	fadingTimer = 20;
-	goUp = true;
-	tempY = y;
+if (keyboard_check_pressed(vk_left) && text != "Back" && oStartUIManager.menu == 1) {
+	oEverythingManager.decrementDifficulty = true;
+} else if (keyboard_check_pressed(vk_right) && text != "Back" && oStartUIManager.menu == 1) {
+	oEverythingManager.incrementDifficulty = true;
 }
 
-if (goUp and fadingTimer > 0) {
-	y = lerp(y, tempY-50,0.1);
-	fadingTimer--;
-	if (fadingTimer ==0) {
-		goUp = false;
-		fadingTimer = 60;
-		tempY = y;
-	}
-} else if (goUp = false and fadingTimer > 0) {
-	y = lerp(y, tempY + 700, 0.05);
+
+
+if (fadingTimer == -1 and oStartUIManager.started) {
+	goFadeTimer--;
 }
-*/
+if (goFadeTimer < -1) {
+	y = lerp(y,room_height+100,0.1);	
+}
+		

@@ -17,8 +17,10 @@ menuButtons[2] = instance_create_depth(room_width/6*5 - 11*sprite_get_width(sBut
 ,-100,-1,oMenuButton);
 menuButtons[1].timer+=30;
 menuButtons[2].timer+=60;
+menuButtons[1].goFadeTimer+=10;
+menuButtons[2].goFadeTimer+=20;
 menuButtons[1].text = "Start"
-menuButtons[0].text = "Astropedia"
+menuButtons[0].text = "Options"
 menuButtons[2].text = "Quit"
 menuButtons[1].tooltip = "S"
 menuButtons[0].tooltip = "A"

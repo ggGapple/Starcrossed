@@ -8,15 +8,18 @@ if (room == CombatRoom and level == 5) {
 	}
 }
 
-if (keyboard_check_pressed(ord("P")) and room != StartRoom) {
+if (incrementDifficulty) {
 	dIndex++;
 	if (dIndex > array_length(difficulties)-1) {
 		dIndex = 0;	
 	}
-	if (difficulty > 1.5) {
-		difficulty = 0.5;
+	incrementDifficulty = false;
+} else if (decrementDifficulty) {
+	dIndex--;
+	if (dIndex < 0) {
+		dIndex = array_length(difficulties)-1;	
 	}
-	dTimer = 180;
+	decrementDifficulty = false;
 }
 
 if (room == DeathRoom and playerLives <= 0) {
@@ -24,9 +27,4 @@ if (room == DeathRoom and playerLives <= 0) {
 		game_restart();
 	}
 	
-}
-
-if (room == CombatRoom and !pinged) {
-	dTimer = 180;
-	pinged = true;
 }

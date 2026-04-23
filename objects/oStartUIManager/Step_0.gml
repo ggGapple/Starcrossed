@@ -1,8 +1,3 @@
-if (keyboard_check_pressed(vk_anykey) and !started and menu== 2) {
-	started = true;
-	instance_create_depth(0,0,-50,oTransition);
-	freeze = true;
-}
 
 if (!freeze) {
 	animTimer++;
@@ -34,13 +29,31 @@ if (irandom(10)>8) {
 
 
 if (keyboard_check_pressed(vk_space)) {
-	if (menuButtons[2].selected) {
-		game_end();	
-	} else if (menuButtons[1].selected){ 
-		started = true;
-		instance_create_depth(0,0,-50,oTransition);
-		freeze = true;			
+	if (menu == 0) {
+		if (menuButtons[2].selected) {
+			game_end();	
+		} else if (menuButtons[1].selected){ 
+			menu = 1;
+		}
+	} else if (menu == 1) {
+		if (menuButtons[1].selected) {
+			started = true;
+			instance_create_depth(0,0,-50,oTransition);
+			freeze = true;					
+		} else if (menuButtons[2].selected) {
+			menu = 0;	
+		}
 	}
 }
 
 glowTimer+=0.003
+
+if (menu == 0 && menuButtons[1].text != "Start") {
+	menuButtons[1].text = "Start"
+	menuButtons[0].text = "Astropedia"
+	menuButtons[2].text = "Quit"
+} else if (menu == 1 && menuButtons[1].text == "Start") {
+	menuButtons[1].text = "Classic"
+	menuButtons[0].text = "Starkiller"
+	menuButtons[2].text = "Back"
+}
