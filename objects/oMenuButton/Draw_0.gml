@@ -37,7 +37,7 @@ if (selected) {
 		} else {
 			selectedTimer = 500;	
 		}
-	} else if (text != "Back" && oStartUIManager.menu == 1){
+	} else if (text == "Classic" && oStartUIManager.menu == 1){
 			draw_set_font(FntMediumLarge);
 			draw_set_halign(fa_center);
 			draw_set_color(c_gray);
@@ -45,6 +45,14 @@ if (selected) {
 			draw_text_transformed(x+sprite_width/2,
 			y+sprite_height+8,"Difficulty: < " + 
 			oEverythingManager.difficultyNames[oEverythingManager.dIndex] + " >"
+			,scale,scale,0);			
+	} else if (text == "Starkiller" || text == "Options") {
+			draw_set_font(FntMediumLarge);
+			draw_set_halign(fa_center);
+			draw_set_color(c_gray);
+			draw_set_font(FntSuggestion);
+			draw_text_transformed(x+sprite_width/2,
+			y+sprite_height+8,"WIP"
 			,scale,scale,0);			
 	}
 } else if (selectedTimer >= 0) {

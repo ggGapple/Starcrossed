@@ -11,14 +11,17 @@ if (!freeze) {
 }
 
 if (keyboard_check_pressed(ord("A"))) {
+	audio_play_sound(SndChooseUpgrade, 1, 0)
 	menuButtons[0].selected=true;
 	menuButtons[1].selected=false;
 	menuButtons[2].selected=false;
 } if (keyboard_check_pressed(ord("S"))) {
+	audio_play_sound(SndChooseUpgrade, 1, 0)
 	menuButtons[1].selected=true;
 	menuButtons[0].selected=false;
 	menuButtons[2].selected=false;
 } if (keyboard_check_pressed(ord("D"))) {
+	audio_play_sound(SndChooseUpgrade, 1, 0)
 	menuButtons[2].selected=true;
 	menuButtons[1].selected=false;
 	menuButtons[0].selected=false;
@@ -33,14 +36,17 @@ if (keyboard_check_pressed(vk_space)) {
 		if (menuButtons[2].selected) {
 			game_end();	
 		} else if (menuButtons[1].selected){ 
+			audio_play_sound(SndHurt,1,0);
 			menu = 1;
 		}
 	} else if (menu == 1) {
 		if (menuButtons[1].selected) {
+			audio_play_sound(SndHurt,1,0);
 			started = true;
 			instance_create_depth(0,0,-50,oTransition);
 			freeze = true;					
 		} else if (menuButtons[2].selected) {
+			audio_play_sound(SndHurt,1,0);
 			menu = 0;	
 		}
 	}

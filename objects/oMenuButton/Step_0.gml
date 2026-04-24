@@ -26,4 +26,3 @@ if (fadingTimer == -1 and oStartUIManager.started) {
 if (goFadeTimer < -1) {
 	y = lerp(y,room_height+100,0.1);	
 }
-		
