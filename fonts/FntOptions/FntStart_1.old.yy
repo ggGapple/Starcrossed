@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"FntStart",
+  "%Name":"FntStart_1",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":128,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":160,
   "maintainGms1Font":false,
-  "name":"FntStart",
+  "name":"FntStart_1",
   "parent":{
     "name":"Fonts",
     "path":"folders/UI/Fonts.yy",

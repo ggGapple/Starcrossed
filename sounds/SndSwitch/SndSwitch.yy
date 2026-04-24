@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"SndSwitch",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"SFX",
+    "path":"audiogroups/SFX",
   },
   "bitDepth":1,
   "channelFormat":0,
