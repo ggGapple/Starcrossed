@@ -12,10 +12,12 @@ else if (timer == -10) {
 	animDone = true
 }
 
-if (keyboard_check_pressed(vk_left) && text != "Back" && oStartUIManager.menu == 1) {
+if (keyboard_check_pressed(vk_left) && text == "Classic" && oStartUIManager.menu == 1 && selected) {
 	oEverythingManager.decrementDifficulty = true;
-} else if (keyboard_check_pressed(vk_right) && text != "Back" && oStartUIManager.menu == 1) {
+	audio_play_sound(SndDialogueNext,1,0);
+} else if (keyboard_check_pressed(vk_right) && text == "Classic" && oStartUIManager.menu == 1 && selected) {
 	oEverythingManager.incrementDifficulty = true;
+	audio_play_sound(SndDialogueNext,1,0);
 }
 
 

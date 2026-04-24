@@ -25,12 +25,15 @@ if (y+sprite_height < 0 && dieSoon) {
 
 if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
 	selected = min(selected+1, array_length(optionsArray));
+	audio_play_sound(SndChooseUpgrade,1,0);
 }
 if (keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))) {
 	selected = max(selected-1, 0);
+	audio_play_sound(SndChooseUpgrade,1,0);
 }
 
 if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
+	audio_play_sound(SndDialogueNext,1,0);
 	if (selected == 0) {
 		oMusicManager.musicVolume = max(0, oMusicManager.musicVolume-1);	
 	} else if (selected == 1) {
@@ -39,6 +42,7 @@ if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
 }
 
 if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
+	audio_play_sound(SndDialogueNext,1,0);
 	if (selected == 0) {
 		oMusicManager.musicVolume = min(5, oMusicManager.musicVolume+1);	
 	} else if (selected == 1) {
