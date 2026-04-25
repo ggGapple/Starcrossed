@@ -28,3 +28,8 @@ if (room == DeathRoom and playerLives <= 0) {
 	}
 	
 }
+
+if (!loadedSettingsYet) {
+	loadedSettingsYet = true;
+	loadSettings();
+}

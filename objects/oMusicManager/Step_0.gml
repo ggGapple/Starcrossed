@@ -17,9 +17,9 @@ else if (room == StartRoom and !playingIntro && musicVolume != 0) {
 
 if (curMusicVolume != musicVolume) {
 	if (playingOst) {
-		audio_sound_gain(ostSnd,musicVolume/3,3000);
+		audio_sound_gain(ostSnd,musicVolume/3,1000);
 	} else if (playingIntro) {
-		audio_sound_gain(introSnd,musicVolume/3,3000);	
+		audio_sound_gain(introSnd,musicVolume/3,1000);	
 	}
 	curMusicVolume = musicVolume;
 }

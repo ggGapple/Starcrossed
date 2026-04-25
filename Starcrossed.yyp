@@ -28,8 +28,12 @@
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_pixelate-1.0.0","name":"io.gamemaker.gm_filter_pixelate-1.0.0","path":"io.gamemaker.gm_filter_pixelate-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_effect_gaussian_blur-1.0.0","name":"io.gamemaker.gm_effect_gaussian_blur-1.0.0","path":"io.gamemaker.gm_effect_gaussian_blur-1.0.0.yyp",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"@gm-ide-prefabs-effect-gaussian-blur-1.0.0.manifest","CopyToMask":-1,"filePath":"datafiles","name":"@gm-ide-prefabs-effect-gaussian-blur-1.0.0.manifest","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -115,6 +119,7 @@
     {"id":{"name":"takeDamageScript","path":"scripts/takeDamageScript/takeDamageScript.yy",},},
     {"id":{"name":"textScripts","path":"scripts/textScripts/textScripts.yy",},},
     {"id":{"name":"updateSettingsScript","path":"scripts/updateSettingsScript/updateSettingsScript.yy",},},
+    {"id":{"name":"shaderBlur","path":"shaders/shaderBlur/shaderBlur.yy",},},
     {"id":{"name":"SndAbilityActivate","path":"sounds/SndAbilityActivate/SndAbilityActivate.yy",},},
     {"id":{"name":"SndAttack","path":"sounds/SndAttack/SndAttack.yy",},},
     {"id":{"name":"SndAttackNotif","path":"sounds/SndAttackNotif/SndAttackNotif.yy",},},

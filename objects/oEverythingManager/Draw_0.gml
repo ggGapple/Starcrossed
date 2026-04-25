@@ -5,3 +5,8 @@ if (room == DeathRoom && playerLives == 0) {
 	draw_set_alpha(1);
 }
 
+if (fullscreen && !window_get_fullscreen()) {
+	window_set_fullscreen(true)	
+} else if (!fullscreen && window_get_fullscreen() ){ 
+	window_set_fullscreen(false);
+}	

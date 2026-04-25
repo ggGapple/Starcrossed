@@ -42,10 +42,10 @@ if (!instance_exists(oOptions)) {
 				audio_play_sound(SndHurt,1,0);
 				menu = 1;
 			} else if (menuButtons[0].selected) {
-				instance_create_depth(room_width/2,-1000,-10,oOptions);	
+				instance_create_layer(room_width/2,-1000,"Options",oOptions);	
 			}
 		} else if (menu == 1) {
-			if (menuButtons[1].selected) {
+			if (menuButtons[1].selected && !started) {
 				audio_play_sound(SndHurt,1,0);
 				started = true;
 				instance_create_depth(0,0,-50,oTransition);

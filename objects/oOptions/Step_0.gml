@@ -2,7 +2,7 @@ y = lerp(y, tempY, 0.1);
 
 
 
-if (image_xscale != 30 * oResolutionManager.uiScale) {
+if (image_xscale != 30* oResolutionManager.uiScale) {
 	image_xscale = 30*oResolutionManager.uiScale;
 	image_yscale = 40*oResolutionManager.uiScale;
 	x = display_get_gui_width()/2 
@@ -19,6 +19,7 @@ selected == array_length(optionsArray))) {
 }
 
 if (y+sprite_height < 0 && dieSoon) {
+	updateSettings();
 	instance_destroy();	
 }
 
@@ -38,6 +39,8 @@ if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
 		oMusicManager.musicVolume = max(0, oMusicManager.musicVolume-1);	
 	} else if (selected == 1) {
 		oMusicManager.sfxVolume = max(0, oMusicManager.sfxVolume-1);	
+	} else if (selected == 2) {
+		oEverythingManager.fullscreen = !oEverythingManager.fullscreen;	
 	}
 }
 
@@ -47,5 +50,7 @@ if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
 		oMusicManager.musicVolume = min(5, oMusicManager.musicVolume+1);	
 	} else if (selected == 1) {
 		oMusicManager.sfxVolume = min(5, oMusicManager.sfxVolume+1);	
+	} else if (selected == 2) {
+		oEverythingManager.fullscreen = !oEverythingManager.fullscreen;	
 	}
 }

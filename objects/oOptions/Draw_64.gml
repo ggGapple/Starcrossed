@@ -1,3 +1,16 @@
+
+draw_set_alpha(0.6); 
+draw_set_color(c_black);
+draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+
+
+draw_set_alpha(0.1);
+draw_set_color(oColorCodes.darkBlue);
+draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+
+draw_set_color(c_white);
+draw_set_alpha(1);
+
 draw_self();
 draw_set_halign(fa_center);
 
@@ -11,7 +24,7 @@ var optionsAnswers = []
 
 optionsAnswers[0] = (oMusicManager.musicVolume == 0 ? "< muted >" : "< "+string(oMusicManager.musicVolume) + " >")
 optionsAnswers[1] = (oMusicManager.sfxVolume == 0 ? "< muted >" : "< "+string(oMusicManager.sfxVolume) + " >")
-
+optionsAnswers[2] = oEverythingManager.fullscreen ? "< On >" : "< Off >"
 for (i = 0; i < array_length(optionsArray);i++) {
 	
 	if (selected == i) {

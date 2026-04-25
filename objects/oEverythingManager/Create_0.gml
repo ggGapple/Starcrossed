@@ -17,3 +17,7 @@ difficultyNames = ["Very Easy", "Easy", "Normal", "Hard", "Expert", "Insane"]
 lightyear = 10;
 incrementDifficulty = false;
 decrementDifficulty = false;
+
+fullscreen = false;
+
+loadedSettingsYet = false;
