@@ -8,7 +8,6 @@ else if (timer > -10 and timer < 30) {
 }
 else if (timer == -10) {
     timer--;
-    y = tempY;
 	animDone = true
 }
 
@@ -23,6 +22,7 @@ if (keyboard_check_pressed(vk_left) && text == "Classic" && oStartUIManager.menu
 
 
 if (fadingTimer == -1 and oStartUIManager.started) {
+	timer = -10;
 	goFadeTimer--;
 }
 if (goFadeTimer < -1) {
