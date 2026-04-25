@@ -1,3 +1,8 @@
+
+if (oPauseManager.paused) {
+	return;	
+}
+
 if (timer >=30) {
 	timer--;	
 }

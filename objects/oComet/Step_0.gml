@@ -1,3 +1,6 @@
+if (oPauseManager.paused) {
+	return;	
+}
 y = baseY + yOffset*cos(timer/35);
 x = xBase + xOffset;
 timer++;

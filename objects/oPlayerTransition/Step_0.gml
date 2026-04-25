@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;
+}
+
 image_angle ++;
 if (oPlayerRight.active) {
 	x = lerp(x,oPlayerRight.x+(sprite_get_width(oPlayerRight.sprite_index)-

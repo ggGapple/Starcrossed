@@ -1,4 +1,7 @@
 // movement
+if (oPauseManager.paused) {
+	return;	
+}
 if (active) {
 
 	if (keyboard_check(ord("S"))) {

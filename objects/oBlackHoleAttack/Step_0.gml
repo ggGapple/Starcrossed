@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;	
+}
+
 if (boomTimer == -1000) {
 	image_alpha = lerp(image_alpha,0.45,0.05);
 }

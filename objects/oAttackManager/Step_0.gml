@@ -1,4 +1,6 @@
-
+if (oPauseManager.paused) {
+	return;	
+}
 attackTimer--;
 
 

@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;	
+}
+
 if ((x > room_width and rightward) or (x < 0 and !rightward)) {
 	instance_destroy();
 }

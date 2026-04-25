@@ -1,4 +1,4 @@
-if (active) {
+if (active && !oPauseManager.paused) {
 	timerVertical--;
 	timerHorizontal--;
 	

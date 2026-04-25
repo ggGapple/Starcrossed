@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;	
+}
+
 if (wiggle > 0){
 	timer++;
 	wiggle-=timer/10;

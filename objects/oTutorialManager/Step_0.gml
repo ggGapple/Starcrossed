@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;
+}
+	
 if (display) {
 	if (curChar < string_length(fullText)) {
 	    curChar += textSpeed;

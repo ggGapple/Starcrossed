@@ -1,3 +1,6 @@
+if (oPauseManager.paused) {
+	return;	
+}
 if (y > room_height) {
 	instance_destroy();
 }

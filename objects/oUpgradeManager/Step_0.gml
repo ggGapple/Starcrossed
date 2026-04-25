@@ -1,4 +1,4 @@
-if (room==UpgradesRoom ) {
+if (room==UpgradesRoom && ! oPauseManager.paused) {
 	if (!instance_exists(oUpgradeBox)|| createNewOptions) {
 		for (i = 0; i < array_length(upgradeBoxes);i++) {
 			instance_destroy(upgradeBoxes[i]);	

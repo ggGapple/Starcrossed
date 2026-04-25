@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;	
+}
+
 leftHpRegenTimer--;
 if (leftHpRegenTimer < 0) {
 	leftHpRegenTimer = 150;

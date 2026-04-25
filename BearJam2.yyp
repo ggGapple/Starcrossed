@@ -79,6 +79,8 @@
     {"id":{"name":"oMenuButton","path":"objects/oMenuButton/oMenuButton.yy",},},
     {"id":{"name":"oMusicManager","path":"objects/oMusicManager/oMusicManager.yy",},},
     {"id":{"name":"oOptions","path":"objects/oOptions/oOptions.yy",},},
+    {"id":{"name":"oPause","path":"objects/oPause/oPause.yy",},},
+    {"id":{"name":"oPauseManager","path":"objects/oPauseManager/oPauseManager.yy",},},
     {"id":{"name":"oPlayerLeft","path":"objects/oPlayerLeft/oPlayerLeft.yy",},},
     {"id":{"name":"oPlayerManager","path":"objects/oPlayerManager/oPlayerManager.yy",},},
     {"id":{"name":"oPlayerParent","path":"objects/oPlayerParent/oPlayerParent.yy",},},

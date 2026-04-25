@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;	
+}
+
 x = lerp(x,targetX,0.1);
 y = lerp(y, targetY,0.1);
 timer--;

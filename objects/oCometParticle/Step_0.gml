@@ -1,3 +1,7 @@
+if (oPauseManager.paused) {
+	return;	
+}
+
 x+=velocity;
 y-=velocity;
 velocity += acceleration;
