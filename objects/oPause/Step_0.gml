@@ -11,7 +11,7 @@ if (image_xscale != 30* oResolutionManager.uiScale) {
 }
 
 
-if (keyboard_check_pressed(vk_escape) || (keyboard_check_pressed(vk_space))) {
+if (keyboard_check_pressed(vk_space)) {
 	if (selected == array_length(optionsArray) +1) {
 		tempY = -50 - sprite_height;	
 		dieSoon = true;
@@ -26,6 +26,11 @@ if (keyboard_check_pressed(vk_escape) || (keyboard_check_pressed(vk_space))) {
 		 game_restart();
 	}
 }
+if (keyboard_check_pressed(vk_escape)) {
+	tempY = -50 - sprite_height;	
+	dieSoon = true;		
+}
+
 
 if (y+sprite_height < 0 && dieSoon) {
 	updateSettings();
