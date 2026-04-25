@@ -12,3 +12,5 @@ fullText4 = upgradesString;
 textSpeed=0.5;
 
 audio_play_sound(SndWinRound, 1, 0)
+oEverythingManager.runCount++;
+updateSettings();

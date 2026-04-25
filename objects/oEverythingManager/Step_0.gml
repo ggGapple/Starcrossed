@@ -1,9 +1,15 @@
 if (room == CombatRoom and level == 5) {
 	bossProjTimer--;
 	if (bossProjTimer == 0) {
-		instance_create_depth(0,0,-20,oBlackHoleAttack);	
+		if (oEverythingManager.lightyear == 1) {
+			instance_create_depth(0,0,-20,oBlackHoleAttack);	
+		} else if (oEverythingManager.lightyear == 10) {
+			instance_create_depth(0,0,-20,oCometAttack);	
+		}
+		
 	}
-	if (bossProjTimer < 0 and !instance_exists(oBlackHoleAttack)) {
+	if (bossProjTimer < 0 and ((!instance_exists(oBlackHoleAttack) && lightyear == 1 ) || 
+	(!instance_exists(oCometAttack) && lightyear == 10))) {
 		bossProjTimer = 200;
 	}
 }

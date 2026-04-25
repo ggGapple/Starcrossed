@@ -3,6 +3,8 @@ function updateSettings(){
 	ini_write_real("Audio", "Music Volume", oMusicManager.musicVolume);
 	ini_write_real("Audio", "SFX Volume", oMusicManager.sfxVolume);
 	ini_write_real("Graphics", "Fullscreen", oEverythingManager.fullscreen);
+	ini_write_real("Gameplay", "Tutorial", oEverythingManager.doTutorial);
+	ini_write_real("Stats","Run Count", oEverythingManager.runCount);
 	ini_close();
 }
 
@@ -11,7 +13,9 @@ function loadSettings() {
 		ini_open("preferences.ini");
 		oMusicManager.musicVolume = ini_read_real("Audio", "Music Volume", 3)
 		oMusicManager.sfxVolume = ini_read_real("Audio", "SFX Volume", 3);
-		oEverythingManager.fullscreen = ini_read_real("Graphics", "Fullscreen", oEverythingManager.fullscreen);
+		oEverythingManager.fullscreen = ini_read_real("Graphics", "Fullscreen", false);
+		oEverythingManager.doTutorial = ini_read_real("Gameplay", "Tutorial", false);
+		oEverythingManager.runCount = ini_read_real("Stats", "Run Count", 0);
 		ini_close();
 	}
 }

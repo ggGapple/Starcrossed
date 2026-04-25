@@ -21,3 +21,6 @@ decrementDifficulty = false;
 fullscreen = false;
 
 loadedSettingsYet = false;
+
+runCount = 0;
+doTutorial = true;

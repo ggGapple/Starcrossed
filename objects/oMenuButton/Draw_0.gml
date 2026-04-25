@@ -22,7 +22,7 @@ draw_set_font(FntSuggestion);
 
 
 if (selected) {
-	draw_sprite_ext(sActiveCentered,0,x+sprite_width/2,y-20,3,3,0,c_white,1)	
+	draw_sprite_ext(sActiveCenteredOld,0,x+sprite_width/2,y-20,3,3,0,c_white,1)	
 	// draw_sprite_ext(sActiveCentered,0,x-10,y+sprite_height/2,3,3,0,c_white,1)	
 	if (oStartUIManager.menu == 0) {
 		if (selectedTimer > 0 && !instance_exists(oOptions)) {

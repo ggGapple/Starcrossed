@@ -13,7 +13,8 @@ pausedOrOptions = "Options";
 optionsArray = [
 "Music Volume",
 "SFX Volume",
-"Fullscreen"
+"Fullscreen",
+"Play Tutorial"
 ]
 scales = [1.3];
 for (i = 1; i < array_length(optionsArray)+1; i++) {

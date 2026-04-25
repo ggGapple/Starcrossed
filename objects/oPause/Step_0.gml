@@ -60,6 +60,8 @@ if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
 		oMusicManager.sfxVolume = max(0, oMusicManager.sfxVolume-1);	
 	} else if (selected == 2) {
 		oEverythingManager.fullscreen = !oEverythingManager.fullscreen;	
+	} else if (selected == 3) {
+		oEverythingManager.doTutorial = !oEverythingManager.doTutorial;	
 	}
 }
 
@@ -71,5 +73,7 @@ if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
 		oMusicManager.sfxVolume = min(5, oMusicManager.sfxVolume+1);	
 	} else if (selected == 2) {
 		oEverythingManager.fullscreen = !oEverythingManager.fullscreen;	
+	}  else if (selected == 3) {
+		oEverythingManager.doTutorial = !oEverythingManager.doTutorial;	
 	}
-}
+} 
