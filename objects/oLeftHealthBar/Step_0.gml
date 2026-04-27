@@ -10,7 +10,7 @@ if (wiggle > 0){
 	timer = 0;
 }
 
-if (damageToTake > 0) {
+if (damageToTake >= 0.2) {
 	damageToTake-=0.2;
 	oEnemyManager.leftHp=max(0,oEnemyManager.leftHp - 0.2);
 }

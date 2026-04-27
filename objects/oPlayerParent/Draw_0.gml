@@ -1,4 +1,8 @@
+if (oPlayerManager.armored && stillArmored) {
+	draw_sprite_ext(armoredSprite,0,x,y,image_xscale+0.3,image_yscale+0.3,0,c_white,0.8);
+}
 draw_self();
+
 if (active and drawExplosion and explosionTimer > 0) {
 	explosionTimer--;
 	draw_set_color(#EE145B)

@@ -7,3 +7,4 @@ activeSprite = sLeft;
 attackSprite = sPlayerAttackLeft;
 invincibleSprite = sPlayerInvincibleLeft;
 invincibleTpSprite = sPlayerTpInvincibleLeft;
+armoredSprite = sPlayerArmoredLeft;

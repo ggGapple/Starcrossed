@@ -1,3 +1,4 @@
+event_inherited();
 timer = 100;
 targetX = x + irandom_range(-20,20);
 targetY = y + irandom_range(-20,20);

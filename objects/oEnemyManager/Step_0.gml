@@ -20,9 +20,12 @@ if (rightHp/rightHpMax <= 0.5 && !rotatedAlready && instance_exists(oBlackHole))
 
 if (rightHp<=0) {
 	audio_play_sound(SndWinRound, 1, 0)
-	if (oEverythingManager.level == 5) {
-		room_goto(WinRoom);
-	} else {
+	if (oEverythingManager.level == 5 && oEverythingManager.lightyear < 100) {
+		room_goto(RareUpgradesRoom);
+	} else if (oEverythingManager.level == 5) {
+		room_goto(WinRoom);	
+	}
+	else {
 		rotatedAlready = false
 		room_goto(UpgradesRoom);
 	}

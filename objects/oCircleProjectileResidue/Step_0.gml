@@ -1,7 +1,8 @@
+
 if (oPauseManager.paused) {
 	return;	
 }
-
+event_inherited();
 x = lerp(x,targetX,0.1);
 y = lerp(y, targetY,0.1);
 timer--;

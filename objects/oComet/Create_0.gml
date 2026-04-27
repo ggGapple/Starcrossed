@@ -1,4 +1,4 @@
-redSprite = sBlackHole2Red;
+redSprite = sCometRed;
 image_index = oEverythingManager.level - 1;
 image_speed = 0;
 image_xscale = 3;

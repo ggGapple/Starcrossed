@@ -29,7 +29,7 @@ if (boomTimer <= -80 and boomTimer > -999) {
 	    for (i = 0; i < count; i++;) {
 	        var inst = list[| i];
 			var parent = object_get_parent(inst.object_index)
-			if (parent != -100) {
+			if (parent == oBulletParent) {
 				instance_destroy(inst);	
 			} else {
 				if (oPlayerLeft.active and inst.object_index == oPlayerLeft) {

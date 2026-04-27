@@ -34,4 +34,20 @@ if (instance_exists(oPlayerLeft) && !oPauseManager.paused) {
 		oEverythingManager.playerLives--;
 		room_goto(DeathRoom);
 	}
+	
+	if (vampiric) {
+		vampiricTimer--;
+		if (vampiricTimer == 0) {
+			dealDamage(0.1, true);
+			vampiricTimer = maxVampiricTimer	
+		}
+	}
+		
+	if (nourished) {
+		nourishedTimer--;
+		if (nourishedTimer== 0) {
+			nourishedTimer = maxNourishedTimer;
+			oPlayerManager.hp = min(oPlayerManager.hp+ 0.1,oPlayerManager.maxHp);	
+		}
+	}
 }

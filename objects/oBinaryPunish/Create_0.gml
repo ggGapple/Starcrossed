@@ -1,0 +1,10 @@
+event_inherited();
+dmg = 3;
+image_index = irandom(3);
+image_xscale = 5;
+image_yscale = 5;
+timer = 15;
+oY = y;
+oY2 = y;
+oX = x;
+color = choose(c_white, oColorCodes.pink,oColorCodes.lightRed);

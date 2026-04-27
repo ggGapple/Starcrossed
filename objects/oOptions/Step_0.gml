@@ -11,7 +11,7 @@ if (image_xscale != 30* oResolutionManager.uiScale) {
 }
 
 
-if (keyboard_check_pressed(vk_escape) || (keyboard_check_pressed(vk_space) && 
+if ((keyboard_check_pressed(vk_space) && 
 selected == array_length(optionsArray))) {
 	tempY = -50 - sprite_height;	
 	dieSoon = true;

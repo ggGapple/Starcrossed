@@ -5,3 +5,4 @@ darkBlue = #1E579C;
 veryDarkBlue = #252446;
 background = #201533;
 darkRed = #7F0A30
+pink = #FF4CB5;

@@ -10,6 +10,10 @@ basicUpgrades = [
 "Reactionary" // more iframes
 ]
 
+if (oEverythingManager.level > 3) {
+	array_push(basicUpgrades, "Versatile")	
+}
+
 descs = {
 "Wise": "+attack window length",
 "Ferocious": "-time in between attacks",
@@ -32,8 +36,26 @@ descs = {
 rareUpgrades= [
 "Opportunistic", // shorter attack window, much more damage
 "Armored" //1 negated attack per round
-
 ]
+
+upgradesSprites = {
+"Wise": sWise,
+"Ferocious": sFerocious,
+"Resilient": sResilient,
+"Vicious": sVicious,
+"Fast": sFast,
+"Forgiving" : sForgiving,
+"Stealthy" : sStealthy,
+"Healthy" : sHealthy,
+"Reactionary" : sReactionary,
+"Versatile" : sVersatile,
+
+//special abilities
+"Elusive": sElusive,
+"Violent": sViolent,
+"Peaceful": sPeaceful,
+
+}
 
 
 curUpgrades = ["","",""];
@@ -68,11 +90,4 @@ curChar4 = 0;
 fullText4 = "";
 yeahWereDone = false;
 
-curIndex2 = 0;
-curChar2 = 0;
-fullText2 = "";
 delay = 60;
-
-num = 0;
-side = "left";
-sideAbbreviation = "L";

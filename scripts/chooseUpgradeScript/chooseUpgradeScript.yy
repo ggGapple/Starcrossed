@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"chooseUpgradeScript",
   "parent":{
-    "name":"Player",
-    "path":"folders/Player.yy",
+    "name":"Upgrades",
+    "path":"folders/Upgrades.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

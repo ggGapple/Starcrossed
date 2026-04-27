@@ -1,30 +1,42 @@
 if (room==UpgradesRoom && ! oPauseManager.paused) {
 	if (!instance_exists(oUpgradeBox)|| createNewOptions) {
+		// instantiate boxes
 		for (i = 0; i < array_length(upgradeBoxes);i++) {
 			instance_destroy(upgradeBoxes[i]);	
 		}
-		upgradeBoxes[0] = instance_create_depth(room_width/6 - 11*sprite_get_width(sButton)
-		,-100,-1,oUpgradeBox);
-		upgradeBoxes[1] = instance_create_depth(room_width/6*3 - 11*sprite_get_width(sButton)
-		,-100,-1,oUpgradeBox);
-		upgradeBoxes[2] = instance_create_depth(room_width/6*5 - 11*sprite_get_width(sButton)
-		,-100,-1,oUpgradeBox);
+		upgradeBoxes[0] = instance_create_depth(room_width/6
+		,-300,-1,oUpgradeBox);
+		upgradeBoxes[1] = instance_create_depth(room_width/6*3
+		,-300,-1,oUpgradeBox);
+		upgradeBoxes[1].idx = 1;
+		upgradeBoxes[2] = instance_create_depth(room_width/6*5
+		,-300,-1,oUpgradeBox);
+		upgradeBoxes[2].idx = 2;
 		upgradeBoxes[1].timer += 30
 		upgradeBoxes[2].timer += 60
 		if (oEverythingManager.obtainedUniqueUpgrade == false and oEverythingManager.level == 3) {
 			curUpgrades[0] = "Elusive";
 			curUpgrades[1] = "Violent";
-			curUpgrades[2] = "Peaceful"
+			curUpgrades[2] = "Peaceful";
+			upgradeBoxes[0].sprite_index = sElusive
+			upgradeBoxes[1].sprite_index = sViolent
+			upgradeBoxes[2].sprite_index = sPeaceful
+			upgradeBoxes[0].tempY+=50;
+			upgradeBoxes[1].tempY+=50;
+			upgradeBoxes[2].tempY+=50;
 		} else {
 			upgradesLeft = basicUpgrades;
 			var idx = irandom(array_length(upgradesLeft)-1)
 			curUpgrades[0] = upgradesLeft[idx];
+			upgradeBoxes[0].sprite_index = upgradesSprites[$ curUpgrades[0]]
 			array_delete(upgradesLeft,idx,1);
 			idx = irandom(array_length(upgradesLeft)-1)
 			curUpgrades[1] = upgradesLeft[idx];
+			upgradeBoxes[1].sprite_index = upgradesSprites[$ curUpgrades[1]]
 			array_delete(upgradesLeft,idx,1);
 			idx = irandom(array_length(upgradesLeft)-1)
 			curUpgrades[2] = upgradesLeft[idx];
+			upgradeBoxes[2].sprite_index = upgradesSprites[$ curUpgrades[2]]
 			array_delete(upgradesLeft,idx,1);
 		}
 		createNewOptions = false;
@@ -38,86 +50,66 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 		delay = 60;
 		selected = -1;
 		selectingUpgrade = true;
-		upgradeBoxes[0].sprite_index = sButton;
-		upgradeBoxes[1].sprite_index = sButton;
-		upgradeBoxes[2].sprite_index = sButton;
 	}
 	
+	
+	// upgrade choosing logic
+	
 	if (selectingUpgrade) {
+		if (keyboard_check_pressed(vk_space) && selected != -1) {
+				if (selected ==0 and upgradeBoxes[0].animDone) {
+					selectingUpgrade = false;
+					if (array_length(oPlayerManager.chosen)!=0) {
+						upgradesString+=", " 	
+					}
+					upgradesString += curUpgrades[selected];
+					if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
+						array_push(oPlayerManager.chosen,curUpgrades[selected]);
+					} else {
+						array_push(oPlayerManager.chosen,curUpgrades[selected]);
+					}
+					instance_destroy(upgradeBoxes[1]);
+					instance_destroy(upgradeBoxes[2]);
+					chooseUpgrade(curUpgrades[selected], "None");
+				} else if (selected ==1 and upgradeBoxes[1].animDone) {
+					selectingUpgrade = false;
+					if (array_length(oPlayerManager.chosen)!=0) {
+						upgradesString+=", " 	
+					}
+					upgradesString += curUpgrades[selected];
+					if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
+						array_push(oPlayerManager.chosen,curUpgrades[selected]);
+					} else {
+						array_push(oPlayerManager.chosen,curUpgrades[selected]);
+					}
+					instance_destroy(upgradeBoxes[0]);
+					instance_destroy(upgradeBoxes[2]);
+					chooseUpgrade(curUpgrades[selected], "None");
+				} else 			if (selected ==2 and upgradeBoxes[2].animDone) {
+					if (array_length(oPlayerManager.chosen)!=0) {
+						upgradesString+=", " 	
+					}
+					selectingUpgrade = false;
+					upgradesString += curUpgrades[selected];
+					if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
+						array_push(oPlayerManager.chosen,curUpgrades[selected]);
+					} else {
+						array_push(oPlayerManager.chosen,curUpgrades[selected]);
+					}
+					instance_destroy(upgradeBoxes[1]);
+					instance_destroy(upgradeBoxes[0]);
+					chooseUpgrade(curUpgrades[selected], "None");
+				}
+		}
 		if (keyboard_check_pressed(ord("A"))) {
-			audio_play_sound(SndChooseUpgrade, 1, 0)
-			if (selected ==0 and upgradeBoxes[0].animDone) {
-				selectingUpgrade = false;
-				upgradeBoxes[0].sprite_index = sButtonChosen;
-				if (array_length(oPlayerManager.chosen)!=0) {
-					upgradesString+=", " 	
-				}
-				upgradesString += curUpgrades[selected];
-				if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
-					upgradesString += " ("+ sideAbbreviation+")"
-					array_push(oPlayerManager.chosen,curUpgrades[selected] + " ("+ sideAbbreviation+")");
-				} else {
-					array_push(oPlayerManager.chosen,curUpgrades[selected]);
-				}
-				instance_destroy(upgradeBoxes[1]);
-				instance_destroy(upgradeBoxes[2]);
-				chooseUpgrade(curUpgrades[selected], side);
-			} else {
 				selected = 0;
-				upgradeBoxes[0].sprite_index = sButtonSelected;
-				upgradeBoxes[1].sprite_index = sButton;
-				upgradeBoxes[2].sprite_index = sButton;
-			}
+				audio_play_sound(SndChooseUpgrade, 1, 0)
 		} else if (keyboard_check_pressed(ord("S"))) {
 			audio_play_sound(SndChooseUpgrade, 1, 0)
-			if (selected ==1 and upgradeBoxes[1].animDone) {
-				
-				selectingUpgrade = false;
-				upgradeBoxes[1].sprite_index = sButtonChosen
-				if (array_length(oPlayerManager.chosen)!=0) {
-					upgradesString+=", " 	
-				}
-				upgradesString += curUpgrades[selected];
-				if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
-					upgradesString += " ("+ sideAbbreviation+")"
-					array_push(oPlayerManager.chosen,curUpgrades[selected] + " ("+ sideAbbreviation+")");
-				} else {
-					array_push(oPlayerManager.chosen,curUpgrades[selected]);
-				}
-				instance_destroy(upgradeBoxes[0]);
-				instance_destroy(upgradeBoxes[2]);
-				chooseUpgrade(curUpgrades[selected], side);
-			} else {
 				selected = 1;
-				upgradeBoxes[1].sprite_index = sButtonSelected;
-				upgradeBoxes[0].sprite_index = sButton;
-				upgradeBoxes[2].sprite_index = sButton;
-			}
 		} else if (keyboard_check_pressed(ord("D"))) {
 			audio_play_sound(SndChooseUpgrade, 1, 0)
-			if (selected ==2 and upgradeBoxes[2].animDone) {
-				
-				if (array_length(oPlayerManager.chosen)!=0) {
-					upgradesString+=", " 	
-				}
-				selectingUpgrade = false;
-				upgradesString += curUpgrades[selected];
-				upgradeBoxes[2].sprite_index = sButtonChosen;
-				if (!(!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3)) {
-					upgradesString += " (" + sideAbbreviation + ")"
-					array_push(oPlayerManager.chosen,curUpgrades[selected] + " (" + sideAbbreviation+")");
-				} else {
-					array_push(oPlayerManager.chosen,curUpgrades[selected]);
-				}
-				instance_destroy(upgradeBoxes[1]);
-				instance_destroy(upgradeBoxes[0]);
-				chooseUpgrade(curUpgrades[selected], side);
-			} else {
 				selected = 2;	
-				upgradeBoxes[2].sprite_index = sButtonSelected;
-				upgradeBoxes[1].sprite_index = sButton;
-				upgradeBoxes[0].sprite_index = sButton;
-			}
 		}
 	
 	} 
@@ -125,32 +117,8 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 	// pressing the button to go to the next screen
 	else {
 		if (keyboard_check_pressed(vk_anykey)) {
-			if (!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3) {
-				oEverythingManager.obtainedUniqueUpgrade = true;
-				array_push(basicUpgrades,"Versatile")
-				var left = instance_create_depth(x,y,depth,oUpgradeManager);
-				left.createNewOptions = true;
-				left.num = 0;
-				for (i = 0; i < array_length(upgradeBoxes);i++) {
-					instance_destroy(upgradeBoxes[i]);	
-				}
-				instance_destroy();
-			} else {
-				if (num == 0) {
-					for (i = 0; i < array_length(upgradeBoxes);i++) {
-						instance_destroy(upgradeBoxes[i]);	
-					}
-					var right = instance_create_depth(x,y,depth,oUpgradeManager);
-					right.createNewOptions = true;
-					right.num = 1;
-					right.side = "right";
-					right.sideAbbreviation = "R";
-					instance_destroy();
-				} else if (num == 1) {
-					oEverythingManager.level++;
-					room_goto(CombatRoom);
-				}
-			}
+			oEverythingManager.level++;
+			room_goto(CombatRoom);
 		}
 	}
 	
@@ -169,6 +137,9 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 		delay--;	
 	}
 
+if (irandom(10)>8) {
+	instance_create_depth(irandom(room_width),room_height+10,1,oStartUiParticle);
+}
 
 }
 

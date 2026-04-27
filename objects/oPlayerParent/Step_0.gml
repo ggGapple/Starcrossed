@@ -22,7 +22,14 @@ if (active) {
 	// check bullets
 	var _bullet = instance_place(x, y, oBulletParent);
 	if (_bullet != noone) {
-		takeDamage(_bullet.dmg);
+		if (oPlayerManager.armored && stillArmored) {
+			stillArmored = false;	
+			audio_play_sound(SndStart,1,0);
+			takeDamage(0);
+		} else {
+			takeDamage(_bullet.dmg);
+		}
+		
 	    instance_destroy(_bullet);
 	}
 	

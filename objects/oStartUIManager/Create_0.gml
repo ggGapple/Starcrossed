@@ -10,11 +10,11 @@ menu = 0
 
 menuButtons = [];
 menuButtons[0] = instance_create_depth(room_width/6 - 11*sprite_get_width(sButton)
-,-100,-1,oMenuButton);
+,-150,-1,oMenuButton);
 menuButtons[1] = instance_create_depth(room_width/6*3 - 11*sprite_get_width(sButton)
-,-100,-1,oMenuButton);
+,-150,-1,oMenuButton);
 menuButtons[2] = instance_create_depth(room_width/6*5 - 11*sprite_get_width(sButton)
-,-100,-1,oMenuButton);
+,-150,-1,oMenuButton);
 menuButtons[1].timer+=30;
 menuButtons[2].timer+=60;
 menuButtons[1].goFadeTimer+=10;

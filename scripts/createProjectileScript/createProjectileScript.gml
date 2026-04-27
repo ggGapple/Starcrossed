@@ -6,6 +6,8 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 				var proj = oBlackHolePunish;
 			} else if (oEverythingManager.lightyear == 10) {
 				var proj = oCometPunish;	
+			} else if (oEverythingManager.lightyear == 100) {
+				var proj = oBinaryPunish;	
 			}
 			if (oPlayerLeft.active && oEverythingManager.lightyear == 1) {
 				var instanceX =0;

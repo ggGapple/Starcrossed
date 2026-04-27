@@ -17,11 +17,7 @@ else if (timer == -10) {
 	animDone = true
 }
 
-if (fadingTimer == -1 and sprite_index = sButtonChosen) {
-	fadingTimer = 20;
-	goUp = true;
-	tempY = y;
-}
+
 
 if (goUp and fadingTimer > 0) {
 	y = lerp(y, tempY-50,0.1);
@@ -34,3 +30,14 @@ if (goUp and fadingTimer > 0) {
 } else if (goUp = false and fadingTimer > 0) {
 	y = lerp(y, tempY + 700, 0.05);
 }
+
+if (upgrader.selected == idx && targetScale != 1.3) {
+	targetScale = 1.3;
+	image_alpha = 1;
+} else if (upgrader.selected != idx && targetScale == 1.3) {
+	targetScale = 1;	
+	image_alpha = 0.7;
+}
+
+image_xscale = lerp(image_xscale,20*targetScale,0.1);
+image_yscale = lerp(image_yscale,20*targetScale,0.1);

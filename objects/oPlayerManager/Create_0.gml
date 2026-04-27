@@ -26,6 +26,11 @@ chosen = []; // upgrades
 elusive = false;
 violent = false;
 peaceful = false;
+vampiric = false;
+armored = false;
+nourished = false;
+
+
 
 abilityCooldown = 0;
 abilityCooldownMax = 300;
@@ -35,3 +40,10 @@ abilityLenY = 20;
 
 invincibleGood = false;
 curHp = maxHp;
+
+
+maxVampiricTimer = 60;
+vampiricTimer = maxVampiricTimer;
+
+maxNourishedTimer = 120;
+nourishedTimer = maxNourishedTimer;

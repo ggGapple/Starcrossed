@@ -13,4 +13,6 @@ if (oEverythingManager.lightyear == 1) {
 	maxUndodgeableTimer = 700;	
 } else if (oEverythingManager.lightyear == 10) {
 	maxUndodgeableTimer = 6;	
+} else if (oEverythingManager.lightyear == 100) {
+	maxUndodgeableTimer = 16;
 }
