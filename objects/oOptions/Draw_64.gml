@@ -25,7 +25,8 @@ var optionsAnswers = []
 optionsAnswers[0] = (oMusicManager.musicVolume == 0 ? "< muted >" : "< "+string(oMusicManager.musicVolume) + " >")
 optionsAnswers[1] = (oMusicManager.sfxVolume == 0 ? "< muted >" : "< "+string(oMusicManager.sfxVolume) + " >")
 optionsAnswers[2] = oEverythingManager.fullscreen ? "< On >" : "< Off >"
-	optionsAnswers[3] = oEverythingManager.doTutorial ? "< On >" : "< Off >"
+optionsAnswers[3] = oEverythingManager.doTutorial ? "< On >" : "< Off >"
+optionsAnswers[4] = oEverythingManager.showRunCountInMenu ? "< On >" : "< Off >"
 	
 for (i = 0; i < array_length(optionsArray);i++) {
 	

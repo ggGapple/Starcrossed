@@ -14,7 +14,8 @@ optionsArray = [
 "Music Volume",
 "SFX Volume",
 "Fullscreen",
-"Play Tutorial"
+"Play Tutorial",
+"Show Run Count"
 ]
 
 

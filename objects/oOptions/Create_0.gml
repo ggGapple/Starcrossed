@@ -14,7 +14,8 @@ optionsArray = [
 "Music Volume",
 "SFX Volume",
 "Fullscreen",
-"Play Tutorial"
+"Play Tutorial",
+"Show Run Count"
 ]
 scales = [1.3];
 for (i = 1; i < array_length(optionsArray)+1; i++) {

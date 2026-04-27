@@ -1,16 +1,14 @@
 rightDefense = 1;
 leftDefense = 1; //0 to 1; closer to zero is higher defense (i know it's stupid and inconsistent mb)
 
-rightHpMax = 20;
 leftHpMax = 10;
+rightHpMax = 20*log10(oEverythingManager.lightyear*10)
 
-if (oEverythingManager.level == 5) {
-	rightHpMax = 30;	
-}
+rightHpMax += oEverythingManager.level*2
 
 
 rightHp = rightHpMax;
-leftHp = 5;
+leftHp = leftHpMax/2;
 
 leftHpRegenTimer = 200;
 

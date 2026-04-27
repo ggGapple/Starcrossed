@@ -12,10 +12,9 @@ if (image_xscale != 30* oResolutionManager.uiScale) {
 
 
 if ((keyboard_check_pressed(vk_space) && 
-selected == array_length(optionsArray))) {
+selected == array_length(optionsArray)) || keyboard_check_pressed(vk_escape)) {
 	tempY = -50 - sprite_height;	
-	dieSoon = true;
-	
+	dieSoon = true;		
 }
 
 if (y+sprite_height < 0 && dieSoon) {
@@ -24,6 +23,9 @@ if (y+sprite_height < 0 && dieSoon) {
 }
 
 
+if (dieSoon) {
+	return;	
+}
 if (keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"))) {
 	selected = min(selected+1, array_length(optionsArray));
 	audio_play_sound(SndChooseUpgrade,1,0);
@@ -43,6 +45,8 @@ if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
 		oEverythingManager.fullscreen = !oEverythingManager.fullscreen;	
 	}  else if (selected == 3) {
 		oEverythingManager.doTutorial = !oEverythingManager.doTutorial;	
+	} else if (selected == 4) {
+		oEverythingManager.showRunCountInMenu = !oEverythingManager.showRunCountInMenu;	
 	}
 }
 
@@ -56,5 +60,7 @@ if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
 		oEverythingManager.fullscreen = !oEverythingManager.fullscreen;	
 	} else if (selected == 3) {
 		oEverythingManager.doTutorial = !oEverythingManager.doTutorial;	
+	} else if (selected == 4) {
+		oEverythingManager.showRunCountInMenu = !oEverythingManager.showRunCountInMenu;	
 	}
 }

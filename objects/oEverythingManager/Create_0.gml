@@ -24,3 +24,5 @@ loadedSettingsYet = false;
 
 runCount = 0;
 doTutorial = true;
+
+showRunCountInMenu = false;

@@ -40,4 +40,11 @@ draw_set_color(c_aqua);
 		room_height/2,10,10,0,c_white,1);
 	}
 	
+	if (oEverythingManager.showRunCountInMenu) {
+		draw_set_color(c_gray);
+		draw_set_font(FntMedium);
+		draw_text(string_width("Completed runs: " + string(oEverythingManager.runCount))/2+4
+		,room_height-20,"Completed runs: " + string(oEverythingManager.runCount));
+	}
+	
 

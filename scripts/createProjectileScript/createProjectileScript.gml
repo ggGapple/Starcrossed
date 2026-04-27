@@ -39,7 +39,7 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 		var proj = chooseProjectileHorizontal();
 		if (willItBeRightward) {
 			var instanceX = -10;
-			if (proj == oSnakeProjectileHorizontal) {
+			if (proj == oSnakeProjectileHorizontal || proj == oSpinningProjectileHorizontal) {
 				instanceX -= 90
 			}
 			var inst = instance_create_depth(instanceX, irandom_range(oBoundingBoxLeft.minY,
@@ -47,7 +47,7 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 			inst.sprite_index = inst.spriteRight;
 		} else {
 			var instanceX = room_width+10;
-			if (proj == oSnakeProjectileHorizontal) {
+			if (proj == oSnakeProjectileHorizontal || proj == oSpinningProjectileHorizontal) {
 				instanceX += 90
 			}
 			var inst = instance_create_depth(instanceX, irandom_range(oBoundingBoxLeft.minY,
