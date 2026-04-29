@@ -5,7 +5,7 @@ textSpeed = 0.5;
 
 display = true;
 
-if (oEverythingManager.doTutorial) {
+if (oEverythingManager.doTutorial && oEverythingManager.lightyear == 1) {
 	texts = [
 	"Welcome to Starcrossed!",
 	"Move and dodge with WASD.",
