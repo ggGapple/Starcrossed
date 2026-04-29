@@ -8,9 +8,6 @@ basicUpgrades = [
 "Nourished"
 ]
 
-if (oEverythingManager.level > 3) {
-	array_push(basicUpgrades, "Versatile")	
-}
 
 descs = {
 "Vampiric" : "+passive damage, --defense",

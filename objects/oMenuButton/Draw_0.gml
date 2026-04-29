@@ -35,7 +35,7 @@ if (selected) {
 			draw_text_transformed(x+sprite_width/2,
 			y+sprite_height+8,"[space]",scale,scale,0);
 		} else {
-			selectedTimer = 500;	
+			selectedTimer = 250;	
 		}
 	} else if (text == "Classic" && oStartUIManager.menu == 1){
 			draw_set_font(FntMediumLarge);

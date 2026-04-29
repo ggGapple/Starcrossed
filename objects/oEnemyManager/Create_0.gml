@@ -2,7 +2,7 @@ rightDefense = 1;
 leftDefense = 1; //0 to 1; closer to zero is higher defense (i know it's stupid and inconsistent mb)
 
 leftHpMax = 10;
-rightHpMax = 20*log10(oEverythingManager.lightyear*10)
+rightHpMax = 10*log10(oEverythingManager.lightyear*10)
 
 rightHpMax += oEverythingManager.level*2
 

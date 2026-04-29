@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"SndChooseUpgrade.wav",
-  "volume":0.76,
+  "volume":0.23,
 }
