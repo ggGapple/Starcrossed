@@ -8,3 +8,4 @@ attackSprite = sPlayerAttackLeft;
 invincibleSprite = sPlayerInvincibleLeft;
 invincibleTpSprite = sPlayerTpInvincibleLeft;
 armoredSprite = sPlayerArmoredLeft;
+otherSide = oPlayerRight;

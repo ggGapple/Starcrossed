@@ -24,6 +24,6 @@ if (curMusicVolume != musicVolume) {
 	curMusicVolume = musicVolume;
 }
 if (curSfxVolume != sfxVolume) {
-	audio_group_set_gain(SFX,sfxVolume/3,0);
+	audio_group_set_gain(SFX,sfxVolume/4,0);
 	curSfxVolume = sfxVolume;
 }

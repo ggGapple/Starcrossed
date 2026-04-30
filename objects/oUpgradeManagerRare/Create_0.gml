@@ -11,11 +11,11 @@ basicUpgrades = [
 
 descs = {
 "Vampiric" : "+passive damage, --defense",
-"Opportunistic" : "-attack window length, ++damage",
+"Opportunistic" : "-attack window length, +damage",
 "Armored" : "negate first hit each round",
-"Rapid" : "--time between attacks, -damage",
+"Rapid" : "-time between attacks, -damage",
 "Mouselike" : "-hitbox size, +speed",
-"Mighty" : "++defense, +damage, -speed, +hitbox size",
+"Mighty" : "+defense, +damage, -speed, +size",
 "Nourished" : "+passive regen"
 }
 

@@ -14,8 +14,9 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 		upgradeBoxes[2].idx = 2;
 		upgradeBoxes[1].timer += 30
 		upgradeBoxes[2].timer += 60
-		if (oEverythingManager.obtainedUniqueUpgrade == false and oEverythingManager.level == 3) {
-			curUpgrades[0] = "Elusive";
+		if (oEverythingManager.level == 3) {
+			if (oEverythingManager.lightyear == 1) {
+							curUpgrades[0] = "Elusive";
 			curUpgrades[1] = "Violent";
 			curUpgrades[2] = "Peaceful";
 			upgradeBoxes[0].sprite_index = sElusive
@@ -24,6 +25,48 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 			upgradeBoxes[0].tempY+=50;
 			upgradeBoxes[1].tempY+=50;
 			upgradeBoxes[2].tempY+=50;
+			} else if (oEverythingManager.lightyear == 10) {
+				
+				if (oPlayerManager.elusive) {
+					curUpgrades[0] = "Blistering";
+					curUpgrades[1] = "Deflective";
+					curUpgrades[2] = "Transcendent";
+					upgradeBoxes[0].sprite_index = sBlistering
+					upgradeBoxes[1].sprite_index = sDeflective
+					upgradeBoxes[2].sprite_index = sTranscendant
+					
+				} else if (oPlayerManager.violent) {
+					curUpgrades[0] = "Synergistic";
+					curUpgrades[1] = "Aggressive";
+					curUpgrades[2] = "Volatile";
+					upgradeBoxes[0].sprite_index = sSynergistic
+					upgradeBoxes[1].sprite_index = sAggressive
+					upgradeBoxes[2].sprite_index = sVolatile
+				} else if (oPlayerManager.peaceful) {
+					curUpgrades[0] = "Medicinal";
+					curUpgrades[1] = "Devout";
+					curUpgrades[2] = "Twisted";
+					upgradeBoxes[0].sprite_index = sMedicinal
+					upgradeBoxes[1].sprite_index = sDevout
+					upgradeBoxes[2].sprite_index = sTwisted
+					
+				}
+
+				upgradeBoxes[0].tempY+=50;
+				upgradeBoxes[1].tempY+=50;
+				upgradeBoxes[2].tempY+=50;
+			} else if (oEverythingManager.lightyear == 100) {
+				upgradeBoxes[0].tempY+=50;
+				upgradeBoxes[1].tempY+=50;
+				upgradeBoxes[2].tempY+=50;
+				curUpgrades[0] = "Prepared";
+				curUpgrades[1] = "Sharp";
+				curUpgrades[2] = "Intimidating";
+				upgradeBoxes[0].sprite_index = sPrepared
+				upgradeBoxes[1].sprite_index = sSharp
+				upgradeBoxes[2].sprite_index = sIntimidating
+			}
+
 		} else {
 			upgradesLeft = basicUpgrades;
 			var idx = irandom(array_length(upgradesLeft)-1)

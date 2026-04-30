@@ -1,5 +1,6 @@
 function createProjectile(projX,projY, dir, undodgeable = false){
 	// proj x and proj y are deprecated and never used but im too lazy to fix it everywhere else
+	
 	if (dir == "vertical") {
 		if (undodgeable) {
 			if (oEverythingManager.lightyear == 1) {
@@ -29,7 +30,7 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 			}
 		}
 		var instanceY = -5;
-		if (proj == oSnakeProjectileVertical) {
+		if (proj == oSnakeProjectileVertical || proj == oSpinningProjectileVertical) {
 			instanceY-=90
 		}
 
@@ -60,23 +61,24 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 }
 
 function chooseProjectileVertical() {
+	var absoluteLevel = oEverythingManager.level + (log10(oEverythingManager.lightyear*10)-1)*5
 	var options = [oRedProjectileVertical]
 	var weights = [10]
 	var sum = 10;
-	if (oEverythingManager.level >=2) {
+	if (absoluteLevel >=3) {
 		array_push(options,oYellowProjectileVertical);
 		array_push(weights,3)
 		sum +=3;
-	} if (oEverythingManager.level >=3) {
+	} if (absoluteLevel >=6) {
 		array_push(options,oSpinningProjectileVertical);
 		array_push(weights,1);
 		weights[0]+=2;
 		sum+=3;
-	} if (oEverythingManager.level >= 4) {
+	} if (absoluteLevel >= 9) {
 		array_push(options,oDiagonalProjectileVertical);
 		array_push(weights,3);
 		sum+=3;		
-	} if (oEverythingManager.level >= 5) {
+	} if (absoluteLevel >= 12) {
 		if (oEverythingManager.seed1 == 1){
 			array_push(options,oCircleProjectileVertical);
 		} else {
@@ -97,23 +99,24 @@ function chooseProjectileVertical() {
 }
 
 function chooseProjectileHorizontal() {
+	var absoluteLevel = oEverythingManager.level + (log10(oEverythingManager.lightyear*10)-1)*5
 	var options = [oRedProjectileHorizontal]
 	var weights = [10]
 	var sum = 10;
-	if (oEverythingManager.level >=2) {
+	if (absoluteLevel >= 3) {
 		array_push(options,oYellowProjectileHorizontal);
 		array_push(weights,3)
 		sum +=3;
-	} if (oEverythingManager.level >=3) {
+	} if (absoluteLevel >=6) {
 		array_push(options,oSpinningProjectileHorizontal);
 		array_push(weights,1);
 		weights[0]+=2;
 		sum+=3;
-	} if (oEverythingManager.level >= 4) {
+	} if (absoluteLevel >= 9) {
 		array_push(options,oDiagonalProjectileHorizontal);
 		array_push(weights,3);
 		sum+=3;		
-	} if (oEverythingManager.level >= 5) {
+	} if (absoluteLevel >= 12) {
 		if (oEverythingManager.seed1 == 1){
 			array_push(options,oCircleProjectileHorizontal);
 		} else {

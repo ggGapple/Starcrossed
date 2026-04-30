@@ -1,6 +1,10 @@
 if (oPauseManager.paused) {
 	return;	
 }
+if (iShouldTakeDamageTimer != oBinaryStar.iShouldTakeDamageTimer) {
+	iShouldTakeDamageTimer = oBinaryStar.iShouldTakeDamageTimer;	
+}
+
 angle += orbitSpeed;
 if (angle > 360) {
 	angle -=360;	
@@ -14,7 +18,7 @@ if (switchTimer == switchWhen) {
 	if (switched){
 		switched = -1
 		image_xscale*=-1
-	} else {
+	} else {  
 		switched = 1
 		image_xscale*=-1	
 	}

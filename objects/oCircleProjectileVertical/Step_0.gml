@@ -1,6 +1,6 @@
 
 
-if (oPauseManager.paused) {
+if (oPauseManager.paused|| global.freezeBullets) {
 	return;	
 }
 if (y > room_height) {

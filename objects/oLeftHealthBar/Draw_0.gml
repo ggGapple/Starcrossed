@@ -14,11 +14,7 @@ draw_set_color(#EE145B)
 draw_roundrect(outerx1, outery1, outerx1+lenX* oEnemyManager.leftHp/oEnemyManager.leftHpMax, 
 outery2, false);
 
-if (warningTimer > 30) {
-	draw_set_font(FntMediumLarge)
-	draw_set_color(c_white)
-	draw_text(outerx1 + (outerx2-outerx1)/2,outery1-100,"!")
-}
+
 
 
 
@@ -27,13 +23,19 @@ if (oEnemyManager.leftHp == oEnemyManager.leftHpMax && !oPauseManager.paused) {
 	if (warningTimer == 0 || warningTimer == 40) {
 		warningDirection*=-1;
 	}
-
-}
 	draw_set_alpha(warningTimer/40);
 	draw_set_color(c_white)
 	draw_roundrect(outerx1, outery1, outerx1+lenX* oEnemyManager.leftHp/oEnemyManager.leftHpMax, 
 	outery2, false);
 	draw_set_alpha(1);
+	if (warningTimer > 30) {
+		draw_set_font(FntMediumLarge)
+		draw_set_color(c_white)
+		draw_text(outerx1 + (outerx2-outerx1)/2,outery1-100,"!")
+	}
+
+}
+
 
 draw_set_color(oColorCodes.lightRed);
 draw_set_font(FntMedium)

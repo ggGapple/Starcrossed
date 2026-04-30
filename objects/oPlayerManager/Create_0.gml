@@ -29,7 +29,18 @@ peaceful = false;
 vampiric = false;
 armored = false;
 nourished = false;
+synergistic = false;
+aggressive = false;
+blistering = false;
+deflective = false;
+transcendent = false;
+healAmount = 1;
+devout = false;
+twisted = true;
 
+explosionRadius = 110;
+
+stillArmored = false;
 
 
 abilityCooldown = 0;

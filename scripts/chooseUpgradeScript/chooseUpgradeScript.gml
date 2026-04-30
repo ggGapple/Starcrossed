@@ -85,7 +85,43 @@ function chooseUpgrade(upgrade, side){
 			case "Peaceful": 
 				oPlayerManager.peaceful = true;
 				break;
-		}
+			case "Synergistic":
+				oPlayerManager.synergistic = true;
+				break;
+			case "Aggressive":
+				oPlayerManager.aggressive = true;
+				break;
+			case "Volatile": 
+				oPlayerManager.explosionRadius*=1.75;
+				break;
+			case "Blistering":
+				oPlayerManager.blistering = true;
+				break;
+			case "Deflective":
+				oPlayerManager.deflective = true;
+				break;
+			case "Transcendant": 
+				oPlayerManager.transcendent = true;
+				break;
+			case "Medicinal":
+				oPlayerManager.healAmount = 2;
+				break;
+			case "Devout":
+				oPlayerManager.devout = true;
+				break;
+			case "Twisted": 
+				oPlayerManager.twisted = true;
+				break;
+			case "Prepared":
+				oEverythingManager.playerLives++;
+				break;
+			case "Sharp":
+				oBulletSpeedManager.bulletSpeed-=0.2;
+				break;
+			case "Intimidating":
+				oEverythingManager.regenMax = 200;
+				break;
+		} 
 		
 	}
 	if (side == "left") {

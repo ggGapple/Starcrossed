@@ -7,8 +7,10 @@ function takeDamage(damage = 1){
 	} else {
 		oHealthBarManager.damageToTake+= damage/oPlayerManager.rightDefense;
 	}
+	if (damage > 0) {
+		oHealthBarManager.wiggle += 50;
+	}
 	
-	oHealthBarManager.wiggle += 50;
 	oPlayerManager.iFrames = oPlayerManager.maxIFrames;
 	oScreenShake.shakeAmount+=4;
 	if (damage != 0) {

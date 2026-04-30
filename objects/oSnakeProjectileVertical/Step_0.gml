@@ -1,4 +1,4 @@
-if (oPauseManager.paused) {
+if (oPauseManager.paused|| global.freezeBullets) {
 	return;	
 }event_inherited();
 

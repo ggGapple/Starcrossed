@@ -30,13 +30,41 @@ descs = {
 "Elusive": "+teleport ability (with i frames)",
 "Violent": "+explode ability",
 "Peaceful": "+heal ability",
-
+"Synergistic" : "+explode triggers on both sides",
+"Aggressive" : "+explode slightly damages enemy",
+"Volatile" : "x2 explosion radius",
+"Blistering" : "+no cooldown, no i-frames",
+"Deflective" : "+i-frame damage taken is reflected",
+"Transcendent" : "+time stops after teleport",
+"Medicinal" : "+heal is more powerful",
+"Devout" : "+healing gives armor",
+"Twisted" : "+healing damages enemy",
+"Prepared" :"+1 life",
+"Intimidating" : "+enemy regenerates slower",
+"Sharp" : "+projectiles move 20% slower"
 }
 
 rareUpgrades= [
 "Opportunistic", // shorter attack window, much more damage
 "Armored" //1 negated attack per round
 ]
+
+violentUpgrades = [
+"Synergistic", // explode triggers on both sides
+"Aggressive", // explode slightly damages boss
+"Volatile" // double explosion radius
+]
+elusiveUpgrades = [
+"Blistering", // infinite TP, no i-frames
+"Deflective", // reflect i-frame damage
+"Transcendent" // time slow
+];
+
+peacefulUpgrades = [
+"Medicinal", // healing is more powerful
+"Devout", // healing armors you
+"Twisted" // healing lifesteals from boss
+];
 
 upgradesSprites = {
 "Wise": sWise,

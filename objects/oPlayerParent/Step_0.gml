@@ -22,8 +22,12 @@ if (active) {
 	// check bullets
 	var _bullet = instance_place(x, y, oBulletParent);
 	if (_bullet != noone) {
-		if (oPlayerManager.armored && stillArmored) {
-			stillArmored = false;	
+		if (oPlayerManager.deflective && oPlayerManager.iFrames > 0) {
+			dealDamage(1);
+			audio_play_sound(SndAttack,1,0);
+		}
+		else if (oPlayerManager.armored && oPlayerManager.stillArmored) {
+			oPlayerManager.stillArmored = false;	
 			audio_play_sound(SndStart,1,0);
 			takeDamage(0);
 		} else {
@@ -41,24 +45,31 @@ if (active) {
 		oPlayerManager.abilityCooldown = oPlayerManager.abilityCooldownMax;
 		audio_play_sound(SndAbilityActivate,1,0);
 		if (oPlayerManager.elusive) {
-			oPlayerManager.iFrames+=60;
+			var tpDist = 65;
+			if (oPlayerManager.blistering) {
+				oPlayerManager.abilityCooldown = 0;
+				tpDist +=15;
+			} else {
+				oPlayerManager.iFrames+=60;
+			}
+
 			oPlayerManager.invincibleGood = true;
 			if (keyboard_check(ord("W"))) {
-				y -= 65;
+				y -= tpDist;
 			} else if (keyboard_check(ord("A"))) {
-				x-=65
+				x-=tpDist
 
 			} else if (keyboard_check(ord("D"))) {
-				x+=65
+				x+=tpDist
 			} else {
-				y+=65
+				y+=tpDist
 			}
 		} 
 		
 		else if (oPlayerManager.violent) {
 			var collisions = ds_list_create();
-			var num = collision_circle_list(x + sprite_width/2,
-			y + sprite_height/2,105,oProjectileManager.projectiles, 
+			var num = collision_circle_list(x,
+			y,oPlayerManager.explosionRadius*1.1,oProjectileManager.projectiles, 
 			false, true, collisions,false);
 			drawExplosion = true;
 			explosionTimer = 60;
@@ -66,9 +77,18 @@ if (active) {
 				instance_destroy(collisions[| i]);
 			}
 			ds_list_destroy(collisions)
+			if (oPlayerManager.aggressive) {
+				dealDamage(1);	
+			}
 			
 		} else if (oPlayerManager.peaceful) {
-			oPlayerManager.hp = min(oPlayerManager.hp+ 1,oPlayerManager.maxHp);	
+			oPlayerManager.hp = min(oPlayerManager.hp+ oPlayerManager.healAmount,oPlayerManager.maxHp);	
+			if (oPlayerManager.devout) {
+				oPlayerManager.armored = true;
+				oPlayerManager.stillArmored = true;
+			} else if (oPlayerManager.twisted) {
+				dealDamage(oPlayerManager.healAmount);	
+			}
 		}
 	}
 	
@@ -84,6 +104,9 @@ if (active) {
 	
 	// flash during i frames
 	if (oPlayerManager.iFrames > 0) {
+		if (oPlayerManager.transcendent && !global.freezeBullets && oPlayerManager.invincibleGood) {
+			global.freezeBullets = true;
+		}
 		if (oPlayerManager.invincibleGood) {
 			if (oPlayerManager.iFrames ==1) {
 				sprite_index = activeSprite;
@@ -98,5 +121,24 @@ if (active) {
 				sprite_index = invincibleSprite;
 			}
 		}
+	} else if (oPlayerManager.transcendent && global.freezeBullets) {
+		global.freezeBullets = false;
+			
 	}
+} else if 
+(oPlayerManager.synergistic && otherSide.drawExplosion && !drawExplosion) {
+			var collisions = ds_list_create();
+			var num = collision_circle_list(x,
+			y,oPlayerManager.explosionRadius*1.1,oProjectileManager.projectiles, 
+			false, true, collisions,false);
+			drawExplosion = true;
+			explosionTimer = 60;
+			for (i = 0; i < num; i++) {
+				instance_destroy(collisions[| i]);
+			}
+			ds_list_destroy(collisions)
+}
+
+if (explosionTimer <= 0) {
+	drawExplosion = false;
 }

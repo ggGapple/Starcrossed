@@ -6,7 +6,13 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 	if (!oEverythingManager.obtainedUniqueUpgrade and oEverythingManager.level == 3) {
 		fullText = "Congrats on beating level 3!"
 		var _displayText = string_copy(fullText, 1, floor(curChar));
-		fullText2 = "As a reward, pick a special ability that triggers with down arrow"
+		if (oEverythingManager.lightyear == 1) {
+			fullText2 = "As a reward, pick a special ability that triggers with down arrow"
+		} else 		if (oEverythingManager.lightyear == 10) {
+			fullText2 = "As a reward, pick an upgrade for your ability"
+		} else if (oEverythingManager.lightyear == 100) {
+			fullText2 = "As a reward, pick a unique upgrade"
+		}
 		var _displayText2 = string_copy(fullText2, 1, floor(curChar2));
 		drawTextShadow(room_width/2-string_width(fullText)/2, 20, _displayText,3);
 		draw_set_font(FntMedium);
@@ -68,7 +74,7 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 	// draw description
 	if (selected != -1) {
 		draw_set_font(FntMedium);
-		draw_set_color(c_gray);
+		draw_set_color(c_white);
 		draw_text(upgradeBoxes[selected].x-string_width(descs[$ curUpgrades[selected]])/2,
 		upgradeBoxes[selected].y+150,descs[$ curUpgrades[selected]]);
 	}

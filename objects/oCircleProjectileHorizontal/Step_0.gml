@@ -1,7 +1,8 @@
 
-if (oPauseManager.paused) {
+if (oPauseManager.paused|| global.freezeBullets) {
 	return;	
-}event_inherited();
+}
+event_inherited();
 if ((x > room_width and rightward) or (x < 0 and !rightward)) {
 	instance_destroy();
 }
