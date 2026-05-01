@@ -97,12 +97,24 @@ selected = 1;
 selectingUpgrade = true;
 createNewOptions = false;
 upgradesString = "Current upgrades: ";
+upgradesString2 = "";
+draw_set_font(FntSuggestion);
 for (i = 0; i < array_length(oPlayerManager.chosen);i++) {
-	upgradesString+=oPlayerManager.chosen[i]
-	if (i != array_length(oPlayerManager.chosen)-1) {
-		upgradesString += ", "
+	if (string_width(upgradesString + oPlayerManager.chosen[i]) > room_width) {
+		upgradesString2 += oPlayerManager.chosen[i];
+		if (i != array_length(oPlayerManager.chosen)-1) {
+			upgradesString2 += ", "
+		}
+	} else {
+		upgradesString+=oPlayerManager.chosen[i]
+		if (i != array_length(oPlayerManager.chosen)-1) {
+			upgradesString += ", "
+		}
 	}
-}
+	
+
+} 
+
 
 curIndex = 0;
 curChar = 0;
@@ -116,6 +128,10 @@ fullText3 = "";
 curIndex4 = 0;
 curChar4 = 0;
 fullText4 = "";
+
+curIndex5 = 0;
+curChar5 = 0;
+fullText5 = "";
 yeahWereDone = false;
 
 delay = 60;

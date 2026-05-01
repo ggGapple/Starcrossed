@@ -170,8 +170,14 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 	    curChar2 += textSpeed;
 	} if (curChar3 < string_length(fullText3)) {
 		curChar3 += textSpeed;	
-	} if (curChar4 < string_length(fullText4) && yeahWereDone) {
-		curChar4 += textSpeed;	
+	} else if (curChar5 < string_length(fullText5)){
+			curChar5 += textSpeed;
+		}
+	
+	if (yeahWereDone) {
+		if (curChar4 < string_length(fullText4)) {
+			curChar4 += textSpeed;	
+		} 
 	}
 	if (delay > 0) {
 		delay--;	

@@ -66,8 +66,20 @@ if (room == RareUpgradesRoom and array_length(upgradeBoxes)> 0) {
 	
 	// draw current upgrades
 	fullText3 = upgradesString;
-	var _displayText3 = string_copy(fullText3, 1, floor(curChar3));
-	draw_set_font(FntSuggestion);
-	draw_set_color(oColorCodes.darkBlue);
-	draw_text(10,room_height-string_height(_displayText3)-5,_displayText3);
+	fullText5 = upgradesString2;
+	if (fullText5 != "") {
+		var _displayText3 = string_copy(fullText3, 1, floor(curChar3));
+		draw_set_font(FntSuggestion);
+		draw_set_color(oColorCodes.darkBlue);
+		draw_text(10,room_height-string_height(_displayText3)-25,_displayText3);
+		var _displayText5 = string_copy(fullText5, 1, floor(curChar5));
+		draw_set_font(FntSuggestion);
+		draw_set_color(oColorCodes.darkBlue);
+		draw_text(10,room_height-string_height(_displayText5)-5,_displayText5);
+	} else {
+		var _displayText3 = string_copy(fullText3, 1, floor(curChar3));
+		draw_set_font(FntSuggestion);
+		draw_set_color(oColorCodes.darkBlue);
+		draw_text(10,room_height-string_height(_displayText3)-5,_displayText3);		
+	}
 }

@@ -15,3 +15,12 @@ if (keyboard_check(ord("H")) and keyboard_check(ord("E"))) {
 if (keyboard_check(ord("L")) and keyboard_check_pressed(ord("Y"))) {
 	oEverythingManager.lightyear*=10
 }
+
+if (keyboard_check(ord("G")) && keyboard_check_pressed(ord("U"))) {
+	
+	array_push(oPlayerManager.chosen	, "Ferocious")
+}
+
+if (keyboard_check(ord("R")) && keyboard_check_pressed(ord("G"))) {
+	room_goto(WinRoom);	
+}
