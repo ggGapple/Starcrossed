@@ -1,5 +1,5 @@
 // draw_self();
-	if (tooltip != "") {
+	if (oEverythingManager.showTips && tooltip != "") {
 		draw_set_font(FntSuggestion);
 		draw_set_color(c_gray);
 		if (tooltip == "<- A") {

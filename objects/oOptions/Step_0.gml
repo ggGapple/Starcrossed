@@ -47,6 +47,8 @@ if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"))) {
 		oEverythingManager.doTutorial = !oEverythingManager.doTutorial;	
 	} else if (selected == 4) {
 		oEverythingManager.showRunCountInMenu = !oEverythingManager.showRunCountInMenu;	
+	} else if (selected == 5) {
+		oEverythingManager.showTips = !oEverythingManager.showTips;	
 	}
 }
 
@@ -62,5 +64,7 @@ if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"))) {
 		oEverythingManager.doTutorial = !oEverythingManager.doTutorial;	
 	} else if (selected == 4) {
 		oEverythingManager.showRunCountInMenu = !oEverythingManager.showRunCountInMenu;	
+	} else if (selected == 5) {
+		oEverythingManager.showTips = !oEverythingManager.showTips;	
 	}
 }
