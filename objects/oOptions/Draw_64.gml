@@ -27,6 +27,7 @@ optionsAnswers[1] = (oMusicManager.sfxVolume == 0 ? "< muted >" : "< "+string(oM
 optionsAnswers[2] = oEverythingManager.fullscreen ? "< On >" : "< Off >"
 optionsAnswers[3] = oEverythingManager.doTutorial ? "< On >" : "< Off >"
 optionsAnswers[4] = oEverythingManager.showRunCountInMenu ? "< On >" : "< Off >"
+optionsAnswers[5] = oEverythingManager.showTips ? "< On >" : "< Off >"
 	
 for (i = 0; i < array_length(optionsArray);i++) {
 	

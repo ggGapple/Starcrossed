@@ -145,14 +145,11 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 				}
 		}
 		if (keyboard_check_pressed(ord("A"))) {
-				selected = 0;
+				selected = clamp(selected-1,0,2);
 				audio_play_sound(SndChooseUpgrade, 1, 0)
-		} else if (keyboard_check_pressed(ord("S"))) {
-			audio_play_sound(SndChooseUpgrade, 1, 0)
-				selected = 1;
 		} else if (keyboard_check_pressed(ord("D"))) {
 			audio_play_sound(SndChooseUpgrade, 1, 0)
-				selected = 2;	
+			selected = clamp(selected+1,0,2);
 		}
 	
 	} 

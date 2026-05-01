@@ -38,15 +38,8 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 		draw_text(upgradeBoxes[2].x - string_width(curUpgrades[2])/2
 		,upgradeBoxes[2].y+75,curUpgrades[2]);
 		
-		
-		// draw text for ASD tooltips
-		draw_set_font(FntMedium);
-		draw_text(upgradeBoxes[0].x - string_width("A")/2
-		,upgradeBoxes[0].y-string_height("A")-90,"A");
-		draw_text(upgradeBoxes[1].x - string_width("S")/2
-		,upgradeBoxes[1].y-string_height("S")-90,"S");
-		draw_text(upgradeBoxes[2].x - string_width("D")/2
-	,upgradeBoxes[2].y-string_height("D")-90,"D");
+
+
 	
 	} else if (selected == 0) {
 		draw_text(upgradeBoxes[0].x - string_width(curUpgrades[0])/2 

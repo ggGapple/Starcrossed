@@ -22,10 +22,9 @@ menuButtons[2].goFadeTimer+=20;
 menuButtons[1].text = "Start"
 menuButtons[0].text = "Options"
 menuButtons[2].text = "Quit"
-menuButtons[1].tooltip = "S"
-menuButtons[0].tooltip = "A"
-menuButtons[2].tooltip = "D"
 
-selected = -1;
+menuButtons[1].selected=true;
+
+selected = 1;
 
 glowTimer = 0;

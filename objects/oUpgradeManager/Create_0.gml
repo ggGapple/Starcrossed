@@ -92,7 +92,7 @@ upgradesLeft = basicUpgrades;
 
 depth = -2;
 
-selected = -1;
+selected = 1;
 
 selectingUpgrade = true;
 createNewOptions = false;

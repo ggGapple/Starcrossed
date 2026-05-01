@@ -28,3 +28,4 @@ doTutorial = true;
 showRunCountInMenu = false;
 
 regenMax = 150;
+showTips = true;

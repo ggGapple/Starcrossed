@@ -17,19 +17,27 @@ glowTimer+=0.003
 if (!instance_exists(oOptions)) {
 	if (keyboard_check_pressed(ord("A"))) {
 		audio_play_sound(SndChooseUpgrade, 1, 0)
-		menuButtons[0].selected=true;
-		menuButtons[1].selected=false;
-		menuButtons[2].selected=false;
-	} if (keyboard_check_pressed(ord("S"))) {
+		if (menuButtons[1].selected) {
+			menuButtons[0].selected=true;
+			menuButtons[1].selected=false;
+			menuButtons[2].selected=false;
+		} else if (menuButtons[2].selected) {
+			menuButtons[0].selected=false;
+			menuButtons[1].selected=true;
+			menuButtons[2].selected=false;
+		}
+
+	}else if (keyboard_check_pressed(ord("D"))) {
 		audio_play_sound(SndChooseUpgrade, 1, 0)
-		menuButtons[1].selected=true;
-		menuButtons[0].selected=false;
-		menuButtons[2].selected=false;
-	} if (keyboard_check_pressed(ord("D"))) {
-		audio_play_sound(SndChooseUpgrade, 1, 0)
-		menuButtons[2].selected=true;
-		menuButtons[1].selected=false;
-		menuButtons[0].selected=false;
+		if (menuButtons[1].selected) {
+			menuButtons[0].selected=false;
+			menuButtons[1].selected=false;
+			menuButtons[2].selected=true;
+		} else if (menuButtons[0].selected) {
+			menuButtons[0].selected=false;
+			menuButtons[1].selected=true;
+			menuButtons[2].selected=false;
+		}
 	}
 
 
