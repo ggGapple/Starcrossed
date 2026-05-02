@@ -6,6 +6,7 @@ function updateSettings(){
 	ini_write_real("Gameplay", "Tutorial", oEverythingManager.doTutorial);
 	ini_write_real("UI","Run Count", oEverythingManager.runCount);
 	ini_write_real("UI","Show Tips", oEverythingManager.showTips);
+	ini_write_real("UI", "Show Run Count", oEverythingManager.showRunCountInMenu);
 	ini_close();
 }
 
@@ -18,6 +19,7 @@ function loadSettings() {
 		oEverythingManager.doTutorial = ini_read_real("Gameplay", "Tutorial", false);
 		oEverythingManager.runCount = ini_read_real("UI", "Run Count", 0);
 		oEverythingManager.showTips = ini_read_real("UI", "Show Tips", true);
+		oEverythingManager.showRunCountInMenu = ini_read_real("UI", "Show Run Count", false);
 		ini_close();
 	}
 }
