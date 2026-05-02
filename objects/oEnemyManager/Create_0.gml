@@ -1,5 +1,5 @@
 rightDefense = 1;
-leftDefense = 1/log10(oEverythingManager.lightyear*10);
+leftDefense = 1/(log10(oEverythingManager.lightyear*10)*log10(oEverythingManager.lightyear*10));
 
 leftHpMax = 10;
 rightHpMax = 10*log10(oEverythingManager.lightyear*10)

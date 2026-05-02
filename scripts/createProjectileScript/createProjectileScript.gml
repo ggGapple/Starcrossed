@@ -71,6 +71,7 @@ function chooseProjectileVertical() {
 	var splitterLevels = [13,14,15]
 	var accelerantLevels = [11,12,13,15]
 	var shurikenLevels = [9,10,11,13,14,15]
+	var expanderLevels = [7,8,9,10,13,15]
 	var snakeLevels = [9,10,12,14,15]
 	var sum = 0
 	if (absoluteLevel != 11) {
@@ -128,6 +129,12 @@ function chooseProjectileVertical() {
 		sum +=2;
 	} 
 	
+	if (array_contains(expanderLevels,absoluteLevel)) {
+		array_push(options,oWhiteProjectileVertical);
+		array_push(weights,2)
+		sum +=2;
+	} 
+	
 	var choice = irandom(sum)
 	var curSum = 0;
 	for (i = 0; i < array_length(options); i ++ ) {
@@ -151,6 +158,7 @@ function chooseProjectileHorizontal() {
 	var accelerantLevels = [11,12,13,15]
 	var shurikenLevels = [9,10,11,13,14,15]
 	var snakeLevels = [9,10,12,14,15]
+	var expanderLevels = [7,8,9,10,13,15]
 	if (absoluteLevel != 11) {
 		options = [oRedProjectileHorizontal]
 		weights = [10]
@@ -202,6 +210,12 @@ function chooseProjectileHorizontal() {
 	
 	if (array_contains(snakeLevels,absoluteLevel)) {
 		array_push(options,oSnakeProjectileHorizontal);
+		array_push(weights,2)
+		sum +=2;
+	} 
+	
+	if (array_contains(expanderLevels,absoluteLevel)) {
+		array_push(options,oWhiteProjectileHorizontal);
 		array_push(weights,2)
 		sum +=2;
 	} 

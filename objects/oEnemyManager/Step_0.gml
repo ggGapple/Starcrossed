@@ -4,7 +4,8 @@ if (oPauseManager.paused) {
 
 leftHpRegenTimer--;
 if (leftHpRegenTimer < 0) {
-	leftHpRegenTimer = oEverythingManager.regenMax;
+	leftHpRegenTimer = oEverythingManager.regenMax/(log10(oEverythingManager.lightyear*10)*
+	min(oEverythingManager.level/3,1));
 	leftHp=min(leftHp+0.5,leftHpMax);
 }
 // Regens faster when very low
