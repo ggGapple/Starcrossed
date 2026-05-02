@@ -3,7 +3,7 @@ if (active && !oPauseManager.paused) {
 	timerHorizontal--;
 	
 	var leftHpPercent = oEnemyManager.leftHp/oEnemyManager.leftHpMax
-	var baseTimer = lerp(15, 70, 1 - leftHpPercent);
+	var baseTimer = lerp(10, 70, 1 - leftHpPercent);
 
 	if (timerVertical < 0) {
 		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/(
