@@ -1,4 +1,7 @@
 if (oPauseManager.paused|| global.freezeBullets) {
+	if (image_speed !=0) {
+		image_speed = 0;	
+	}
 	return;	
 }event_inherited();
 

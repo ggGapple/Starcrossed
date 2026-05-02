@@ -40,6 +40,7 @@ twisted = true;
 
 explosionRadius = 110;
 
+healArmored = false;
 stillArmored = false;
 
 

@@ -1,3 +1,6 @@
+if (oPauseManager.paused) {
+	return;	
+}
 if (drawTimer> 0) {
 	drawTimer--;	
 } else {

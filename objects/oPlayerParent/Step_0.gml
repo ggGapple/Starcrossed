@@ -26,7 +26,8 @@ if (active) {
 			dealDamage(1);
 			audio_play_sound(SndAttack,1,0);
 		}
-		else if (oPlayerManager.armored && oPlayerManager.stillArmored) {
+		else if( (oPlayerManager.armored && oPlayerManager.stillArmored)||
+		(oPlayerManager.healArmored && oPlayerManager.stillArmored)){
 			oPlayerManager.stillArmored = false;	
 			audio_play_sound(SndStart,1,0);
 			takeDamage(0);
@@ -85,7 +86,7 @@ if (active) {
 		} else if (oPlayerManager.peaceful) {
 			oPlayerManager.hp = min(oPlayerManager.hp+ oPlayerManager.healAmount,oPlayerManager.maxHp);	
 			if (oPlayerManager.devout) {
-				oPlayerManager.armored = true;
+				oPlayerManager.healArmored = true;
 				oPlayerManager.stillArmored = true;
 			} else if (oPlayerManager.twisted) {
 				dealDamage(oPlayerManager.healAmount);	
