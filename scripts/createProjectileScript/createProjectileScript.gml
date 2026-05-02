@@ -11,9 +11,9 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 				var proj = oBinaryPunish;	
 			}
 			if (oPlayerLeft.active && oEverythingManager.lightyear == 1) {
-				var instanceX =0;
+				var instanceX =-15;
 			} else if (oEverythingManager.lightyear == 1){
-				var instanceX = room_width/2;
+				var instanceX = 15+room_width/2;
 			} else {
 				if (oPlayerLeft.active) {
 					var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
@@ -29,7 +29,7 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 				var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
 			}
 		}
-		var instanceY = -5;
+		var instanceY = -15;
 		if (proj == oSnakeProjectileVertical || proj == oSpinningProjectileVertical) {
 			instanceY-=90
 		}

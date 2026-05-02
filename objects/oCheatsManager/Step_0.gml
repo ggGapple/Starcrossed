@@ -17,9 +17,13 @@ if (keyboard_check(ord("L")) and keyboard_check_pressed(ord("Y"))) {
 }
 
 if (keyboard_check(ord("G")) && keyboard_check_pressed(ord("U"))) {
-	array_push(oPlayerManager.chosen	, "Ferocious")
+	array_push(oPlayerManager.chosen, "Ferocious")
 }
 
 if (keyboard_check(ord("R")) && keyboard_check_pressed(ord("G"))) {
 	room_goto(WinRoom);	
+}
+
+if (keyboard_check(ord("D")) && keyboard_check_pressed(ord("I"))) {
+	oEverythingManager.playerLives = 0;
 }

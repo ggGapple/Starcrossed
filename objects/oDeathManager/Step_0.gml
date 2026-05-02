@@ -5,3 +5,7 @@ if (keyboard_check_pressed(vk_anykey) and oEverythingManager.playerLives>0 and t
 if (timer > 0) {
 	timer--;
 }
+
+if (curChar < string_length(fullText)) {
+	   curChar += textSpeed;
+}
