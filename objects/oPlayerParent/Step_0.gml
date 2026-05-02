@@ -48,6 +48,7 @@ if (active) {
 			var tpDist = 65;
 			if (oPlayerManager.blistering) {
 				oPlayerManager.abilityCooldown = 0;
+				oPlayerManager.iFrames+=2;
 				tpDist +=15;
 			} else {
 				oPlayerManager.iFrames+=60;

@@ -100,7 +100,7 @@ function chooseUpgrade(upgrade, side){
 			case "Deflective":
 				oPlayerManager.deflective = true;
 				break;
-			case "Transcendant": 
+			case "Transcendent": 
 				oPlayerManager.transcendent = true;
 				break;
 			case "Medicinal":

@@ -3,5 +3,7 @@ if (drawTimer> 0) {
 } else {
 	if (irandom(100)>98) {
 		drawTimer = 30;	
+		oScreenShake.shakeAmount+=5;
+		audio_play_sound(SndBinaryStarConnect,1,0);
 	}
 }

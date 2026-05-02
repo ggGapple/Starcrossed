@@ -32,4 +32,5 @@ if (irandom(11)>10) {
 
 if (!instance_exists(oBinaryStarLine)) {
 	instance_create_depth(x,y,depth+3,oBinaryStarLine);	
+
 }

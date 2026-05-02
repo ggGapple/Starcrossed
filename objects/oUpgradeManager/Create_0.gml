@@ -33,7 +33,7 @@ descs = {
 "Synergistic" : "+explode triggers on both sides",
 "Aggressive" : "+explode slightly damages enemy",
 "Volatile" : "x2 explosion radius",
-"Blistering" : "+no cooldown, no i-frames",
+"Blistering" : "+no cooldown, near zero i-frames",
 "Deflective" : "+i-frame damage taken is reflected",
 "Transcendent" : "+time stops after teleport",
 "Medicinal" : "+heal is more powerful",

@@ -6,8 +6,9 @@ if (active && !oPauseManager.paused) {
 	var baseTimer = lerp(10, 30, 1 - leftHpPercent);
 
 	if (timerVertical < 0) {
-		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/
-		oEverythingManager.difficulties[oEverythingManager.dIndex];
+		timerVertical = (baseTimer + irandom(4) - 1.25*oEverythingManager.level)/(
+		oEverythingManager.difficulties[oEverythingManager.dIndex]*
+		log10(oEverythingManager.lightyear*10));
 		if (oEverythingManager.level == 0){
 			timerVertical += 10;	
 		}

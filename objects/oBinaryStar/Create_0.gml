@@ -10,7 +10,7 @@ xBase = room_width/2
 yBase = 120;
 
 radius = 40;
-orbitSpeed = 2;
+orbitSpeed = oEverythingManager.level;
 angle = 0;
 
 timer = 0;

@@ -17,7 +17,6 @@ if (keyboard_check(ord("L")) and keyboard_check_pressed(ord("Y"))) {
 }
 
 if (keyboard_check(ord("G")) && keyboard_check_pressed(ord("U"))) {
-	
 	array_push(oPlayerManager.chosen	, "Ferocious")
 }
 

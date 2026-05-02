@@ -69,24 +69,28 @@ function chooseProjectileVertical() {
 		array_push(options,oYellowProjectileVertical);
 		array_push(weights,3)
 		sum +=3;
-	} if (absoluteLevel >=6) {
+	} if (absoluteLevel >=5) {
 		array_push(options,oSpinningProjectileVertical);
 		array_push(weights,1);
 		weights[0]+=2;
 		sum+=3;
-	} if (absoluteLevel >= 9) {
+	} if (absoluteLevel >= 7) {
 		array_push(options,oDiagonalProjectileVertical);
 		array_push(weights,3);
 		sum+=3;		
-	} if (absoluteLevel >= 12) {
-		if (oEverythingManager.seed1 == 1){
-			array_push(options,oCircleProjectileVertical);
-		} else {
-			array_push(options,oSnakeProjectileVertical);
-		}
+	} if (absoluteLevel >= 9) {
+		array_push(options,oCircleProjectileVertical);
 		array_push(weights,1);
 		weights[0]+= 2;
 		sum+=3;		
+	} if (absoluteLevel >= 11) {
+		array_push(options,oSnakeProjectileVertical);
+		array_push(weights,1);
+		sum+=1;				
+	} if (absoluteLevel >= 13) {
+		array_push(options,oSplitProjectileVertical);
+		array_push(weights,1);
+		sum+=1;
 	}
 	var choice = irandom(sum)
 	var curSum = 0;
@@ -107,24 +111,28 @@ function chooseProjectileHorizontal() {
 		array_push(options,oYellowProjectileHorizontal);
 		array_push(weights,3)
 		sum +=3;
-	} if (absoluteLevel >=6) {
+	} if (absoluteLevel >=5) {
 		array_push(options,oSpinningProjectileHorizontal);
 		array_push(weights,1);
 		weights[0]+=2;
 		sum+=3;
-	} if (absoluteLevel >= 9) {
+	} if (absoluteLevel >= 7) {
 		array_push(options,oDiagonalProjectileHorizontal);
 		array_push(weights,3);
 		sum+=3;		
-	} if (absoluteLevel >= 12) {
-		if (oEverythingManager.seed1 == 1){
-			array_push(options,oCircleProjectileHorizontal);
-		} else {
-			array_push(options,oSnakeProjectileHorizontal);
-		}
+	} if (absoluteLevel >= 9) {
+		array_push(options,oCircleProjectileHorizontal);
 		array_push(weights,1);
 		weights[0]+= 2;
 		sum+=3;		
+	}  if (absoluteLevel >= 11) {
+		array_push(options,oSnakeProjectileHorizontal);
+		array_push(weights,1);
+		sum+=1;				
+	} if (absoluteLevel >= 13) {
+		array_push(options,oSplitProjectileHorizontal);
+		array_push(weights,1);
+		sum+=1;
 	}
 	var choice = irandom(sum)
 	var curSum = 0;
