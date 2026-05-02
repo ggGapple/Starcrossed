@@ -11,6 +11,8 @@ rightHp = rightHpMax;
 leftHp = leftHpMax/2;
 
 leftHpRegenTimer = 200;
+regenBase =100;
+regenMax = regenBase+ 50/log10(oEverythingManager.lightyear*10);
 
 rightHealthBar = instance_create_depth(0,0,-1,oRightHealthBar);
 leftHealthBar = instance_create_depth(0,0,-1,oLeftHealthBar);
