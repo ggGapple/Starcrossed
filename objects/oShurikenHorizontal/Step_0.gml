@@ -13,9 +13,9 @@ if ((x >= room_width/2 and oPlayerRight.active) or (x <= room_width/2 and oPlaye
 	verticalVelocity += a*projSpeed
 	if (rightward) {
 		x+=projSpeed*5*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-	log10(oEverythingManager.lightyear)/2;
+0.5;
 	} else {
 		x-=projSpeed*5*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-	log10(oEverythingManager.lightyear)/2;
+0.5;
 	}
 }

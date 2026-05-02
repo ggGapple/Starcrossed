@@ -9,7 +9,7 @@ if (y > room_height) {
 
 if ((x > room_width/2 and oPlayerRight.active) or (x < room_width/2 and oPlayerLeft.active)) {
 	y+=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-	log10(oEverythingManager.lightyear)/2;
+0.5;
 	sizeTimer++;
 	image_xscale = (cos(sizeTimer*pi/180))*(cos(sizeTimer*pi/180)) * 3.5 + 0.5
 	image_yscale = (cos(sizeTimer*pi/180))*(cos(sizeTimer*pi/180)) * 3.5 + 0.5

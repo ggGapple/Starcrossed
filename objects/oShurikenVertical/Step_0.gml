@@ -9,7 +9,7 @@ if (y > room_height) {
 
 if ((x > room_width/2 and oPlayerRight.active) or (x < room_width/2 and oPlayerLeft.active)) {
 	y+=projSpeed*5*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-	log10(oEverythingManager.lightyear)/2;
+0.5;
 	image_angle+=4;
 	x+=horizontalVelocity;
 	horizontalVelocity += a*projSpeed

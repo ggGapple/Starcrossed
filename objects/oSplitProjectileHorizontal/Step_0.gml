@@ -12,7 +12,7 @@ if ((x >= room_width/2 and oPlayerRight.active) or (x <= room_width/2 and oPlaye
 	log10(oEverythingManager.lightyear)/2;
 	} else {
 		x-=projSpeed*2*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-	log10(oEverythingManager.lightyear)/2;
+	0.5;
 	}
 	
 	explodeTimer--;
