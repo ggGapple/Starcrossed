@@ -36,7 +36,7 @@ deflective = false;
 transcendent = false;
 healAmount = 1;
 devout = false;
-twisted = true;
+twisted = false;
 
 explosionRadius = 110;
 
