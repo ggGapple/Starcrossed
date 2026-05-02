@@ -16,7 +16,7 @@ optionsArray = [
 "Fullscreen",
 "Play Tutorial",
 "Show Run Count",
-"Show Menu Tips"
+"Show Menu Hints"
 ]
 scales = [1.3];
 for (i = 1; i < array_length(optionsArray)+1; i++) {

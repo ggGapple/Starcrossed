@@ -16,7 +16,7 @@ optionsArray = [
 "Fullscreen",
 "Play Tutorial",
 "Show Run Count",
-"Show Menu Tips"
+"Show Menu Hints"
 ]
 
 
