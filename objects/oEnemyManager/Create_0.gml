@@ -1,5 +1,5 @@
 rightDefense = 1;
-leftDefense = max(1,1/(log10(oEverythingManager.lightyear*10)-0.5));
+leftDefense = 1-(log10(oEverythingManager.lightyear*10)/5);
 
 leftHpMax = 10;
 rightHpMax = 10*log10(oEverythingManager.lightyear*10)
@@ -11,7 +11,7 @@ rightHp = rightHpMax;
 leftHp = leftHpMax/2;
 
 leftHpRegenTimer = 200;
-regenBase =100;
+regenBase =75;
 regenMax = regenBase+ 50 /log10(oEverythingManager.lightyear*10);
 
 rightHealthBar = instance_create_depth(0,0,-1,oRightHealthBar);

@@ -10,12 +10,10 @@ if ((x >= room_width/2 and oPlayerRight.active) or (x <= room_width/2 and oPlaye
 	image_angle+=4;
 	image_angle+=4;
 	y+=verticalVelocity;
-	verticalVelocity += a*projSpeed
+	verticalVelocity += a*projSpeed*oEnemyManager.leftHp/oEnemyManager.leftHpMax
 	if (rightward) {
-		x+=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-0.5;
+		x+=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+0.5;
 	} else {
-		x-=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-0.5;
+		x-=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+0.5;
 	}
 }

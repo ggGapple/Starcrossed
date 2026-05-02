@@ -4,6 +4,8 @@ function chooseUpgrade(upgrade, side){
 		switch upgrade {
 			case "Vampiric":
 				oPlayerManager.vampiric = true;
+				oPlayerManager.leftAttackDamage-=0.2;
+				oPlayerManager.rightAttackDamage-=0.2;
 				break;
 			case "Opportunistic":
 				oPlayerManager.rightAttackWindowLength *=0.5;
@@ -119,7 +121,7 @@ function chooseUpgrade(upgrade, side){
 				oBulletSpeedManager.bulletSpeed-=0.2;
 				break;
 			case "Intimidating":
-				oEverythingManager.regenBase = 150;
+				oEverythingManager.regenBase += 50;
 				break;
 		} 
 		

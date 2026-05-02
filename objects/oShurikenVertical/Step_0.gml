@@ -12,5 +12,5 @@ if ((x > room_width/2 and oPlayerRight.active) or (x < room_width/2 and oPlayerL
 0.5;
 	image_angle+=4;
 	x+=horizontalVelocity;
-	horizontalVelocity += a*projSpeed
+	horizontalVelocity += a*projSpeed*oEnemyManager.leftHp/oEnemyManager.leftHpMax
 }
