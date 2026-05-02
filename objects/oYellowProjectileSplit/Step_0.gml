@@ -10,5 +10,6 @@ if (y > room_height) {
 }
 
 if ((x > room_width/2 and oPlayerRight.active) or (x < room_width/2 and oPlayerLeft.active)) {
-    speed = projSpeed * 8 * oEnemyManager.leftHp / oEnemyManager.leftHpMax + 0.5;
+    speed = projSpeed * 8 * oEnemyManager.leftHp / oEnemyManager.leftHpMax+
+	log10(oEverythingManager.lightyear)/2;
 }

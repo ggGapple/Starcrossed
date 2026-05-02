@@ -41,6 +41,6 @@ if (room == DeathRoom and playerLives <= 0) {
 if (!loadedSettingsYet) {
 	loadedSettingsYet = true;
 	loadSettings();
-	oStartUIManager.menuButtons[0].tooltip = oEverythingManager.showTips ? "<- A" : ""
-	oStartUIManager.menuButtons[2].tooltip = oEverythingManager.showTips ? "D ->" : ""
+	oStartUIManager.menuButtons[0].tooltip = "<- A"
+	oStartUIManager.menuButtons[2].tooltip = "D ->"
 }
