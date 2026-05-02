@@ -15,8 +15,8 @@ function chooseUpgrade(upgrade, side){
 				oPlayerManager.armored = true;
 				break;
 			case "Rapid":
-				oPlayerManager.rightAttackFrequency+=1
-				oPlayerManager.rightAttackFrequency+=1
+				oPlayerManager.rightAttackFrequency+=0.8
+				oPlayerManager.rightAttackFrequency+=0.8
 				oPlayerManager.leftAttackDamage-=0.35;
 				oPlayerManager.rightAttackDamage-=0.35;
 				break;

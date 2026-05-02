@@ -51,7 +51,7 @@ if (active) {
 				oPlayerManager.iFrames+=2;
 				tpDist +=15;
 			} else {
-				oPlayerManager.iFrames+=60;
+				oPlayerManager.iFrames+=50+oPlayerManager.maxIFrames;
 			}
 
 			oPlayerManager.invincibleGood = true;
