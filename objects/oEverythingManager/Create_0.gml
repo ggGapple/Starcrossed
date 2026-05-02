@@ -27,5 +27,5 @@ doTutorial = true;
 
 showRunCountInMenu = false;
 
-regenMax = 150;
+regenMax = 50 + 100/log10(lightyear*10);
 showTips = true;
