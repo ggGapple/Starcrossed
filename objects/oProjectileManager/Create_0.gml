@@ -6,7 +6,9 @@ projectiles = [oRedProjectileHorizontal, oRedProjectileVertical,oYellowProjectil
 oYellowProjectileVertical,oSpinningProjectileHorizontal,oSpinningProjectileVertical,
 oCircleProjectileHorizontal,oCircleProjectileResidue,oCircleProjectileVertical,
 oDiagonalProjectileHorizontal,oDiagonalProjectileVertical,oSnakeProjectileHorizontal,
-oSnakeProjectileVertical]
+oSnakeProjectileVertical, oShurikenHorizontal, oShurikenVertical, oAccelerativeHorizontal,
+oAccelerativeVertical,oSplitProjectileHorizontal,oSplitProjectileVertical,
+oWhiteProjectileHorizontal,oWhiteProjectileVertical,oYellowProjectileSplit]
 
 undodgeableTimer = 250;
 if (oEverythingManager.lightyear == 1) {
