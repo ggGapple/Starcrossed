@@ -19,7 +19,7 @@ if (image_alpha == 0 and oPlayerRight.active) {
 	out = true;
 }
 
-if (image_xscale != display_get_gui_width/sprite_get_width(sVignette)) { 
-	image_yscale = display_get_gui_height/sprite_get_height(sVignette)
-	image_xscale = display_get_gui_width/sprite_get_width(sVignette)*1.2;
+if (image_xscale != display_get_gui_width()/sprite_get_width(sVignette)) { 
+	image_yscale = display_get_gui_height()/sprite_get_height(sVignette)
+	image_xscale = display_get_gui_width()/sprite_get_width(sVignette)*1.2;
 }
