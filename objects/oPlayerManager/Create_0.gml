@@ -57,5 +57,5 @@ curHp = maxHp;
 maxVampiricTimer = 60;
 vampiricTimer = maxVampiricTimer;
 
-maxNourishedTimer = 120;
+maxNourishedTimer = 160;
 nourishedTimer = maxNourishedTimer;

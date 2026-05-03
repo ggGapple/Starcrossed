@@ -9,6 +9,6 @@ if (y > room_height) {
 
 if ((x > room_width/2 and oPlayerRight.active) or (x < room_width/2 and oPlayerLeft.active)) {
 	v+=(projSpeed*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-0.5)*0.035;
+0.5)*0.045;
 	y+=v
 }

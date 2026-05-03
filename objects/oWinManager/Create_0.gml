@@ -4,7 +4,7 @@ upgradesString = "Current upgrades: ";
 upgradesString2 = "";
 draw_set_font(FntSuggestion);
 for (i = 0; i < array_length(oPlayerManager.chosen);i++) {
-	if (string_width(upgradesString + oPlayerManager.chosen[i]) > room_width) {
+	if (string_width(upgradesString + oPlayerManager.chosen[i])+10 > room_width) {
 		upgradesString2 += oPlayerManager.chosen[i];
 		if (i != array_length(oPlayerManager.chosen)-1) {
 			upgradesString2 += ", "

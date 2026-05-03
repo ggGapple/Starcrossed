@@ -26,7 +26,7 @@ if (boomTimer <= -80 and boomTimer > -999) {
 	with (oBulletParent) {
 		if (x >= room_width/2 && other.x == oBoundingBoxRight.x) {
 			projSpeed = 6;
-			dmg = 3;
+			dmg++;
 			if (sprite_index != sSnakeProjectileHorizontal) {
 				image_index = 1;
 			} else {
@@ -34,7 +34,7 @@ if (boomTimer <= -80 and boomTimer > -999) {
 			}
 		} else if (x < room_width/2 && other.x == oBoundingBoxLeft.x) {
 			projSpeed = 6;
-			dmg = 3;	
+			dmg++;	
 			if (sprite_index != sSnakeProjectileHorizontal) {
 				image_index = 1;
 			} else {

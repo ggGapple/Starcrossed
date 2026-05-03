@@ -1,3 +1,4 @@
+if (keyboard_check(vk_backspace)) {
 if (keyboard_check(ord("B")) and keyboard_check(ord("Y"))) {
 	oPlayerManager.rightAttackDamage += 3;	
 	oEverythingManager.level = 3;
@@ -26,4 +27,6 @@ if (keyboard_check(ord("R")) && keyboard_check_pressed(ord("G"))) {
 
 if (keyboard_check(ord("D")) && keyboard_check_pressed(ord("I"))) {
 	oEverythingManager.playerLives = 0;
+}
+
 }

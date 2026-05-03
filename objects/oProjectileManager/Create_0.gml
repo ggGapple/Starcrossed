@@ -10,9 +10,9 @@ oSnakeProjectileVertical, oShurikenHorizontal, oShurikenVertical, oAccelerativeH
 oAccelerativeVertical,oSplitProjectileHorizontal,oSplitProjectileVertical,
 oWhiteProjectileHorizontal,oWhiteProjectileVertical,oYellowProjectileSplit]
 
-undodgeableTimer = 250;
+undodgeableTimer = 100;
 if (oEverythingManager.lightyear == 1) {
-	maxUndodgeableTimer = 700;	
+	maxUndodgeableTimer = 300;	
 } else if (oEverythingManager.lightyear == 10) {
 	maxUndodgeableTimer = 6;	
 } else if (oEverythingManager.lightyear == 100) {

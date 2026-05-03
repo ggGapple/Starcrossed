@@ -121,7 +121,7 @@ function chooseUpgrade(upgrade, side){
 				oBulletSpeedManager.bulletSpeed-=0.2;
 				break;
 			case "Intimidating":
-				oEverythingManager.regenBase += 50;
+				oEverythingManager.regenBase += 35;
 				break;
 		} 
 		
