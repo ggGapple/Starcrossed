@@ -2,31 +2,33 @@ function createProjectile(projX,projY, dir, undodgeable = false){
 	// proj x and proj y are deprecated and never used but im too lazy to fix it everywhere else
 	
 	if (dir == "vertical") {
+		var proj = 0;
+		var instanceX = 0;
 		if (undodgeable) {
 			if (oEverythingManager.lightyear == 1) {
-				var proj = oBlackHolePunish;
+				proj = oBlackHolePunish;
 			} else if (oEverythingManager.lightyear == 10) {
-				var proj = oCometPunish;	
+				proj = oCometPunish;	
 			} else if (oEverythingManager.lightyear == 100) {
-				var proj = oBinaryPunish;	
+				proj = oBinaryPunish;	
 			}
 			if (oPlayerLeft.active && oEverythingManager.lightyear == 1) {
-				var instanceX =-15;
+				instanceX =-15;
 			} else if (oEverythingManager.lightyear == 1){
-				var instanceX = 15+room_width/2;
+				instanceX = 15+room_width/2;
 			} else {
 				if (oPlayerLeft.active) {
-					var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
+					instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
 				} else if (oPlayerRight.active) {
-					var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
+					instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
 				}
 			}
 		} else {
-			var proj = chooseProjectileVertical();
+			proj = chooseProjectileVertical();
 			if (oPlayerLeft.active) {
-				var instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
+				instanceX = irandom_range(oBoundingBoxLeft.minX, oBoundingBoxLeft.maxX);
 			} else if (oPlayerRight.active) {
-				var instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
+				instanceX = irandom_range(oBoundingBoxRight.minX, oBoundingBoxRight.maxX);
 			}
 		}
 		var instanceY = -15;
@@ -130,7 +132,7 @@ function chooseProjectileVertical() {
 	} 
 	
 	if (array_contains(expanderLevels,absoluteLevel)) {
-		array_push(options,oWhiteProjectileVertical);
+		array_push(options,oExpanderProjectileVertical);
 		array_push(weights,2)
 		sum +=2;
 	} 
@@ -215,7 +217,7 @@ function chooseProjectileHorizontal() {
 	} 
 	
 	if (array_contains(expanderLevels,absoluteLevel)) {
-		array_push(options,oWhiteProjectileHorizontal);
+		array_push(options,oExpanderProjectileHorizontal);
 		array_push(weights,2)
 		sum +=2;
 	} 

@@ -8,7 +8,7 @@ oCircleProjectileHorizontal,oCircleProjectileResidue,oCircleProjectileVertical,
 oDiagonalProjectileHorizontal,oDiagonalProjectileVertical,oSnakeProjectileHorizontal,
 oSnakeProjectileVertical, oShurikenHorizontal, oShurikenVertical, oAccelerativeHorizontal,
 oAccelerativeVertical,oSplitProjectileHorizontal,oSplitProjectileVertical,
-oWhiteProjectileHorizontal,oWhiteProjectileVertical,oYellowProjectileSplit]
+oExpanderProjectileHorizontal,oExpanderProjectileVertical,oYellowProjectileSplit]
 
 undodgeableTimer = 100;
 if (oEverythingManager.lightyear == 1) {

@@ -70,6 +70,13 @@ if (room == UpgradesRoom and array_length(upgradeBoxes)> 0) {
 		draw_set_color(c_white);
 		draw_text(upgradeBoxes[selected].x-string_width(descs[$ curUpgrades[selected]])/2,
 		upgradeBoxes[selected].y+150,descs[$ curUpgrades[selected]]);
+		if (oEverythingManager.showTips) {
+			draw_set_color(c_gray);
+			draw_set_font(FntSuggestion);
+			draw_text(upgradeBoxes[selected].x-string_width("[space]")/2,
+			upgradeBoxes[selected].y+183, "[space]");
+			draw_set_color(c_white)
+		}
 	}
 	
 	// draw current upgrades

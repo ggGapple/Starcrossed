@@ -5,3 +5,4 @@ image_yscale = 3;
 
 explodeTimer = irandom_range(200,300);
 drawTimer = 0;
+dir = "down"

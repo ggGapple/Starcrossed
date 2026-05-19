@@ -1,4 +1,25 @@
 projSpeed = oBulletSpeedManager.bulletSpeed;
 dmg = 1;
+storeX = 0;
+storeY = 0;
+dir = 0;
 lastX = x;
-lastY = y;
+colors = {
+sAccelerativeHorizontal : oColorCodes.accelerant,
+sAccelerativeVertical : oColorCodes.accelerant,
+sBallProjectile : oColorCodes.ball,
+sBallProjectileResidue : oColorCodes.ball,
+sDiagonalProjectile : oColorCodes.diagonal,
+sRedProjectileHorizontal : oColorCodes.basic,
+sRedProjectileVertical : oColorCodes.basic,
+sShuriken : oColorCodes.shuriken,
+sSnakeProjectileHorizontal : oColorCodes.snake,
+sSnakeProjectileHorizontalBlue : oColorCodes.snake,
+sSpinningProjectile : oColorCodes.spinning,
+sSplitProjectile : oColorCodes.split,
+sExpander : oColorCodes.resize,
+sYellowProjectileLeft : oColorCodes.bullet,
+sYellowProjectileRight : oColorCodes.bullet,
+sYellowProjectileVertical : oColorCodes.bullet,
+sCometParticle : c_white
+}

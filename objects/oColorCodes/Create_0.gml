@@ -6,3 +6,14 @@ veryDarkBlue = #252446;
 background = #201533;
 darkRed = #7F0A30
 pink = #FF4CB5;
+
+accelerant = #F16EAA;
+ball = #ED008C;
+diagonal = #F36C4F;
+basic = lightRed;
+shuriken = #FBAF5D
+snake = #B814CC
+spinning = #8DC73F
+split = c_white;
+resize = #39B54A
+bullet = #FFF568;

@@ -11,7 +11,7 @@ fadingTimer = -1;
 goUp = false;
 animDone = false;
 idx = 0;
-
+tooltip = ""
 targetScale = 1
 image_alpha = 0.7;
 

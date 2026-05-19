@@ -1,3 +1,8 @@
+if (oPauseManager.paused) {
+	wereWePausedLastFrame = true;	
+} else {
+	wereWePausedLastFrame = false;	
+}
 if (room==UpgradesRoom && ! oPauseManager.paused) {
 	if (!instance_exists(oUpgradeBox)|| createNewOptions) {
 		// instantiate boxes
@@ -14,6 +19,8 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 		upgradeBoxes[2].idx = 2;
 		upgradeBoxes[1].timer += 30
 		upgradeBoxes[2].timer += 60
+		upgradeBoxes[0].tooltip = "<- A"
+		upgradeBoxes[2].tooltip = "D ->"
 		if (oEverythingManager.level == 3) {
 			if (oEverythingManager.lightyear == 1) {
 							curUpgrades[0] = "Elusive";
@@ -26,7 +33,6 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 			upgradeBoxes[1].tempY+=50;
 			upgradeBoxes[2].tempY+=50;
 			} else if (oEverythingManager.lightyear == 10) {
-				
 				if (oPlayerManager.elusive) {
 					curUpgrades[0] = "Blistering";
 					curUpgrades[1] = "Deflective";
@@ -99,7 +105,7 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 	// upgrade choosing logic
 	
 	if (selectingUpgrade) {
-		if (keyboard_check_pressed(vk_space) && selected != -1) {
+		if (keyboard_check_pressed(vk_space) && selected != -1&& !wereWePausedLastFrame) {
 				if (selected ==0 and upgradeBoxes[0].animDone) {
 					selectingUpgrade = false;
 					if (array_length(oPlayerManager.chosen)!=0) {

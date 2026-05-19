@@ -1,6 +1,12 @@
 if (oPauseManager.paused|| global.freezeBullets) {
 	return;	
 }
+
+if (rightward && dir != "right") {
+	dir = "right"	
+} else if (!rightward && dir != "left") {
+	dir = "left"	
+}
 event_inherited();
 
 if ((x > room_width and rightward) or (x < 0 and !rightward)) {

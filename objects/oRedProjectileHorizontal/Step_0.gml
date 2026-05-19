@@ -3,6 +3,12 @@ if (oPauseManager.paused|| global.freezeBullets) {
 }
 event_inherited();
 
+if (rightward && dir != "right") {
+	dir = "right"	
+} else if (!rightward && dir != "left") {
+	dir = "left"	
+}
+
 if ((x > room_width and rightward) or (x < 0 and !rightward)) {
 	instance_destroy();
 }

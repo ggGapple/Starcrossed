@@ -3,6 +3,8 @@
 if (oPauseManager.paused|| global.freezeBullets) {
 	return;	
 }
+
+
 if (y > room_height) {
 	instance_destroy();
 }

@@ -5,8 +5,8 @@ draw_text(room_width/2-string_width("You won!! :D")/2, room_height/2-string_heig
 draw_set_font(FntMedium);
 draw_set_color(oColorCodes.darkBlue);
 diff = oEverythingManager.difficultyNames[oEverythingManager.dIndex]
-draw_text(string_width(diff) / 2 - 1, 
-string_height(diff) / 2 + 1, 
+draw_text(7, 
+3, 
 "Difficulty: " + diff)
 
 	if (fullText5 != "") {

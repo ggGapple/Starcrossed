@@ -135,3 +135,4 @@ fullText5 = "";
 yeahWereDone = false;
 
 delay = 60;
+wereWePausedLastFrame = false;

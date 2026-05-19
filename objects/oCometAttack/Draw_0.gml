@@ -1,6 +1,3 @@
-if (!(boomTimer < -120 and boomTimer>-135)) {
-	draw_self();	
-}
 
 if (boomTimer > -20 and boomTimer < 0) {
 	if (boomTimer == 0) {

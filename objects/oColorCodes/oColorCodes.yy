@@ -8,8 +8,8 @@
   "name":"oColorCodes",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/UI.yy",
+    "name":"Misc",
+    "path":"folders/Misc.yy",
   },
   "parentObjectId":null,
   "persistent":true,

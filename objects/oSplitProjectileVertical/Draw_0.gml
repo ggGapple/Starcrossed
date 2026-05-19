@@ -1,4 +1,4 @@
-draw_self();
+event_inherited();
 if ((explodeTimer < 60 and explodeTimer > 40) || (explodeTimer <=15)) {
 	drawTimer++;	
 	draw_sprite_ext(sprite_index,1,x,y,image_xscale,image_yscale,0,c_white,drawTimer/30)
