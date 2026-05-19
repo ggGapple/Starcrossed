@@ -1,12 +1,12 @@
 event_inherited();
 active = false;
-image_xscale = oPlayerManager.rightHitbox;
-image_yscale = oPlayerManager.rightHitbox;
-moveSpeed = oPlayerManager.rightMovementSpeed;
-activeSprite = sRight;
-attackSprite = sPlayerAttackRight;
-invincibleSprite = sPlayerInvincibleRight;
-invincibleTpSprite = sPlayerTpInvincibleRight;
-armoredSprite = sPlayerArmoredRight;
+image_xscale = oPlayerManager.hitbox;
+image_yscale = oPlayerManager.hitbox;
+moveSpeed = oPlayerManager.movementSpeed;
+activeSprite = sActiveCentered;
+attackSprite = sPlayerAttack;
+invincibleSprite = sPlayerInvincible;
+invincibleTpSprite = sPlayerTpInvincible;
+armoredSprite = sPlayerTpInvincible;
 
 otherSide = oPlayerLeft;

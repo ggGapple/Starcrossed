@@ -3,9 +3,9 @@ function takeDamage(damage = 1){
 		return;
 	}
 	if (oPlayerLeft.active) {
-		oHealthBarManager.damageToTake+= damage/oPlayerManager.leftDefense;
+		oHealthBarManager.damageToTake+= damage/oPlayerManager.defense;
 	} else {
-		oHealthBarManager.damageToTake+= damage/oPlayerManager.rightDefense;
+		oHealthBarManager.damageToTake+= damage/oPlayerManager.defense;
 	}
 	if (damage > 0) {
 		oHealthBarManager.wiggle += 50;

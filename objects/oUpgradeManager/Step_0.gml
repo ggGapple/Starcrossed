@@ -119,7 +119,7 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 					}
 					instance_destroy(upgradeBoxes[1]);
 					instance_destroy(upgradeBoxes[2]);
-					chooseUpgrade(curUpgrades[selected], "None");
+					chooseUpgrade(curUpgrades[selected]);
 				} else if (selected ==1 and upgradeBoxes[1].animDone) {
 					selectingUpgrade = false;
 					if (array_length(oPlayerManager.chosen)!=0) {
@@ -133,7 +133,7 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 					}
 					instance_destroy(upgradeBoxes[0]);
 					instance_destroy(upgradeBoxes[2]);
-					chooseUpgrade(curUpgrades[selected], "None");
+					chooseUpgrade(curUpgrades[selected]);
 				} else 			if (selected ==2 and upgradeBoxes[2].animDone) {
 					if (array_length(oPlayerManager.chosen)!=0) {
 						upgradesString+=", " 	
@@ -147,7 +147,7 @@ if (room==UpgradesRoom && ! oPauseManager.paused) {
 					}
 					instance_destroy(upgradeBoxes[1]);
 					instance_destroy(upgradeBoxes[0]);
-					chooseUpgrade(curUpgrades[selected], "None");
+					chooseUpgrade(curUpgrades[selected]);
 				}
 		}
 		if (keyboard_check_pressed(ord("A"))) {

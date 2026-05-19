@@ -2,13 +2,13 @@ event_inherited();
 
 if (active) {
 	// check bbox
-	while (x > oBoundingBoxLeft.maxX) {
+	while (x + sprite_width/2> oBoundingBoxLeft.maxX) {
 		x--;
 	}
 	while (y + sprite_height/2 > oBoundingBoxLeft.maxY) {
 		y--;
 	}
-	while (x -sprite_width< oBoundingBoxLeft.minX) {
+	while (x -sprite_width/2< oBoundingBoxLeft.minX) {
 		x++;
 	}
 	while (y-sprite_height/2 < oBoundingBoxLeft.minY) {

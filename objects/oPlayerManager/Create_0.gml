@@ -1,23 +1,14 @@
 hp = 10;
 maxHp = 10;
 iFrames = 0;
-leftDefense = 1;
-leftMovementSpeed = 1;
-leftHitbox = 2;
-leftAttackWindowLength = 1;
-leftAttackFrequency = 1;
-leftAttackPunishMultiplier =1 ;
-leftAttackDamage = 1;
+defense = 1;
+movementSpeed = 1;
+hitbox = 2;
+attackWindowLength = 1;
+attackFrequency = 1;
+attackPunishMultiplier =1 ;
+attackDamage = 1;
 maxIFrames = 10;
-
-
-rightDefense = 1;
-rightMovementSpeed = 1;
-rightHitbox = 2;
-rightAttackWindowLength = 1;
-rightAttackFrequency = 1;
-rightAttackPunishMultiplier =1 ;
-rightAttackDamage = 1;
 
 
 

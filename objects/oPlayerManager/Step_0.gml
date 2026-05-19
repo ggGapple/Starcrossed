@@ -8,8 +8,8 @@ if (instance_exists(oPlayerLeft) && !oPauseManager.paused) {
 		if (oPlayerRight.active == false and !instance_exists(oPlayerTransition)) {
 			instance_create_depth(room_width/2,room_height/2,-2,oPlayerTransition);
 		}
-		oPlayerLeft.sprite_index = sLeft;
-		oPlayerRight.sprite_index = sInactiveRight;
+		oPlayerLeft.sprite_index = sActiveCentered;
+		oPlayerRight.sprite_index = sInactive;
 		oPlayerRight.active = false;
 		oScreenShake.shakeAmount = 5;
 		moveVignette();
@@ -19,8 +19,8 @@ if (instance_exists(oPlayerLeft) && !oPauseManager.paused) {
 		audio_play_sound(SndSwitch,1,0);
 		oPlayerRight.active = true;
 		oPlayerLeft.active = false;
-		oPlayerLeft.sprite_index = sInactiveLeft;
-		oPlayerRight.sprite_index = sRight;
+		oPlayerLeft.sprite_index = sInactive;
+		oPlayerRight.sprite_index = sActiveCentered;
 		oScreenShake.shakeAmount = 5;
 		moveVignette();
 	}
