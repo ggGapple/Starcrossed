@@ -1,3 +1,4 @@
+return;
 if (oPauseManager.paused) {
 	return;
 }

@@ -1,3 +1,4 @@
+return;
 var _displayText = string_copy(fullText, 1, floor(curChar));
 
 draw_set_font(FntMedium)
