@@ -1,0 +1,1 @@
+global.freezeBullets = true;

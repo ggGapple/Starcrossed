@@ -32,7 +32,7 @@ if (instance_exists(oPlayerLeft) && !oPauseManager.paused) {
 	// death logic
 	if (oPlayerManager.hp<= 0) {
 		oEverythingManager.playerLives--;
-		room_goto(DeathRoom);
+		instance_create_depth(0,0,depth,oDyingAnimationManager);
 	}
 	
 	if (vampiric) {

@@ -3,7 +3,7 @@ if (oPauseManager.paused) {
 }
 
 leftHpRegenTimer--;
-if (leftHpRegenTimer < 0) {
+if (leftHpRegenTimer < 0 && oEverythingManager.level != 0) {
 	leftHpRegenTimer = regenMax;
 	leftHp=min(leftHp+0.5,leftHpMax);
 }

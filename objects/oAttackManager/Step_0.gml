@@ -5,7 +5,11 @@ attackTimer--;
 
 
 // start attack window, give notif
-if (attackTimer<= 0 and !doneAttackNotif) {
+if ((attackTimer<= 0 and !doneAttackNotif && (oEverythingManager.level != 0||doMoreAttacks)) 
+|| (customStartAttack)) {
+	if (customStartAttack) {
+		customStartAttack = false;	
+	}
 	audio_play_sound(SndAttackNotif,1,0);
 	if (oPlayerLeft.active) {
 		attackWindow = irandom_range(30,80)*oPlayerManager.attackWindowLength;
@@ -26,8 +30,20 @@ if (keyboard_check_pressed(vk_up) and attackWindow < 0) {
 
 // if window is open
 if (attackWindow >= 0) {
-	attackWindow--;
+	if (oEverythingManager.level !=0) {
+		attackWindow--;
+	}
+	if (instance_exists(oTutorial)) {
+		if (oTutorial.attacks == 1) {
+			attackWindow--;
+		}
+	}
+	
 	if (keyboard_check_pressed(vk_up)) {
+		if (instance_exists(oTutorial)) {
+			oTutorial.attacks++;	
+			doMoreAttacks = false;
+		}
 		audio_play_sound(SndAttack,1,0);
 		attackWindow = -1;
 		if (oPlayerLeft.active) {
