@@ -1,3 +1,8 @@
+if (oEverythingManager.level !=0) {
+	oProjectileManager.active = true;
+	instance_destroy();	
+}
+
 if (!justGl) {
 if (keyboard_check_pressed(ord("W"))) {
 	array_push(done,"W")	

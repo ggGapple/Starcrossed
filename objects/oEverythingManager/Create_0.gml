@@ -32,3 +32,4 @@ showTips = true;
 
 leftMax = false;
 leftHalf = false;
+global.dead = false;

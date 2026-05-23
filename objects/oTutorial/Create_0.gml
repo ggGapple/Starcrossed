@@ -1,7 +1,4 @@
-if (oEverythingManager.level !=0) {
-	oProjectileManager.active = true;
-	instance_destroy();	
-}
+
 justGl = false;
 if (!oEverythingManager.doTutorial || (oEverythingManager.lightyear != 1)) {
 	oProjectileManager.active = false;

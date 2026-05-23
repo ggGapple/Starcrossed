@@ -1,4 +1,4 @@
-if (instance_exists(oPlayerLeft) && !oPauseManager.paused) {
+if (instance_exists(oPlayerLeft) && !oPauseManager.paused && !global.dead) {
 	if ((keyboard_check_pressed(vk_left) && oPlayerLeft.active = false) or 
 	(oPlayerLeft.active = false and oPlayerRight.active = false)) {
 		if (oPlayerRight.active == true) {

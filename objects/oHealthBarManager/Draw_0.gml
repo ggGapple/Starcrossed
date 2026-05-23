@@ -10,8 +10,9 @@ outery2 = oBoundingBoxLeft.maxY + (room_height-oBoundingBoxLeft.maxY)/2+lenY + y
 draw_set_color(#0098DB);
 draw_roundrect(outerx1+4, outery1+4, outerx2-4, outery2-4, false);
 
-draw_set_color(c_white);
-draw_roundrect(outerx1+4, outery1+4 , +outerx1-4+lenX*curHp/oPlayerManager.maxHp, outery2-4 , false);
-
-draw_set_color(#0CE6F2)
-draw_roundrect(outerx1, outery1 , +outerx1+lenX* oPlayerManager.hp/oPlayerManager.maxHp, outery2 , false);
+if (oPlayerManager.hp>0) {
+	draw_set_color(c_white);
+	draw_roundrect(outerx1+4, outery1+4 , +outerx1-4+lenX*curHp/oPlayerManager.maxHp, outery2-4 , false);
+	draw_set_color(#0CE6F2)
+	draw_roundrect(outerx1, outery1 , +outerx1+lenX* oPlayerManager.hp/oPlayerManager.maxHp, outery2 , false);
+}
