@@ -25,7 +25,7 @@ if (boomTimer <= -80 and boomTimer > -999) {
 	audio_play_sound(SndStart,1,0);
 	with (oBulletParent) {
 		if (x >= room_width/2 && other.x == oBoundingBoxRight.x) {
-			projSpeed = 6;
+			projSpeed = 11;
 			dmg++;
 			if (sprite_index != sSnakeProjectileHorizontal) {
 				image_index = 1;
@@ -33,7 +33,7 @@ if (boomTimer <= -80 and boomTimer > -999) {
 				sprite_index = sSnakeProjectileHorizontalBlue	
 			}
 		} else if (x < room_width/2 && other.x == oBoundingBoxLeft.x) {
-			projSpeed = 6;
+			projSpeed = 11;
 			dmg++;	
 			if (sprite_index != sSnakeProjectileHorizontal) {
 				image_index = 1;

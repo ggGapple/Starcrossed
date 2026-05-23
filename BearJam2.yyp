@@ -152,6 +152,7 @@
     {"id":{"name":"SndChooseUpgrade","path":"sounds/SndChooseUpgrade/SndChooseUpgrade.yy",},},
     {"id":{"name":"SndDeath","path":"sounds/SndDeath/SndDeath.yy",},},
     {"id":{"name":"SndDialogueNext","path":"sounds/SndDialogueNext/SndDialogueNext.yy",},},
+    {"id":{"name":"SndExplode","path":"sounds/SndExplode/SndExplode.yy",},},
     {"id":{"name":"SndHurt","path":"sounds/SndHurt/SndHurt.yy",},},
     {"id":{"name":"SndIntro","path":"sounds/SndIntro/SndIntro.yy",},},
     {"id":{"name":"SndOst1","path":"sounds/SndOst1/SndOst1.yy",},},

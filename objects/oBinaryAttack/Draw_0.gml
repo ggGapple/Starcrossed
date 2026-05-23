@@ -21,3 +21,21 @@ if (boomTimer > -20 and boomTimer < 0) {
 	draw_text(x + sprite_width/2 - string_width("!")/2,
 	y + sprite_height/2-string_height("!")/2,"!")
 }
+
+with (oBulletParent) {
+	if (x >= room_width/2) {
+		if (sprite_index == sSnakeProjectileHorizontal) {
+			draw_sprite_ext(sSnakeProjectileHorizontalBlue,
+			image_index,x-room_width/2,y,image_xscale,image_yscale,0,c_white,0.4)
+		} else {
+			draw_sprite_ext(sprite_index,1,x-room_width/2,y,image_xscale,image_yscale,image_angle,c_white,0.4)
+		}
+		
+	} else if (x < room_width/2) {
+		if (sprite_index == sSnakeProjectileHorizontal) {
+			draw_sprite_ext(sSnakeProjectileHorizontalBlue,image_index,x+room_width/2,y,image_xscale,image_yscale,0,c_white,0.4)
+		} else {
+			draw_sprite_ext(sprite_index,1,x+room_width/2,y,image_xscale,image_yscale,image_angle,c_white,0.4)
+		}
+	}
+}

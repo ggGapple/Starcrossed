@@ -21,7 +21,7 @@ if (explodeTimer == 0) {
 		
 	}
 	oScreenShake.shakeAmount += 10;
-	audio_play_sound(SndStart,1,0);
+	audio_play_sound(SndExplode,1,0);
 	instance_destroy();
 }
 }

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"SndExplode",
+  "audioGroupId":{
+    "name":"SFX",
+    "path":"audiogroups/SFX",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.28229025,
+  "exportDir":"",
+  "name":"SndExplode",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SndExplode.wav",
+  "volume":0.87,
+}
