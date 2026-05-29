@@ -46,11 +46,18 @@ if (attackWindow >= 0) {
 		}
 		audio_play_sound(SndAttack,1,0);
 		attackWindow = -1;
-		if (oPlayerLeft.active) {
-			dealDamage(oPlayerManager.attackDamage);
-		} else {
-			dealDamage(oPlayerManager.attackDamage);
+		var critMult = 1;
+		if (irandom(99) < oPlayerManager.critPct) {
+			critMult = 2;
+			audio_play_sound(SndCrit,1,0);
+			var activePlayer = oPlayerRight
+			if (oPlayerLeft.active) {
+				activePlayer = oPlayerLeft
+			}
+			instance_create_depth(activePlayer.x,activePlayer.y,-9,oCritText);
 		}
+		dealDamage(oPlayerManager.attackDamage*critMult);
+
 	}
 	
 	// reset timer

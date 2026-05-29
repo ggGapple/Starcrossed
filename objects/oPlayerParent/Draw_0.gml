@@ -4,8 +4,7 @@ if ((oPlayerManager.armored && oPlayerManager.stillArmored) ||
 }
 draw_self();
 
-if ((active and drawExplosion and explosionTimer > 0 )|| (drawExplosion and explosionTimer > 0 && 
-oPlayerManager.synergistic)) {
+if (drawExplosion and explosionTimer > 0 ) {
 	explosionTimer--;
 	draw_set_color(#EE145B)
 	draw_set_alpha(explosionTimer/50);

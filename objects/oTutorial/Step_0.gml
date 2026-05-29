@@ -139,11 +139,16 @@ if (didLeft && !didAttack && !startedAttack) {
 }
 
 if (attacks<2 &&didAttack) {
-	oAttackManager.doMoreAttacks = true;
+	if (instance_exists(oAttackManager)) {
+		oAttackManager.doMoreAttacks = true;
+	}
+	
 }
 
 if (attacks >=2) {
+	if (instance_exists(oAttackManager)) {
 	oAttackManager.doMoreAttacks = false;	
+	}
 }
 
 

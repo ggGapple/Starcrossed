@@ -2,13 +2,15 @@ hp = 10;
 maxHp = 10;
 iFrames = 0;
 defense = 1;
-movementSpeed = 1;
-hitbox = 2;
+movementSpeed = 0.9;
+hitbox = 1.8;
 attackWindowLength = 1;
 attackFrequency = 1;
 attackPunishMultiplier =1 ;
 attackDamage = 1;
-maxIFrames = 10;
+maxIFrames = 10
+dodgePct = 0;
+critPct = 5;
 
 
 
@@ -29,7 +31,7 @@ healAmount = 1;
 devout = false;
 twisted = false;
 
-explosionRadius = 110;
+explosionRadius = 125;
 
 healArmored = false;
 stillArmored = false;

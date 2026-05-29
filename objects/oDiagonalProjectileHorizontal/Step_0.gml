@@ -15,15 +15,14 @@ if ((x > room_width and rightward) or (x < 0 and !rightward)) {
 }
 if ((x >= room_width/2 and oPlayerRight.active) or (x <= room_width/2 and oPlayerLeft.active)) {
 	if (rightward) {
-		x+=projSpeed*2*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
+		x+=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
 0.5;
 	} else {
-		x-=projSpeed*2*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
+		x-=projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
 0.5;
 	} 
 	if (image_index != 1) {
-			y+=upOrDown*projSpeed*2*oEnemyManager.leftHp/oEnemyManager.leftHpMax+
-0.5;
+		y+=upOrDown*(projSpeed*3*oEnemyManager.leftHp/oEnemyManager.leftHpMax+0.5);
 	}
 
 }

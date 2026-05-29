@@ -1,6 +1,14 @@
 function chooseUpgrade(upgrade){
 	audio_play_sound(SndUpgrade, 1, 0)
 	switch upgrade {
+		case "Chaotic":
+			oPlayerManager.critPct +=30;
+			oPlayerManager.attackDamage-=0.3
+			break;
+		case "Ninja":
+			oPlayerManager.dodgePct +=30;
+			oPlayerManager.defense-=0.3;
+			break;
 		case "Vampiric":
 			oPlayerManager.vampiric = true;
 			oPlayerManager.attackDamage-=0.2;
@@ -21,8 +29,8 @@ function chooseUpgrade(upgrade){
 			oPlayerManager.hitbox*=0.75;
 			break;
 		case "Mighty":
-			oPlayerManager.defense +=0.8
-			oPlayerManager.attackDamage+=0.35;
+			oPlayerManager.defense +=0.7
+			oPlayerManager.attackDamage+=0.25;
 			oPlayerManager.movementSpeed -= 0.5;					
 			oPlayerManager.hitbox*=1.3;
 			break;
@@ -33,13 +41,19 @@ function chooseUpgrade(upgrade){
 			oPlayerManager.attackWindowLength +=0.5
 			break;
 		case "Ferocious":
-			oPlayerManager.attackFrequency +=0.3;
+			oPlayerManager.attackFrequency +=0.15;
 			break;
 		case "Resilient":
 			oPlayerManager.defense +=0.4;
 			break;
 		case "Vicious":
-			oPlayerManager.attackDamage +=0.35;
+			oPlayerManager.attackDamage +=0.25;
+			break;
+		case "Nimble":
+			oPlayerManager.dodgePct += 7
+			break;
+		case "Lucky":
+			oPlayerManager.critPct += 10;
 			break;
 		case "Fast":
 			oPlayerManager.movementSpeed += 0.25;
@@ -104,5 +118,6 @@ function chooseUpgrade(upgrade){
 		case "Intimidating":
 			oEverythingManager.regenBase += 35;
 			break;
+
 	} 
 }

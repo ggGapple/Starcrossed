@@ -1,9 +1,10 @@
 if (oEverythingManager.playerLives > 0) {
 	draw_set_font(FntMediumLarge);
 	draw_set_color(#EE145B);
+	var suffix = oEverythingManager.playerLives == 1 ? "fe" : "ves"
 	draw_text(room_width/2-string_width("You died! It's okay, you still have " + 
-	string(oEverythingManager.playerLives) + " lives left")/2,50,"You died! It's okay, you still have " + 
-	string(oEverythingManager.playerLives) + " lives left");
+	string(oEverythingManager.playerLives) + " li" + suffix +" left")/2,50,"You died! It's okay, you still have " + 
+	string(oEverythingManager.playerLives) + " li"+suffix+" left");
 	draw_set_font(FntMedium);
 	draw_text(room_width/2 - string_width("Press any key to restart level "+
 	string(oEverythingManager.level))/2,room_height-60,

@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sRight",
-    "path":"sprites/sRight/sRight.yy",
+    "name":"sActiveCentered",
+    "path":"sprites/sActiveCentered/sActiveCentered.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -80,7 +80,7 @@ if (oPlayerLeft.active) {
 	draw_set_color(c_white);
 	draw_set_font(FntSuggestion);
 	draw_text(room_width/2,80,
-	"Make sure to switch often and use your special. Good luck!")
+	"Make sure to switch often and use your special. Good luck! [space]")
 	draw_set_alpha(1)
 	draw_set_halign(fa_left)
 } 

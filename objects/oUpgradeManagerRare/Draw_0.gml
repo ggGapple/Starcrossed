@@ -22,6 +22,11 @@ if (room == RareUpgradesRoom and array_length(upgradeBoxes)> 0) {
 		draw_set_color(#1e579c);
 	}
 	draw_set_font(FntMediumLarge);
+			font_enable_effects(FntMediumLarge, true, {
+		    outlineEnable: true,
+		    outlineDistance: 1,
+		    outlineColour: c_black
+		});
 	draw_set_color(c_white);
 	if (selectingUpgrade) {
 		// draw text for upgrade names
@@ -44,6 +49,13 @@ if (room == RareUpgradesRoom and array_length(upgradeBoxes)> 0) {
 		,upgradeBoxes[2].y+75,curUpgrades[2]);	
 	}
 	
+		draw_set_font(FntMediumLarge);
+			font_enable_effects(FntMediumLarge, false, {
+		    outlineEnable: true,
+		    outlineDistance: 1,
+		    outlineColour: c_black
+		});
+	
 	// if done, the tip to go to next level
 	 if (!selectingUpgrade) {
 		yeahWereDone = true;
@@ -59,6 +71,11 @@ if (room == RareUpgradesRoom and array_length(upgradeBoxes)> 0) {
 	// draw description
 	if (selected != -1) {
 		draw_set_font(FntMedium);
+		font_enable_effects(FntMediumLarge, true, {
+		    outlineEnable: true,
+		    outlineDistance: 1,
+		    outlineColour: c_black
+		});
 		draw_set_color(c_gray);
 		draw_text(upgradeBoxes[selected].x-string_width(descs[$ curUpgrades[selected]])/2,
 		upgradeBoxes[selected].y+150,descs[$ curUpgrades[selected]]);
@@ -69,6 +86,11 @@ if (room == RareUpgradesRoom and array_length(upgradeBoxes)> 0) {
 			upgradeBoxes[selected].y+183, "[space]");
 			draw_set_color(c_white)
 		}
+		font_enable_effects(FntMediumLarge, false, {
+		    outlineEnable: true,
+		    outlineDistance: 1,
+		    outlineColour: c_black
+		});
 	}
 	
 	// draw current upgrades

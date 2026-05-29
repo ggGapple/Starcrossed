@@ -7,7 +7,9 @@ basicUpgrades = [
 "Forgiving", // less punishing if you miss the attack window
 "Stealthy", //smaller hitbox
 "Healthy", //more max hp
-"Reactionary" // more iframes
+"Reactionary", // more iframes
+"Nimble",
+"Lucky"
 ]
 
 if (oEverythingManager.level > 3) {
@@ -16,7 +18,7 @@ if (oEverythingManager.level > 3) {
 
 descs = {
 "Wise": "+attack window length",
-"Ferocious": "-time in between attacks",
+"Ferocious": "+attack frequency",
 "Resilient": "+defense",
 "Vicious": "+damage",
 "Fast": "+speed",
@@ -25,6 +27,8 @@ descs = {
 "Healthy" : "+max hp",
 "Reactionary" : "+invincibility frames",
 "Versatile" : "-ability cooldown",
+"Nimble" : "+dodge chance",
+"Lucky" : "+crit chance",
 
 //special abilities
 "Elusive": "+teleport ability (with i frames)",
@@ -37,7 +41,7 @@ descs = {
 "Deflective" : "+i-frame damage taken is reflected",
 "Transcendent" : "+time stops after teleport",
 "Medicinal" : "+heal is more powerful",
-"Devout" : "+healing gives armor",
+"Devout" : "+healing gives shield",
 "Twisted" : "+healing damages enemy",
 "Prepared" :"+1 life",
 "Intimidating" : "+enemy regenerates slower",
@@ -77,6 +81,8 @@ upgradesSprites = {
 "Healthy" : sHealthy,
 "Reactionary" : sReactionary,
 "Versatile" : sVersatile,
+"Nimble" : sNimble,
+"Lucky" : sLucky,
 
 //special abilities
 "Elusive": sElusive,

@@ -26,10 +26,15 @@ if (active) {
 			dealDamage(1);
 			audio_play_sound(SndAttack,1,0);
 		}
+		else if (irandom(99) < oPlayerManager.dodgePct) {
+			audio_play_sound(SndDodge,1,0)
+			instance_create_depth(x+15, y-25,-9,oDodgeText);
+		}
+		
 		else if( (oPlayerManager.armored && oPlayerManager.stillArmored)||
 		(oPlayerManager.healArmored && oPlayerManager.stillArmored)){
 			oPlayerManager.stillArmored = false;	
-			audio_play_sound(SndStart,1,0);
+			audio_play_sound(SndShieldBreak,1,0);
 			takeDamage(0);
 		} else {
 			takeDamage(_bullet.dmg);

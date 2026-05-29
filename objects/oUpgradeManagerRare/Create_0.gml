@@ -1,28 +1,32 @@
 basicUpgrades = [
 "Vampiric",
 "Opportunistic",
-"Armored",
 "Rapid",
 "Mouselike",
 "Mighty",
-"Nourished"
+"Nourished",
+"Chaotic",
+"Ninja",
+"Arrogant",
+"Cautious",
+"Punishing"
 ]
 
 
 descs = {
-"Vampiric" : "+passive damage, --defense",
+"Vampiric" : "+passive damage, -defense",
 "Opportunistic" : "-attack window length, +damage",
-"Armored" : "+negate first hit each round",
-"Rapid" : "-time between attacks, -damage",
+"Rapid" : "-attack frequency, -damage",
 "Mouselike" : "-hitbox size, +speed",
 "Mighty" : "+defense, +damage, -speed, +size",
-"Nourished" : "+passive regen"
+"Nourished" : "+passive regen",
+"Chaotic" : "+crit chance, -damage",
+"Ninja" : "+dodge chance, -defense",
+"Arrogant" : "+damage, -defense",
+"Cautious" : "+defense, -damage",
+"Punishing" : "+attack frequency, +crit, +damage"
 }
 
-rareUpgrades= [
-"Opportunistic", // shorter attack window, much more damage
-"Armored" //1 negated attack per round
-]
 
 upgradesSprites = {
 "Wise": sWise,
@@ -35,6 +39,11 @@ upgradesSprites = {
 "Healthy" : sHealthy,
 "Reactionary" : sReactionary,
 "Versatile" : sVersatile,
+"Arrogant" : sArrogant,
+"Cautious" : sCautious,
+"Punishing" : sPunishing,
+"Ninja" : sNinja,
+"Chaotic" : sChaotic,
 
 //special abilities
 "Elusive": sElusive,
@@ -42,7 +51,6 @@ upgradesSprites = {
 "Peaceful": sPeaceful,
 "Vampiric" : sVampiric,
 "Opportunistic" : sOpportunistic,
-"Armored" : sArmored,
 "Rapid" : sRapid,
 "Mouselike" : sMouselike,
 "Mighty" : sMighty,
